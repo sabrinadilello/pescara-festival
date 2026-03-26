@@ -89,21 +89,6 @@ function App() {
     'lilith lyla.jpg', 'nina.jpg', 'ralda.jpg', 'romi.jpg', 'Sinti.jpg'
   ].map(img => `/images/prima serata/${img}`);
 
-  const secondaSerataImages = [
-    'cartolina 1.jpg', 'cartolina 2.jpg', 'cartolina 3.jpg', 'cartolina 4.jpg',
-    'cartolina 5.jpg', 'cartolina Betty Rocket.jpg', 'cartolina.jpg',
-    'cartolina6.jpg', 'cartolina7.jpg', 'cartolina8.jpg'
-  ].map(img => `/images/seconda serata/${img}`);
-
-  const terzaSerataImages = [
-    'Elektra Headliner.jpg',
-    'Amalia.jpg',
-    'Lady BB.jpg',
-    'Lun Du Nil 2025.jpg',
-    'Rocky Bon Bon.jpg',
-    'Titty Flambè.jpg'
-  ].map(img => `/images/terza serata/${img}`);
-
   return (
     <div className="min-h-screen bg-black text-white pb-24">
       <style>{`
@@ -187,7 +172,7 @@ function App() {
         </div>
       </nav>
 
-      {/* Page 1 - Home (AGGIORNATA PER PESCARA) */}
+      {/* Page 1 - Home */}
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
@@ -273,7 +258,7 @@ function App() {
         </section>
       )}
 
-      {/* Page 2 - Cast */}
+      {/* Page 2 - Cast (MODIFICATA) */}
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
@@ -324,12 +309,12 @@ function App() {
             <div className="space-y-8 mt-16">
               <div>
                 <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-gold mb-4 border-b border-gold/30 pb-3 transition-colors hover:text-gold/80">
-                  <span>Ludus Levis</span>
-                  <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'ludusLevis' ? 'rotate-180' : ''}`} />
+                  <span>PERFORMER</span>
+                  <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
-                {openSection === 'ludusLevis' && (
+                {openSection === 'performer' && (
                   <div className="py-4">
-                    <p className="text-center text-lg italic text-gold/90 mb-8">Un assaggio del piacere che ti attende… scorri le immagini e scopri le dive della serata Ludus Levis</p>
+                    <p className="text-center text-lg italic text-gold/90 mb-8">Un assaggio del piacere che ti attende… scorri le immagini e scopri le dive del Festival</p>
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
                       breakpoints={{ 640: { slidesPerView: 2, spaceBetween: 20 }, 768: { slidesPerView: 3, spaceBetween: 30 }, 1024: { slidesPerView: 4, spaceBetween: 40 }, }}
