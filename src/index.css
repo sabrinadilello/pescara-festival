@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer utilities {
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .text-gold {
+    color: #D4AF37;
+  }
+
+  .text-porpora {
+    color: #8B1538;
+  }
+
+  .bg-gold {
+    background-color: #D4AF37;
+  }
+
+  .bg-porpora {
+    background-color: #8B1538;
+  }
+
+  .border-gold {
+    border-color: #D4AF37;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
