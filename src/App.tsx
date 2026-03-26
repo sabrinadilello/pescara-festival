@@ -323,7 +323,7 @@ function App() {
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('ludusLevis')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-gold mb-4 border-b border-gold/30 pb-3 transition-colors hover:text-gold/80">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-gold mb-4 border-b border-gold/30 pb-3 transition-colors hover:text-gold/80">
                   <span>Ludus Levis</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'ludusLevis' ? 'rotate-180' : ''}`} />
                 </button>
