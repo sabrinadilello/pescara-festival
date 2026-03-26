@@ -106,7 +106,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black text-white pb-24">
-      {/* Stili per personalizzare Swiper */}
       <style>{`
         :root {
           --swiper-theme-color: #daa520; 
@@ -188,7 +187,7 @@ function App() {
         </div>
       </nav>
 
-      {/* Page 1 - Home */}
+      {/* Page 1 - Home (AGGIORNATA PER PESCARA) */}
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
@@ -197,7 +196,7 @@ function App() {
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="font-cinzel text-5xl md:text-7xl text-gold mb-4 tracking-wider">
-              EXCELSIOR BURLESQUE FESTIVAL
+              PESCARA BURLESQUE FESTIVAL
             </h1>
             <div className="text-2xl md:text-3xl text-gold/80 mb-2 font-light">
               II EDIZIONE
@@ -206,7 +205,7 @@ function App() {
               una produzione di Matisse Royale
             </div>
             <p className="text-xl md:text-2xl text-porpora font-cinzel mb-12 italic">
-              Tre giorni di eleganza, ironia e seduzione nella Roma Imperiale
+              La notte più glamour dell’Adriatico
             </p>
             <div className="mb-12 border-4 border-gold p-4 bg-black/50 inline-block">
               <button
@@ -215,56 +214,35 @@ function App() {
               >
                 <img
                   src="/images/locandina II ed..jpg"
-                  alt="Locandina Excelsior Burlesque Festival II Edizione"
+                  alt="Locandina Pescara Burlesque Festival"
                   className="max-w-full h-auto max-h-96 object-contain"
                 />
               </button>
             </div>
             <div className="text-lg md:text-xl leading-relaxed mb-12 text-left max-w-3xl mx-auto space-y-6">
               <p>
-                Il fascino del burlesque incontra la grandezza di Roma in un festival unico nel suo genere.
-                Per tre serate, il Teatro Petrolini si trasforma in un'arena scintillante dove piume, ventagli
-                e tacchi a spillo rendono omaggio alla sensualità e alla Roma Imperiale.
+                Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.
               </p>
-              <p className="text-gold font-semibold">
-                Dal 14 al 16 novembre 2025, il pubblico vivrà un viaggio tra spettacolo e storia:
+              <p>
+                In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà. Un viaggio magnetico tra sensualità e ironia, dove il glamour si fonde con il respiro del mare e ogni dettaglio è pensato per incantare.
               </p>
-              <ul className="space-y-4 pl-6">
-                <li>
-                  <span className="text-gold font-cinzel text-xl">• Venerdì 14 – Ludus Levis</span>
-                  <br />
-                  <span className="text-sm md:text-base">
-                    Cerimonia d'apertura con performance mozzafiato e il primo tuffo nell'universo dell'Excelsior.
-                  </span>
-                </li>
-                <li>
-                  <span className="text-gold font-cinzel text-xl">• Sabato 15 – Electio Imperatoris</span>
-                  <br />
-                  <span className="text-sm md:text-base">
-                    La notte del grande contest: una giuria di esperti incoronerà l'Imperatrice di Roma,
-                    la Vestale e la Gladiatrice, mentre il pubblico sceglierà il proprio campione — il Favor Populi.
-                  </span>
-                </li>
-                <li>
-                  <span className="text-gold font-cinzel text-xl">• Domenica 16 – Spectaculum Excellens</span>
-                  <br />
-                  <span className="text-sm md:text-base">
-                    Gran Galà di chiusura con le esibizioni delle guest star, la madrina del festival e le vincitrici del contest.
-                  </span>
-                </li>
-              </ul>
+              <p>
+                Un appuntamento imperdibile per chi desidera lasciarsi sedurre e vivere una notte fuori dall’ordinario.
+              </p>
               <p className="italic text-gold/90 pt-6">
-                Tre giorni di spettacolo, workshop e pura celebrazione dell'arte burlesque.
-                Una festa di libertà, ironia e bellezza. Un tributo alla Roma che fu — e alla femminilità che è.
+                Preparati a varcare la soglia di un mondo in cui tutto è possibile… e lasciati travolgere dalla notte più glamour dell’Adriatico. ✨
               </p>
             </div>
             <div className="border-t border-b border-gold py-6 mb-8">
+              <div className="text-gold text-2xl font-cinzel mb-4">
+                Sabato 16 maggio ore 21:00
+              </div>
               <div className="flex items-center justify-center gap-3 text-gold text-lg md:text-xl">
                 <MapPin className="w-6 h-6" />
-                <span className="font-cinzel">Teatro Petrolini – Via Rubattino 5, Roma (Testaccio)</span>
+                <span className="font-cinzel">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
               <a
-                href="https://maps.google.com/?q=Teatro+Petrolini+Via+Rubattino+5+Roma"
+                href="https://maps.google.com/?q=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 text-porpora hover:text-white transition-colors underline"
@@ -278,11 +256,11 @@ function App() {
                 PRENOTAZIONI
               </h3>
               <p className="text-lg mb-6">
-                Vuoi partecipare all'Excelsior Burlesque Festival? Compila il modulo di prenotazione
+                Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione
                 e assicurati il tuo posto in platea.
               </p>
               <a
-                href="https://forms.gle/nAeke1KamjxbaTqeA"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-porpora text-white px-12 py-4 text-xl font-cinzel hover:bg-gold hover:text-black transition-all transform hover:scale-105"
@@ -312,13 +290,10 @@ function App() {
               </button>
               <div className="text-lg md:text-xl leading-relaxed mt-8 space-y-4 text-left max-w-3xl mx-auto">
                 <p>
-                  Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni.
+                  Matisse Royale è l’anima scintillante del festival: showman, performer di fama internazionale e raffinato narratore di emozioni.
                 </p>
                 <p>
                   Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.
-                </p>
-                <p>
-                  Dai palchi d’Europa alle luci dell’Excelsior, porta con sé un universo fatto di glamour, poesia e provocazione.
                 </p>
                 <p>
                   Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia.
@@ -335,24 +310,18 @@ function App() {
               </button>
               <div className="text-lg md:text-xl leading-relaxed mt-8 space-y-4 text-left max-w-3xl mx-auto">
                 <p className="font-cinzel text-2xl text-porpora italic text-center mb-6">
-                  🔥 Roma si inchina alla sua nuova Dea dello Spettacolo! 🔥
+                  🔥 La Dea dello Spettacolo! 🔥
                 </p>
                 <p>
-                  Dalla Repubblica Ceca con furore, eleganza e magnetismo… <strong>Elektra Show</strong> è la <strong>MADRINA</strong> della seconda edizione dell’Excelsior Burlesque Festival!
+                  Dalla Repubblica Ceca con furore, eleganza e magnetismo… <strong>Elektra Show</strong> è la <strong>MADRINA</strong> della seconda edizione del Pescara Burlesque Festival!
                 </p>
                 <p>
-                  Artista raffinata e regina del palcoscenico, Elektra incarna la perfetta fusione tra il fascino del burlesque classico e l’energia travolgente del neo-burlesque. Con la sua presenza scenica mozzafiato e numeri ricchi di sorprese, saprà conquistare il pubblico come una vera imperatrice dell’Impero Romano… in paillettes!
-                </p>
-                <p className="font-cinzel text-gold font-bold text-center pt-4">
-                  Preparatevi ad accoglierla… AVE ELEKTRA!
+                  Artista raffinata e regina del palcoscenico, Elektra incarna la perfetta fusione tra il fascino del burlesque classico e l’energia travolgente del neo-burlesque. Con la sua presenza scenica mozzafiato e numeri ricchi di sorprese, saprà conquistare il pubblico come una vera imperatrice.
                 </p>
               </div>
             </div>
 
             <div className="space-y-8 mt-16">
-
-              {/* SEZIONE GIUDICI RIMOSSA */}
-
               <div>
                 <button onClick={() => toggleSection('ludusLevis')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-gold mb-4 border-b border-gold/30 pb-3 transition-colors hover:text-gold/80">
                   <span>Ludus Levis</span>
@@ -385,7 +354,7 @@ function App() {
                 </button>
                 {openSection === 'electioImperatoris' && (
                   <div className="py-4">
-                    <p className="text-center text-lg italic text-gold/90 mb-8">Una notte di sfide, fascino e potere. Scorri per conoscere le regine che si contenderanno il titolo di Imperatrice.</p>
+                    <p className="text-center text-lg italic text-gold/90 mb-8">Una notte di sfide, fascino e potere. Scorri per conoscere le regine che si contenderanno il titolo.</p>
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
                       breakpoints={{ 640: { slidesPerView: 2, spaceBetween: 20 }, 768: { slidesPerView: 3, spaceBetween: 30 }, 1024: { slidesPerView: 4, spaceBetween: 40 }, }}
@@ -411,7 +380,7 @@ function App() {
                 {openSection === 'spectaculumExcellens' && (
                   <div className="py-4">
                     <p className="text-center text-lg italic text-gold/90 mb-8">
-                      Nella serata conclusiva, il sipario si apre sull’eccellenza: ecco le protagoniste della serata “Spectaculum Excellens”.
+                      Nella serata conclusiva, il sipario si apre sull’eccellenza.
                     </p>
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
@@ -429,26 +398,12 @@ function App() {
                   </div>
                 )}
               </div>
-
-            </div>
-
-            <div className="border-4 border-gold p-8 bg-black/50 mt-16 text-center">
-              <h3 className="font-cinzel text-3xl text-gold mb-6">
-                PRENOTAZIONI
-              </h3>
-              <p className="text-lg mb-6">
-                Vuoi partecipare all'Excelsior Burlesque Festival? Compila il modulo di prenotazione
-                e assicurati il tuo posto in platea.
-              </p>
-              <a href="https://forms.gle/nAeke1KamjxbaTqeA" target="_blank" rel="noopener noreferrer" className="inline-block bg-porpora text-white px-12 py-4 text-xl font-cinzel hover:bg-gold hover:text-black transition-all transform hover:scale-105">
-                PRENOTA ORA
-              </a>
             </div>
           </div>
         </section>
       )}
 
-      {/* Page 3 - Workshop (MODIFICATA - SOLO IL PRIMO E PIÙ GRANDE) */}
+      {/* Page 3 - Workshop */}
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
@@ -460,7 +415,7 @@ function App() {
             </p>
             <div className="text-lg leading-relaxed space-y-4 mb-12 text-left max-w-3xl mx-auto">
               <p>
-                L’Excelsior Burlesque Festival non è solo spettacolo… è anche formazione, scoperta e condivisione.
+                Il Pescara Burlesque Festival non è solo spettacolo… è anche formazione, scoperta e condivisione.
               </p>
             </div>
 
@@ -477,22 +432,16 @@ function App() {
                   </h3>
                   <p className="text-gold font-cinzel text-xl mb-3 text-center">Tenuto da: Terry Paradise</p>
                   <div className="text-sm md:text-base border-t border-b border-gold/30 py-4 mb-4 space-y-1 text-center">
-                    <p>🗓 <span className="font-semibold">Sabato 15 Novembre, ore 17:15</span></p>
+                    <p>🗓 <span className="font-semibold">Domenica 17 Maggio</span></p>
                     <p>💰 <span className="font-semibold">Costo: 25€</span> – Durata: 1h 15 min</p>
                   </div>
-                  <p className="mb-4">In questo originalissimo workshop, Terry Paradise invita ogni partecipante non solo a sperimentare l’arte della seduzione, ma anche a dare vita a un personaggio burlesque unico e autentico. Attraverso elementi fondamentali dell’arte scenica — come trucco, costume, presenza scenica e costruzione del progetto artistico — scoprirai come raccontare te stessə sul palco in modo consapevole, potente e creativo.</p>
-                  <p className="font-cinzel text-gold mt-4">Contenuti:</p>
-                  <p>Breve storia del Burlesque e creazione di un progetto e sviluppo del personaggio. (Saranno rilasciate brevi dispense)</p>
-                  <p className="font-cinzel text-gold mt-4">A chi è rivolto:</p>
-                  <p>A tuttə coloro che desiderano esprimersi in modo creativo e personale, con o senza esperienza nel mondo del burlesque o delle arti performative.</p>
-                  <p className="font-cinzel text-gold mt-4">Cosa portare:</p>
-                  <p>Abbigliamento comodo e un accessorio con cui giocare o sperimentare la propria espressività.</p>
-                  <p className="font-cinzel text-gold mt-4 text-center">
+                  <p className="mb-4 text-center">In questo originalissimo workshop, Terry Paradise invita ogni partecipante non solo a sperimentare l’arte della seduzione, ma anche a dare vita a un personaggio burlesque unico e autentico. Attraverso elementi fondamentali dell’arte scenica scoprirai come raccontare te stessə sul palco in modo consapevole, potente e creativo.</p>
+                  <div className="text-center mt-6">
                     <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-porpora text-white px-12 py-4 text-xl font-cinzel hover:bg-gold hover:text-black transition-all transform hover:scale-105">
                       <MessageCircle className="w-6 h-6" />
                       ISCRIVITI ORA
                     </a>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -504,13 +453,6 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="mb-12">
-              <img
-                src="/images/logo per video.jpg"
-                alt="Logo Excelsior Burlesque Festival"
-                className="max-w-xs mx-auto border-4 border-gold p-4"
-              />
-            </div>
             <h2 className="font-cinzel text-4xl md:text-6xl text-gold mb-12 tracking-wider">
               INFORMAZIONI E CONTATTI
             </h2>
@@ -519,8 +461,8 @@ function App() {
                 <MapPin className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cinzel text-gold">LOCATION:</p>
-                  <p className="text-white">Teatro Petrolini - Via Rubattino 5, Roma (Testaccio)</p>
-                  <a href="https://maps.google.com/?q=Teatro+Petrolini+Via+Rubattino+5+Roma" target="_blank" rel="noopener noreferrer" className="text-porpora hover:text-gold transition-colors underline text-base">
+                  <p className="text-white">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  <a href="https://maps.google.com/?q=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara" target="_blank" rel="noopener noreferrer" className="text-porpora hover:text-gold transition-colors underline text-base">
                     Apri su Google Maps →
                   </a>
                 </div>
@@ -530,26 +472,12 @@ function App() {
                 <div className="text-left">
                   <p className="font-cinzel text-gold">PAGINA UFFICIALE:</p>
                   <a
-                    href="https://www.instagram.com/excelsior_burlesque_festival"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-porpora transition-colors underline"
                   >
-                    @excelsior_burlesque_festival
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Instagram className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
-                <div className="text-left">
-                  <p className="font-cinzel text-gold">DIREZIONE ARTISTICA:</p>
-                  <a
-                    href="https://www.instagram.com/matisse_royale"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-porpora transition-colors underline"
-                  >
-                    @matisse_royale
+                    @pescara_burlesque_festival
                   </a>
                 </div>
               </div>
@@ -558,17 +486,17 @@ function App() {
                 <div className="text-left">
                   <p className="font-cinzel text-gold">EMAIL:</p>
                   <a
-                    href="mailto:excelsiorburlesquefestival@gmail.com"
+                    href="mailto:pescaraburlesquefestival@gmail.com"
                     className="text-white hover:text-porpora transition-colors underline"
                   >
-                    excelsiorburlesquefestival@gmail.com
+                    pescaraburlesquefestival@gmail.com
                   </a>
                 </div>
               </div>
             </div>
             <div className="border-t border-gold pt-8">
               <p className="text-gold/70 text-sm">
-                © 2025 Excelsior Burlesque Festival – Tutti i diritti riservati
+                © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
             </div>
           </div>
