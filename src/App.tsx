@@ -346,58 +346,6 @@ function App() {
                   </div>
                 )}
               </div>
-
-              <div>
-                <button onClick={() => toggleSection('electioImperatoris')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-gold mb-4 border-b border-gold/30 pb-3 transition-colors hover:text-gold/80">
-                  <span>Electio Imperatoris</span>
-                  <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'electioImperatoris' ? 'rotate-180' : ''}`} />
-                </button>
-                {openSection === 'electioImperatoris' && (
-                  <div className="py-4">
-                    <p className="text-center text-lg italic text-gold/90 mb-8">Una notte di sfide, fascino e potere. Scorri per conoscere le regine che si contenderanno il titolo.</p>
-                    <Swiper
-                      modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
-                      breakpoints={{ 640: { slidesPerView: 2, spaceBetween: 20 }, 768: { slidesPerView: 3, spaceBetween: 30 }, 1024: { slidesPerView: 4, spaceBetween: 40 }, }}
-                      className="w-full"
-                    >
-                      {secondaSerataImages.map((src, index) => (
-                        <SwiperSlide key={index}>
-                          <button onClick={() => openModal(secondaSerataImages, index)} className="w-full cursor-zoom-in">
-                            <img src={src} alt={`Contestant ${index + 1}`} className="w-full h-auto object-cover aspect-[3/4]" />
-                          </button>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
-                  </div>
-                )}
-              </div>
-
-              <div>
-                <button onClick={() => toggleSection('spectaculumExcellens')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-gold mb-4 border-b border-gold/30 pb-3 transition-colors hover:text-gold/80">
-                  <span>Spectaculum Excellens</span>
-                  <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'spectaculumExcellens' ? 'rotate-180' : ''}`} />
-                </button>
-                {openSection === 'spectaculumExcellens' && (
-                  <div className="py-4">
-                    <p className="text-center text-lg italic text-gold/90 mb-8">
-                      Nella serata conclusiva, il sipario si apre sull’eccellenza.
-                    </p>
-                    <Swiper
-                      modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
-                      breakpoints={{ 640: { slidesPerView: 2, spaceBetween: 20 }, 768: { slidesPerView: 3, spaceBetween: 30 }, 1024: { slidesPerView: 4, spaceBetween: 40 }, }}
-                      className="w-full"
-                    >
-                      {terzaSerataImages.map((src, index) => (
-                        <SwiperSlide key={index}>
-                          <button onClick={() => openModal(terzaSerataImages, index)} className="w-full cursor-zoom-in">
-                            <img src={src} alt={`Performer Terza Serata ${index + 1}`} className="w-full h-auto object-cover aspect-[3/4]" />
-                          </button>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </section>
