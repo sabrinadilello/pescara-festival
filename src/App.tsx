@@ -189,10 +189,10 @@ function App() {
             <h1 className="font-playfair text-5xl md:text-7xl text-white mb-4 tracking-wider uppercase font-bold">
               PESCARA BURLESQUE FESTIVAL
             </h1>
-            <div className="text-2xl md:text-3xl text-white/80 mb-2 font-light italic">
+            <div className="text-2xl md:text-3xl text-[#0b46d0] mb-2 font-light italic">
               II EDIZIONE
             </div>
-            <div className="font-playfair text-base text-white/70 mb-8 italic tracking-wider">
+            <div className="font-playfair text-base text-[#0b46d0] mb-8 italic tracking-wider">
               una produzione di Matisse Royale
             </div>
             <p className="text-xl md:text-2xl text-sky-200 font-playfair mb-12 italic">
@@ -240,7 +240,7 @@ function App() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-playfair hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105"
+                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-cinzel hover:bg-sky-200 hover:text-[#0b46d0] transition-all transform hover:scale-105"
               >
                 PRENOTA ORA
               </a>
@@ -258,7 +258,6 @@ function App() {
             </h2>
 
             <div className="mb-12 text-center">
-              {/* MODIFICATA L'ESTENSIONE IN .jpg */}
               <button onClick={() => openModal(['/images/presentatore.jpg'], 0)} className="cursor-zoom-in group">
                 <img src="/images/presentatore.jpg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-sky-300 transition-colors duration-500" />
               </button>
@@ -279,7 +278,7 @@ function App() {
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-playfair text-3xl text-white mb-4 border-b border-white/20 pb-3 hover:text-sky-200 transition-colors duration-300 uppercase">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-playfair text-3xl text-white mb-4 border-b border-white/20 pb-3 hover:text-sky-300 transition-colors duration-300 uppercase">
                   <span>PERFORMER</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
@@ -326,7 +325,7 @@ function App() {
                   <p>💰 <span className="font-semibold text-white">Costo: 25€</span></p>
                 </div>
                 <div className="text-center mt-6">
-                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-playfair hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105">
+                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-playfair hover:bg-sky-200 hover:text-[#0b46d0] transition-all transform hover:scale-105">
                     <MessageCircle className="w-6 h-6" />
                     ISCRIVITI ORA
                   </a>
@@ -349,7 +348,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-playfair text-white font-bold uppercase">LOCATION:</p>
+                  <p className="font-playfair text-[#0b46d0] font-bold uppercase">LOCATION:</p>
                   <p className="text-white/90">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a
                     href={mapsLink}
@@ -365,7 +364,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-playfair text-white font-bold uppercase">PAGINA UFFICIALE:</p>
+                  <p className="font-playfair text-[#0b46d0] font-bold uppercase">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
                     target="_blank"
@@ -380,7 +379,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-playfair text-white font-bold uppercase">EMAIL:</p>
+                  <p className="font-playfair text-[#0b46d0] font-bold uppercase">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
                     className="text-white hover:text-sky-300 transition-colors duration-300 underline decoration-white/20 hover:decoration-sky-300"
