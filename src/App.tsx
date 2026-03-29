@@ -95,7 +95,7 @@ function App() {
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#2194d2] to-black text-white pb-24">
+    <div className="min-h-screen bg-gradient-to-b from-[#2194d2] to-black text-white pb-24 font-sans">
       <style>{`
         :root {
           --swiper-theme-color: #ffffff; 
@@ -159,15 +159,15 @@ function App() {
             <button
               key={item.page}
               onClick={() => goToPage(item.page)}
-              className="flex flex-1 flex-col items-center gap-1 px-1 text-xs transition-all duration-300 transform"
+              className="group flex flex-1 flex-col items-center gap-1 px-1 text-xs transition-all duration-300 transform"
               aria-label={item.label}
             >
               <item.Icon
-                className={`w-6 h-6 ${currentPage === item.page ? 'text-white' : 'text-white/50 group-hover:text-white'
+                className={`w-6 h-6 transition-colors duration-300 ${currentPage === item.page ? 'text-white' : 'text-white/40 group-hover:text-sky-300'
                   }`}
               />
               <span
-                className={`font-cinzel ${currentPage === item.page ? 'text-white' : 'text-white/50 group-hover:text-white'
+                className={`font-cinzel transition-colors duration-300 ${currentPage === item.page ? 'text-white' : 'text-white/40 group-hover:text-sky-300'
                   }`}
               >
                 {item.label}
@@ -206,15 +206,9 @@ function App() {
               </button>
             </div>
             <div className="text-lg md:text-xl leading-relaxed mb-12 text-left max-w-3xl mx-auto space-y-6">
-              <p>
-                Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.
-              </p>
-              <p>
-                In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.
-              </p>
-              <p className="italic text-sky-200 pt-6">
-                Preparati a varcare la soglia di un mondo in cui tutto è possibile… e lasciati travolgere dalla notte più glamour dell’Adriatico. ✨
-              </p>
+              <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
+              <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
+              <p className="italic text-sky-200 pt-6">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
             </div>
 
             <div className="border-t border-b border-white/30 py-6 mb-8">
@@ -229,26 +223,23 @@ function App() {
                 href={mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-sky-300 hover:text-white transition-colors underline"
+                className="inline-block mt-4 text-white hover:text-sky-300 transition-all duration-300 underline decoration-white/30 hover:decoration-sky-300"
               >
                 Apri su Google Maps →
               </a>
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
-              <h3 className="font-cinzel text-3xl text-white mb-6">
-                PRENOTAZIONI
-              </h3>
+              <h3 className="font-cinzel text-3xl text-white mb-6">PRENOTAZIONI</h3>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-cinzel hover:bg-sky-200 transition-all transform hover:scale-105"
+                className="inline-block bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-cinzel hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105"
               >
                 PRENOTA ORA
               </a>
             </div>
-
           </div>
         </section>
       )}
@@ -262,11 +253,8 @@ function App() {
             </h2>
 
             <div className="mb-12 text-center">
-              <button
-                onClick={() => openModal(['/images/presentatore.jpeg'], 0)}
-                className="cursor-zoom-in"
-              >
-                <img src="/images/presentatore.jpeg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20" />
+              <button onClick={() => openModal(['/images/presentatore.jpeg'], 0)} className="cursor-zoom-in group">
+                <img src="/images/presentatore.jpeg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-sky-300 transition-colors duration-500" />
               </button>
               <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
                 <p>Matisse Royale è l’anima scintillante del festival: showman, performer e raffinato narratore di emozioni.</p>
@@ -274,11 +262,8 @@ function App() {
             </div>
 
             <div className="mb-12 text-center">
-              <button
-                onClick={() => openModal(['/images/madrina.jpeg'], 0)}
-                className="cursor-zoom-in"
-              >
-                <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20" />
+              <button onClick={() => openModal(['/images/madrina.jpeg'], 0)} className="cursor-zoom-in group">
+                <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20 group-hover:border-sky-300 transition-colors duration-500" />
               </button>
               <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
                 <p className="font-cinzel text-2xl text-sky-200 italic text-center mb-6">🔥 La Dea dello Spettacolo! 🔥</p>
@@ -288,12 +273,13 @@ function App() {
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-white mb-4 border-b border-white/20 pb-3 hover:text-sky-200 transition-colors">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-white mb-4 border-b border-white/20 pb-3 hover:text-sky-300 transition-colors duration-300">
                   <span>PERFORMER</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
                 {openSection === 'performer' && (
                   <div className="py-4 text-center">
+                    <p className="text-center text-lg italic text-white/70 mb-8">Un assaggio del piacere che ti attende… scorri le immagini.</p>
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
                       breakpoints={{ 640: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }}
@@ -301,8 +287,8 @@ function App() {
                     >
                       {primaSerataImages.map((src, index) => (
                         <SwiperSlide key={index}>
-                          <button onClick={() => openModal(primaSerataImages, index)} className="w-full cursor-zoom-in">
-                            <img src={src} alt={`Performer ${index + 1}`} className="w-full h-auto object-cover aspect-[3/4] border border-white/10" />
+                          <button onClick={() => openModal(primaSerataImages, index)} className="w-full cursor-zoom-in group">
+                            <img src={src} alt="Performer" className="w-full h-auto object-cover aspect-[3/4] border border-white/10 group-hover:border-sky-300 transition-colors duration-300" />
                           </button>
                         </SwiperSlide>
                       ))}
@@ -323,20 +309,18 @@ function App() {
               WORKSHOP
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
-              <div className="w-full max-w-2xl">
-                <button onClick={() => openModal(['/images/terryparadise.jpeg'], 0)} className="cursor-zoom-in w-full">
-                  <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className="w-full h-auto object-cover border-4 border-white/20 shadow-xl" />
-                </button>
-              </div>
+              <button onClick={() => openModal(['/images/terryparadise.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
+                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className="w-full h-auto object-cover border-4 border-white/20 group-hover:border-sky-300 shadow-xl transition-colors duration-500" />
+              </button>
               <div className="max-w-2xl w-full">
                 <h3 className="font-cinzel text-3xl text-white mb-2 text-center">💄 MAKE-IT UP!</h3>
                 <p className="text-sky-200 font-cinzel text-xl mb-3 text-center">Tenuto da: Terry Paradise</p>
                 <div className="text-sm border-t border-b border-white/20 py-4 mb-4 text-center">
-                  <p>🗓 <span className="font-semibold">Domenica 17 Maggio</span></p>
-                  <p>💰 <span className="font-semibold">Costo: 25€</span></p>
+                  <p>🗓 <span className="font-semibold text-white">Domenica 17 Maggio</span></p>
+                  <p>💰 <span className="font-semibold text-white">Costo: 25€</span></p>
                 </div>
                 <div className="text-center mt-6">
-                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-cinzel hover:bg-sky-200 transition-all">
+                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-cinzel hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105">
                     <MessageCircle className="w-6 h-6" />
                     ISCRIVITI ORA
                   </a>
@@ -365,7 +349,7 @@ function App() {
                     href={mapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-300 hover:text-white transition-colors underline text-base"
+                    className="text-white hover:text-sky-300 transition-colors duration-300 underline decoration-white/20 hover:decoration-sky-300 text-base"
                   >
                     Apri su Google Maps →
                   </a>
@@ -380,7 +364,7 @@ function App() {
                     href={instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-300 hover:text-white transition-colors underline text-white/90"
+                    className="text-white hover:text-sky-300 transition-colors duration-300 underline decoration-white/20 hover:decoration-sky-300"
                   >
                     @pescara_burlesque_festival
                   </a>
@@ -393,7 +377,7 @@ function App() {
                   <p className="font-cinzel text-white">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
-                    className="text-sky-300 hover:text-white transition-colors underline text-white/90"
+                    className="text-white hover:text-sky-300 transition-colors duration-300 underline decoration-white/20 hover:decoration-sky-300"
                   >
                     {emailAddress}
                   </a>
