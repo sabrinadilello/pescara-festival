@@ -95,8 +95,13 @@ function App() {
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#2194d2] to-black text-white pb-24 font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-[#2194d2] to-black text-white pb-24 font-montserrat">
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
+        
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+
         :root {
           --swiper-theme-color: #ffffff; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
@@ -167,7 +172,7 @@ function App() {
                   }`}
               />
               <span
-                className={`font-cinzel transition-colors duration-300 ${currentPage === item.page ? 'text-white' : 'text-white/40 group-hover:text-sky-300'
+                className={`font-playfair transition-colors duration-300 ${currentPage === item.page ? 'text-white' : 'text-white/40 group-hover:text-sky-300'
                   }`}
               >
                 {item.label}
@@ -181,16 +186,16 @@ function App() {
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-cinzel text-5xl md:text-7xl text-white mb-4 tracking-wider">
+            <h1 className="font-playfair text-5xl md:text-7xl text-white mb-4 tracking-wider uppercase font-bold">
               PESCARA BURLESQUE FESTIVAL
             </h1>
-            <div className="text-2xl md:text-3xl text-white/80 mb-2 font-light">
+            <div className="text-2xl md:text-3xl text-white/80 mb-2 font-light italic">
               II EDIZIONE
             </div>
-            <div className="font-cinzel text-base text-white/70 mb-8 italic tracking-wider">
+            <div className="font-playfair text-base text-white/70 mb-8 italic tracking-wider">
               una produzione di Matisse Royale
             </div>
-            <p className="text-xl md:text-2xl text-sky-200 font-cinzel mb-12 italic">
+            <p className="text-xl md:text-2xl text-sky-200 font-playfair mb-12 italic">
               La notte più glamour dell’Adriatico
             </p>
             <div className="mb-12 border-4 border-white p-4 bg-white/10 inline-block">
@@ -212,12 +217,12 @@ function App() {
             </div>
 
             <div className="border-t border-b border-white/30 py-6 mb-8">
-              <div className="text-white text-2xl font-cinzel mb-4">
+              <div className="text-white text-2xl font-playfair mb-4">
                 Sabato 16 maggio ore 21:00
               </div>
               <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-white text-lg md:text-xl">
                 <MapPin className="w-6 h-6 text-sky-300" />
-                <span className="font-cinzel">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
+                <span className="font-playfair">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
               <a
                 href={mapsLink}
@@ -230,12 +235,12 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
-              <h3 className="font-cinzel text-3xl text-white mb-6">PRENOTAZIONI</h3>
+              <h3 className="font-playfair text-3xl text-white mb-6 uppercase">PRENOTAZIONI</h3>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-cinzel hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105"
+                className="inline-block bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-playfair hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105"
               >
                 PRENOTA ORA
               </a>
@@ -248,7 +253,7 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-cinzel text-4xl md:text-6xl text-white mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center">
+            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase">
               IL CAST
             </h2>
 
@@ -266,20 +271,20 @@ function App() {
                 <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20 group-hover:border-sky-300 transition-colors duration-500" />
               </button>
               <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
-                <p className="font-cinzel text-2xl text-sky-200 italic text-center mb-6">🔥 La Dea dello Spettacolo! 🔥</p>
-                <p className="text-center"><strong>Elektra Show</strong> è la <strong>MADRINA</strong> del Pescara Burlesque Festival!</p>
+                <p className="font-playfair text-2xl text-sky-200 italic text-center mb-6 font-bold">🔥 La Dea dello Spettacolo! 🔥</p>
+                <p className="text-center font-playfair text-xl"><strong>Elektra Show</strong> è la <strong>MADRINA</strong> del Pescara Burlesque Festival!</p>
               </div>
             </div>
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-cinzel text-3xl text-white mb-4 border-b border-white/20 pb-3 hover:text-sky-300 transition-colors duration-300">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-playfair text-3xl text-white mb-4 border-b border-white/20 pb-3 hover:text-sky-200 transition-colors duration-300 uppercase">
                   <span>PERFORMER</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
                 {openSection === 'performer' && (
                   <div className="py-4 text-center">
-                    <p className="text-center text-lg italic text-white/70 mb-8">Un assaggio del piacere che ti attende… scorri le immagini.</p>
+                    <p className="text-center text-lg italic text-white/70 mb-8 font-playfair">Un assaggio del piacere che ti attende… scorri le immagini.</p>
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
                       breakpoints={{ 640: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }}
@@ -305,7 +310,7 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-cinzel text-4xl md:text-6xl text-white mb-4 tracking-wider border-b-2 border-white/30 pb-4">
+            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-4 tracking-wider border-b-2 border-white/30 pb-4 uppercase">
               WORKSHOP
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
@@ -313,14 +318,14 @@ function App() {
                 <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className="w-full h-auto object-cover border-4 border-white/20 group-hover:border-sky-300 shadow-xl transition-colors duration-500" />
               </button>
               <div className="max-w-2xl w-full">
-                <h3 className="font-cinzel text-3xl text-white mb-2 text-center">💄 MAKE-IT UP!</h3>
-                <p className="text-sky-200 font-cinzel text-xl mb-3 text-center">Tenuto da: Terry Paradise</p>
-                <div className="text-sm border-t border-b border-white/20 py-4 mb-4 text-center">
+                <h3 className="font-playfair text-3xl text-white mb-2 text-center uppercase font-bold italic">💄 MAKE-IT UP!</h3>
+                <p className="text-sky-200 font-playfair text-xl mb-3 text-center">Tenuto da: Terry Paradise</p>
+                <div className="text-sm border-t border-b border-white/20 py-4 mb-4 text-center font-montserrat">
                   <p>🗓 <span className="font-semibold text-white">Domenica 17 Maggio</span></p>
                   <p>💰 <span className="font-semibold text-white">Costo: 25€</span></p>
                 </div>
                 <div className="text-center mt-6">
-                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-cinzel hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105">
+                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#2194d2] px-12 py-4 text-xl font-bold font-playfair hover:bg-sky-200 hover:text-[#1a7bb0] transition-all transform hover:scale-105">
                     <MessageCircle className="w-6 h-6" />
                     ISCRIVITI ORA
                   </a>
@@ -335,7 +340,7 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-cinzel text-4xl md:text-6xl text-white mb-12 tracking-wider">
+            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider uppercase">
               INFORMAZIONI E CONTATTI
             </h2>
             <div className="space-y-8 text-lg mb-12 max-w-md mx-auto">
@@ -343,7 +348,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-cinzel text-white">LOCATION:</p>
+                  <p className="font-playfair text-white font-bold uppercase">LOCATION:</p>
                   <p className="text-white/90">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a
                     href={mapsLink}
@@ -359,7 +364,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-cinzel text-white">PAGINA UFFICIALE:</p>
+                  <p className="font-playfair text-white font-bold uppercase">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
                     target="_blank"
@@ -374,7 +379,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-cinzel text-white">EMAIL:</p>
+                  <p className="font-playfair text-white font-bold uppercase">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
                     className="text-white hover:text-sky-300 transition-colors duration-300 underline decoration-white/20 hover:decoration-sky-300"
@@ -385,7 +390,7 @@ function App() {
               </div>
             </div>
             <div className="border-t border-white/20 pt-8">
-              <p className="text-white/50 text-sm">
+              <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
             </div>
