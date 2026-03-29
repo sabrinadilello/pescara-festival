@@ -258,8 +258,9 @@ function App() {
             </h2>
 
             <div className="mb-12 text-center">
-              <button onClick={() => openModal(['/images/presentatore.jpeg'], 0)} className="cursor-zoom-in group">
-                <img src="/images/presentatore.jpeg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-sky-300 transition-colors duration-500" />
+              {/* MODIFICATA L'ESTENSIONE IN .jpg */}
+              <button onClick={() => openModal(['/images/presentatore.jpg'], 0)} className="cursor-zoom-in group">
+                <img src="/images/presentatore.jpg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-sky-300 transition-colors duration-500" />
               </button>
               <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
                 <p>Matisse Royale è l’anima scintillante del festival: showman, performer e raffinato narratore di emozioni.</p>
