@@ -90,7 +90,7 @@ function App() {
   ].map(img => `/images/prima serata/${img}`);
 
   return (
-    <div className="min-h-screen bg-black text-white pb-24">
+    <div className="min-h-screen bg-gradient-to-b from-[#2194d2] to-black text-white pb-24">
       <style>{`
         :root {
           --swiper-theme-color: #daa520; 
