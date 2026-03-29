@@ -89,11 +89,14 @@ function App() {
     'lilith lyla.jpg', 'nina.jpg', 'ralda.jpg', 'romi.jpg', 'Sinti.jpg'
   ].map(img => `/images/prima serata/${img}`);
 
+  // Link Google Maps per il Teatro Cavour Pescara
+  const mapsLink = "https://www.google.com/maps/search/?api=1&query=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara";
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#2194d2] to-black text-white pb-24">
       <style>{`
         :root {
-          --swiper-theme-color: #ffffff; /* Bianco per i pallini dello slider */
+          --swiper-theme-color: #ffffff; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
           --swiper-pagination-bullet-inactive-opacity: 1;
         }
@@ -205,20 +208,30 @@ function App() {
                 Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.
               </p>
               <p>
-                In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà. Un viaggio magnetico tra sensualità e ironia, dove il glamour si fonde con il respiro del mare e ogni dettaglio è pensato per incantare.
+                In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.
               </p>
               <p className="italic text-sky-200 pt-6">
                 Preparati a varcare la soglia di un mondo in cui tutto è possibile… e lasciati travolgere dalla notte più glamour dell’Adriatico. ✨
               </p>
             </div>
+
+            {/* INDIRIZZO HOME CLICCABILE */}
             <div className="border-t border-b border-white/30 py-6 mb-8">
               <div className="text-white text-2xl font-cinzel mb-4">
                 Sabato 16 maggio ore 21:00
               </div>
-              <div className="flex items-center justify-center gap-3 text-white text-lg md:text-xl">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-white text-lg md:text-xl">
                 <MapPin className="w-6 h-6 text-sky-300" />
                 <span className="font-cinzel">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
+              <a
+                href={mapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sky-300 hover:text-white transition-colors underline"
+              >
+                Apri su Google Maps →
+              </a>
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
@@ -254,7 +267,7 @@ function App() {
               >
                 <img src="/images/presentatore.jpeg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20" />
               </button>
-              <div className="text-lg md:text-xl leading-relaxed mt-8 space-y-4 text-left max-w-3xl mx-auto">
+              <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
                 <p>Matisse Royale è l’anima scintillante del festival: showman, performer e raffinato narratore di emozioni.</p>
               </div>
             </div>
@@ -266,7 +279,7 @@ function App() {
               >
                 <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20" />
               </button>
-              <div className="text-lg md:text-xl leading-relaxed mt-8 space-y-4 text-left max-w-3xl mx-auto">
+              <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
                 <p className="font-cinzel text-2xl text-sky-200 italic text-center mb-6">🔥 La Dea dello Spettacolo! 🔥</p>
                 <p className="text-center"><strong>Elektra Show</strong> è la <strong>MADRINA</strong> del Pescara Burlesque Festival!</p>
               </div>
@@ -341,13 +354,24 @@ function App() {
               INFORMAZIONI E CONTATTI
             </h2>
             <div className="space-y-8 text-lg mb-12 max-w-md mx-auto">
+
+              {/* INDIRIZZO CONTATTI CLICCABILE */}
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cinzel text-white">LOCATION:</p>
                   <p className="text-white/90">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  <a
+                    href={mapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-300 hover:text-white transition-colors underline text-base"
+                  >
+                    Apri su Google Maps →
+                  </a>
                 </div>
               </div>
+
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
