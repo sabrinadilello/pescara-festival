@@ -89,8 +89,10 @@ function App() {
     'lilith lyla.jpg', 'nina.jpg', 'ralda.jpg', 'romi.jpg', 'Sinti.jpg'
   ].map(img => `/images/prima serata/${img}`);
 
-  // Link Google Maps per il Teatro Cavour Pescara
+  // Dati di contatto
   const mapsLink = "https://www.google.com/maps/search/?api=1&query=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara";
+  const instagramUrl = "https://www.instagram.com/pescara_burlesque_festival";
+  const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#2194d2] to-black text-white pb-24">
@@ -215,7 +217,6 @@ function App() {
               </p>
             </div>
 
-            {/* INDIRIZZO HOME CLICCABILE */}
             <div className="border-t border-b border-white/30 py-6 mb-8">
               <div className="text-white text-2xl font-cinzel mb-4">
                 Sabato 16 maggio ore 21:00
@@ -355,7 +356,6 @@ function App() {
             </h2>
             <div className="space-y-8 text-lg mb-12 max-w-md mx-auto">
 
-              {/* INDIRIZZO CONTATTI CLICCABILE */}
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
@@ -375,15 +375,28 @@ function App() {
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-cinzel text-white">INSTAGRAM:</p>
-                  <p className="text-white/90 underline decoration-sky-300">@pescara_burlesque_festival</p>
+                  <p className="font-cinzel text-white">PAGINA UFFICIALE:</p>
+                  <a
+                    href={instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-300 hover:text-white transition-colors underline text-white/90"
+                  >
+                    @pescara_burlesque_festival
+                  </a>
                 </div>
               </div>
+
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-sky-300 flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cinzel text-white">EMAIL:</p>
-                  <p className="text-white/90 underline decoration-sky-300">pescaraburlesquefestival@gmail.com</p>
+                  <a
+                    href={`mailto:${emailAddress}`}
+                    className="text-sky-300 hover:text-white transition-colors underline text-white/90"
+                  >
+                    {emailAddress}
+                  </a>
                 </div>
               </div>
             </div>
