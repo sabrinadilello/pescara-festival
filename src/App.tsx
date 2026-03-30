@@ -244,7 +244,7 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
-              <h3 className="font-playfair text-3xl text-[#D4AF37] mb-6 uppercase text-shadow-3d">PRENOTAZIONI</h3>
+              <h3 className="font-playfair text-3xl text-white mb-6 uppercase text-shadow-3d">PRENOTAZIONI</h3>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
