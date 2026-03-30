@@ -102,12 +102,17 @@ function App() {
         .font-playfair { font-family: 'Playfair Display', serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
+        /* EFFETTO 3D ORO ACCESO (non giallo) */
         .text-shadow-3d {
-          text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 4px 4px 8px rgba(0,0,0,0.5);
+          text-shadow: 
+            1px 1px 0px #8B7355, 
+            2px 2px 0px #705D44, 
+            3px 3px 0px #5F4B32, 
+            4px 4px 8px rgba(0,0,0,0.9);
         }
 
         :root {
-          --swiper-theme-color: #ffffff; 
+          --swiper-theme-color: #D4AF37; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
           --swiper-pagination-bullet-inactive-opacity: 1;
         }
@@ -120,7 +125,7 @@ function App() {
         >
           <button
             onClick={() => setModalGallery(null)}
-            className="absolute top-4 right-4 text-white hover:text-sky-300 transition-colors z-50"
+            className="absolute top-4 right-4 text-white hover:text-[#D4AF37] transition-colors z-50"
             aria-label="Chiudi"
           >
             <X className="w-10 h-10" />
@@ -144,7 +149,7 @@ function App() {
             <img
               src={modalGallery.images[modalGallery.currentIndex]}
               alt="Immagine ingrandita"
-              className="w-full h-auto object-contain max-h-[90vh] border border-white/20"
+              className="w-full h-auto object-contain max-h-[90vh] border border-[#D4AF37]/20"
             />
           </div>
 
@@ -172,11 +177,11 @@ function App() {
               aria-label={item.label}
             >
               <item.Icon
-                className={`w-6 h-6 transition-colors duration-300 ${currentPage === item.page ? 'text-white' : 'text-white/40 group-hover:text-sky-300'
+                className={`w-6 h-6 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
                   }`}
               />
               <span
-                className={`font-playfair transition-colors duration-300 ${currentPage === item.page ? 'text-white' : 'text-white/40 group-hover:text-sky-300'
+                className={`font-playfair transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
                   }`}
               >
                 {item.label}
@@ -190,14 +195,13 @@ function App() {
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-playfair text-5xl md:text-7xl text-white mb-4 tracking-wider uppercase font-bold text-shadow-3d">
+            <h1 className="font-playfair text-5xl md:text-7xl text-[#D4AF37] mb-4 tracking-wider uppercase font-bold text-shadow-3d">
               PESCARA BURLESQUE FESTIVAL
             </h1>
-            {/* MODIFICA: rimosso text-shadow-3d qui sotto */}
-            <div className="text-2xl md:text-3xl text-[#011244] mb-2 font-light italic">
+            <div className="text-2xl md:text-3xl text-white mb-2 font-light italic">
               II EDIZIONE
             </div>
-            <div className="font-playfair text-base text-[#011244] mb-8 italic tracking-wider">
+            <div className="font-playfair text-base text-white mb-8 italic tracking-wider">
               una produzione di Matisse Royale
             </div>
             <p className="text-xl md:text-2xl text-sky-100 font-playfair mb-12 italic">
@@ -240,12 +244,12 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
-              <h3 className="font-playfair text-3xl text-white mb-6 uppercase text-shadow-3d">PRENOTAZIONI</h3>
+              <h3 className="font-playfair text-3xl text-[#D4AF37] mb-6 uppercase text-shadow-3d">PRENOTAZIONI</h3>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-playfair hover:bg-[#0b46d0] hover:text-white transition-all transform hover:scale-105"
+                className="inline-block bg-[#D4AF37] text-black px-12 py-4 text-xl font-bold font-playfair hover:bg-white transition-all transform hover:scale-105"
               >
                 PRENOTA ORA
               </a>
@@ -258,13 +262,13 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase text-shadow-3d">
+            <h2 className="font-playfair text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase text-shadow-3d">
               IL CAST
             </h2>
 
             <div className="mb-12 text-center">
               <button onClick={() => openModal(['/images/presentatore.jpg'], 0)} className="cursor-zoom-in group">
-                <img src="/images/presentatore.jpg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-[#0b46d0] transition-colors duration-500" />
+                <img src="/images/presentatore.jpg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-[#D4AF37] transition-colors duration-500" />
               </button>
               <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
                 <p>Matisse Royale è l’anima scintillante del festival: showman, performer e raffinato narratore di emozioni.</p>
@@ -273,17 +277,17 @@ function App() {
 
             <div className="mb-12 text-center">
               <button onClick={() => openModal(['/images/madrina.jpeg'], 0)} className="cursor-zoom-in group">
-                <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20 group-hover:border-[#0b46d0] transition-colors duration-500" />
+                <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20 group-hover:border-[#D4AF37] transition-colors duration-500" />
               </button>
               <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
-                <p className="font-playfair text-2xl text-sky-100 italic text-center mb-6 font-bold">🔥 La Dea dello Spettacolo! 🔥</p>
+                <p className="font-playfair text-2xl text-white italic text-center mb-6 font-bold">🔥 La Dea dello Spettacolo! 🔥</p>
                 <p className="text-center font-playfair text-xl"><strong>Elektra Show</strong> è la <strong>MADRINA</strong> del Pescara Burlesque Festival!</p>
               </div>
             </div>
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-playfair text-3xl text-white mb-4 border-b border-white/20 pb-3 hover:text-[#0b46d0] transition-colors duration-300 uppercase">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-playfair text-3xl text-[#D4AF37] mb-4 border-b border-white/20 pb-3 hover:text-white transition-colors duration-300 uppercase">
                   <span>PERFORMER</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
@@ -298,7 +302,7 @@ function App() {
                       {primaSerataImages.map((src, index) => (
                         <SwiperSlide key={index}>
                           <button onClick={() => openModal(primaSerataImages, index)} className="w-full cursor-zoom-in group">
-                            <img src={src} alt="Performer" className="w-full h-auto object-cover aspect-[3/4] border border-white/10 group-hover:border-[#0b46d0] transition-colors duration-300" />
+                            <img src={src} alt="Performer" className="w-full h-auto object-cover aspect-[3/4] border border-white/10 group-hover:border-[#D4AF37] transition-colors duration-300" />
                           </button>
                         </SwiperSlide>
                       ))}
@@ -315,22 +319,22 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-4 tracking-wider border-b-2 border-white/30 pb-4 uppercase text-shadow-3d">
+            <h2 className="font-playfair text-4xl md:text-6xl text-[#D4AF37] mb-4 tracking-wider border-b-2 border-white/30 pb-4 uppercase text-shadow-3d">
               WORKSHOP
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
               <button onClick={() => openModal(['/images/terryparadise.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
-                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className="w-full h-auto object-cover border-4 border-white/20 group-hover:border-[#0b46d0] shadow-xl transition-colors duration-500" />
+                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className="w-full h-auto object-cover border-4 border-white/20 group-hover:border-[#D4AF37] shadow-xl transition-colors duration-500" />
               </button>
               <div className="max-w-2xl w-full">
                 <h3 className="font-playfair text-3xl text-white mb-2 text-center uppercase font-bold italic">💄 MAKE-IT UP!</h3>
-                <p className="text-sky-100 font-playfair text-xl mb-3 text-center">Tenuto da: Terry Paradise</p>
+                <p className="text-white font-playfair text-xl mb-3 text-center">Tenuto da: Terry Paradise</p>
                 <div className="text-sm border-t border-b border-white/20 py-4 mb-4 text-center font-montserrat">
                   <p>🗓 <span className="font-semibold text-white">Domenica 17 Maggio</span></p>
                   <p>💰 <span className="font-semibold text-white">Costo: 25€</span></p>
                 </div>
                 <div className="text-center mt-6">
-                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-playfair hover:bg-[#0b46d0] hover:text-white transition-all transform hover:scale-105">
+                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-[#D4AF37] text-black px-12 py-4 text-xl font-bold font-playfair hover:bg-white transition-all transform hover:scale-105">
                     <MessageCircle className="w-6 h-6" />
                     ISCRIVITI ORA
                   </a>
@@ -345,7 +349,7 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider uppercase text-shadow-3d">
+            <h2 className="font-playfair text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider uppercase text-shadow-3d">
               INFORMAZIONI E CONTATTI
             </h2>
             <div className="space-y-12 text-lg mb-12 max-w-md mx-auto">
@@ -367,7 +371,7 @@ function App() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Instagram className="w-8 h-8 text-white flex-shrink-0 mt-1" />
+                <Instagram className="w-6 h-6 text-white flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-playfair text-white font-bold uppercase tracking-widest mb-1">PAGINA UFFICIALE:</p>
                   <a
@@ -382,7 +386,7 @@ function App() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Mail className="w-8 h-8 text-white flex-shrink-0 mt-1" />
+                <Mail className="w-6 h-6 text-white flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-playfair text-white font-bold uppercase tracking-widest mb-1">EMAIL:</p>
                   <a
