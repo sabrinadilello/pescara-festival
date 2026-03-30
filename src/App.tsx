@@ -102,6 +102,11 @@ function App() {
         .font-playfair { font-family: 'Playfair Display', serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
+        /* EFFETTO 3D AGGIUNTO */
+        .text-shadow-3d {
+          text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 4px 4px 8px rgba(0,0,0,0.5);
+        }
+
         :root {
           --swiper-theme-color: #ffffff; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
@@ -186,10 +191,10 @@ function App() {
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-playfair text-5xl md:text-7xl text-white mb-4 tracking-wider uppercase font-bold text-shadow">
+            <h1 className="font-playfair text-5xl md:text-7xl text-white mb-4 tracking-wider uppercase font-bold text-shadow-3d">
               PESCARA BURLESQUE FESTIVAL
             </h1>
-            <div className="text-2xl md:text-3xl text-[#011244] mb-2 font-light italic">
+            <div className="text-2xl md:text-3xl text-[#011244] mb-2 font-light italic text-shadow-3d">
               II EDIZIONE
             </div>
             <div className="font-playfair text-base text-[#011244] mb-8 italic tracking-wider">
@@ -235,7 +240,7 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
-              <h3 className="font-playfair text-3xl text-white mb-6 uppercase">PRENOTAZIONI</h3>
+              <h3 className="font-playfair text-3xl text-white mb-6 uppercase text-shadow-3d">PRENOTAZIONI</h3>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
@@ -253,7 +258,7 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase">
+            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase text-shadow-3d">
               IL CAST
             </h2>
 
@@ -310,7 +315,7 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-4 tracking-wider border-b-2 border-white/30 pb-4 uppercase">
+            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-4 tracking-wider border-b-2 border-white/30 pb-4 uppercase text-shadow-3d">
               WORKSHOP
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
@@ -340,7 +345,7 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider uppercase">
+            <h2 className="font-playfair text-4xl md:text-6xl text-white mb-12 tracking-wider uppercase text-shadow-3d">
               INFORMAZIONI E CONTATTI
             </h2>
             <div className="space-y-12 text-lg mb-12 max-w-md mx-auto">
