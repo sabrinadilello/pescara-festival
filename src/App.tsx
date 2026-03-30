@@ -112,7 +112,7 @@ function App() {
         }
 
         :root {
-          --swiper-theme-color: #D4AF37; 
+          --swiper-theme-color: #EFBF04; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
           --swiper-pagination-bullet-inactive-opacity: 1;
         }
@@ -125,7 +125,7 @@ function App() {
         >
           <button
             onClick={() => setModalGallery(null)}
-            className="absolute top-4 right-4 text-white hover:text-[#D4AF37] transition-colors z-50"
+            className="absolute top-4 right-4 text-white hover:text-[#EFBF04] transition-colors z-50"
             aria-label="Chiudi"
           >
             <X className="w-10 h-10" />
@@ -244,7 +244,7 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
-              <h3 className="font-playfair text-3xl text-white mb-6 uppercase text-shadow-3d">PRENOTAZIONI</h3>
+              <h3 className="font-playfair text-3xl text-white mb-6 uppercase">PRENOTAZIONI</h3>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
