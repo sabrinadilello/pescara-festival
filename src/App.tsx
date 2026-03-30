@@ -249,7 +249,7 @@ function App() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#D4AF37] text-black px-12 py-4 text-xl font-bold font-playfair hover:bg-white transition-all transform hover:scale-105"
+                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-playfair hover:bg-[#0b46d0] hover:text-white transition-all transform hover:scale-105"
               >
                 PRENOTA ORA
               </a>
@@ -334,7 +334,7 @@ function App() {
                   <p>💰 <span className="font-semibold text-white">Costo: 25€</span></p>
                 </div>
                 <div className="text-center mt-6">
-                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-[#D4AF37] text-black px-12 py-4 text-xl font-bold font-playfair hover:bg-white transition-all transform hover:scale-105">
+                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-playfair hover:bg-[#0b46d0] hover:text-white transition-all transform hover:scale-105">
                     <MessageCircle className="w-6 h-6" />
                     ISCRIVITI ORA
                   </a>
