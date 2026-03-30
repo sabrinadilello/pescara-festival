@@ -102,7 +102,6 @@ function App() {
         .font-playfair { font-family: 'Playfair Display', serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
-        /* EFFETTO 3D AGGIUNTO */
         .text-shadow-3d {
           text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 4px 4px 8px rgba(0,0,0,0.5);
         }
@@ -194,7 +193,8 @@ function App() {
             <h1 className="font-playfair text-5xl md:text-7xl text-white mb-4 tracking-wider uppercase font-bold text-shadow-3d">
               PESCARA BURLESQUE FESTIVAL
             </h1>
-            <div className="text-2xl md:text-3xl text-[#011244] mb-2 font-light italic text-shadow-3d">
+            {/* MODIFICA: rimosso text-shadow-3d qui sotto */}
+            <div className="text-2xl md:text-3xl text-[#011244] mb-2 font-light italic">
               II EDIZIONE
             </div>
             <div className="font-playfair text-base text-[#011244] mb-8 italic tracking-wider">
