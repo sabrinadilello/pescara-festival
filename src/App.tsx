@@ -95,7 +95,7 @@ function App() {
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#04359b] to-[#011547] text-white pb-24 font-montserrat">
+    <div className="min-h-screen bg-gradient-to-b from-[#04359b] to-black text-white pb-24 font-montserrat">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
         
@@ -189,10 +189,10 @@ function App() {
             <h1 className="font-playfair text-5xl md:text-7xl text-white mb-4 tracking-wider uppercase font-bold text-shadow">
               PESCARA BURLESQUE FESTIVAL
             </h1>
-            <div className="text-2xl md:text-3xl text-[#0b46d0] mb-2 font-light italic">
+            <div className="text-2xl md:text-3xl text-[#011244] mb-2 font-light italic">
               II EDIZIONE
             </div>
-            <div className="font-playfair text-base text-[#0b46d0] mb-8 italic tracking-wider">
+            <div className="font-playfair text-base text-[#011244] mb-8 italic tracking-wider">
               una produzione di Matisse Royale
             </div>
             <p className="text-xl md:text-2xl text-sky-100 font-playfair mb-12 italic">
