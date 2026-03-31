@@ -94,13 +94,15 @@ function App() {
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#25a3e9] to-[#061c57] text-white pb-24 font-montserrat">
+    /* MODIFICA: Gradiente che parte da bianco, passa per il celeste e finisce nel blu scuro */
+    <div className="min-h-screen bg-gradient-to-b from-white via-[#25a3e9] to-[#061c57] text-white pb-24 font-montserrat">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
         
         .font-playfair { font-family: 'Playfair Display', serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
+        /* EFFETTO 3D ORO ACCESO (non giallo) */
         .text-shadow-3d {
           text-shadow: 
             1px 1px 0px #8B7355, 
@@ -193,7 +195,8 @@ function App() {
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            {/* TITOLO SOSTITUITO CON IMMAGINE PNG */}
+
+            {/* TITOLO IMMAGINE PNG */}
             <div className="mb-8 flex justify-center">
               <img
                 src="/images/titolo.png"
