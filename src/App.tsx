@@ -94,21 +94,18 @@ function App() {
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
-    /* MODIFICA: Gradiente che parte da bianco, passa per il celeste e finisce nel blu scuro */
     <div className="min-h-screen bg-gradient-to-b from-white via-[#25a3e9] to-[#061c57] text-white pb-24 font-montserrat">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Montserrat:wght@300;400;600&display=swap');
         
-        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-playfair { font-family: 'Satisfy', cursive; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
-        /* EFFETTO 3D ORO ACCESO (non giallo) */
+        /* NUOVO EFFETTO OMBRA OTTIMIZZATO PER MOBILE (Senza strati separati) */
         .text-shadow-3d {
           text-shadow: 
-            1px 1px 0px #8B7355, 
-            2px 2px 0px #705D44, 
-            3px 3px 0px #5F4B32, 
-            4px 4px 8px rgba(0,0,0,0.9);
+            2px 2px 4px rgba(0,0,0,0.5), 
+            0px 0px 10px rgba(0,0,0,0.3);
         }
 
         :root {
@@ -196,7 +193,6 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10">
 
-            {/* TITOLO IMMAGINE PNG */}
             <div className="mb-8 flex justify-center">
               <img
                 src="/images/titolo.png"
@@ -214,18 +210,20 @@ function App() {
             <p className="text-xl md:text-2xl text-sky-100 font-playfair mb-12 italic">
               La notte più glamour dell’Adriatico
             </p>
+
             <div className="mb-12 border-4 border-white inline-block overflow-hidden">
               <button
                 onClick={() => openModal(['/images/locandina II ed..jpg'], 0)}
-                className="cursor-zoom-in"
+                className="cursor-zoom-in block"
               >
                 <img
                   src="/images/locandina II ed..jpg"
                   alt="Locandina Pescara Burlesque Festival"
-                  className="max-w-full h-auto max-h-96 object-contain"
+                  className="max-w-full h-auto max-h-[500px] object-contain block"
                 />
               </button>
             </div>
+
             <div className="text-lg md:text-xl leading-relaxed mb-12 text-left max-w-3xl mx-auto space-y-6">
               <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
               <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
