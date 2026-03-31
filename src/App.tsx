@@ -171,7 +171,7 @@ function App() {
                   }`}
               />
               <span
-                className={`font-pinyon text-lg transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
+                className={`font-quicksand text-[10px] font-bold uppercase tracking-widest mt-1 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
                   }`}
               >
                 {item.label}
