@@ -214,7 +214,7 @@ function App() {
             <p className="text-xl md:text-2xl text-sky-100 font-playfair mb-12 italic">
               La notte più glamour dell’Adriatico
             </p>
-            <div className="mb-12 border-4 border-white p-4 bg-white/10 inline-block">
+            <div className="mb-12 border-4 border-white inline-block overflow-hidden">
               <button
                 onClick={() => openModal(['/images/locandina II ed..jpg'], 0)}
                 className="cursor-zoom-in"
