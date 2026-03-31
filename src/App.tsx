@@ -263,7 +263,7 @@ function App() {
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
             <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center text-shadow-3d">
-              IL CAST
+              Il Cast
             </h2>
 
             <div className="mb-12 text-center">
@@ -315,7 +315,7 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-white/30 pb-4 text-shadow-3d">
-              WORKSHOP
+              Workshop
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
               <button onClick={() => openModal(['/images/terryparadise.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
@@ -342,7 +342,7 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider text-shadow-3d">
-              INFORMAZIONI E CONTATTI
+              Informazioni e Contatti
             </h2>
             <div className="space-y-12 text-lg">
               <div className="flex items-start gap-4 text-left">
