@@ -285,8 +285,8 @@ function App() {
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-pinyon text-5xl text-[#D4AF37] border-b border-white/20 pb-3 hover:text-white transition-colors duration-300 uppercase">
-                  <span>PERFORMER</span>
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-pinyon text-5xl text-[#D4AF37] border-b border-white/20 pb-3 hover:text-white transition-colors duration-300">
+                  <span>Performer</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
                 {openSection === 'performer' && (
