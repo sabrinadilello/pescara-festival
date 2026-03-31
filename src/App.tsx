@@ -88,6 +88,9 @@ function App() {
     'lilith lyla.jpg', 'nina.jpg', 'ralda.jpg', 'romi.jpg', 'Sinti.jpg'
   ].map(img => `/images/prima serata/${img}`);
 
+  // Classe CSS comune per i bordi delle immagini
+  const imageBorderClass = "border-4 border-white hover:border-[#D4AF37] active:border-[#D4AF37] transition-colors duration-300 shadow-lg";
+
   // Dati di contatto
   const mapsLink = "https://www.google.com/maps/search/?api=1&query=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara";
   const instagramUrl = "https://www.instagram.com/pescara_burlesque_festival";
@@ -141,7 +144,7 @@ function App() {
             <img
               src={modalGallery.images[modalGallery.currentIndex]}
               alt="Ingrandimento"
-              className="w-full h-auto object-contain max-h-[90vh] border border-[#D4AF37]/20"
+              className="w-full h-auto object-contain max-h-[90vh] border-2 border-[#D4AF37]/40"
             />
           </div>
 
@@ -204,10 +207,10 @@ function App() {
               La notte più glamour dell’Adriatico
             </p>
 
-            <div className="mb-12 border-4 border-white inline-flex overflow-hidden transition-colors duration-300 hover:border-[#D4AF37] active:border-[#D4AF37]">
+            <div className="mb-12 inline-flex overflow-hidden">
               <button
                 onClick={() => openModal(['/images/locandina II ed..jpg'], 0)}
-                className="cursor-zoom-in block"
+                className={`cursor-zoom-in block ${imageBorderClass}`}
               >
                 <img
                   src="/images/locandina II ed..jpg"
@@ -268,13 +271,13 @@ function App() {
 
             <div className="mb-12 text-center">
               <button onClick={() => openModal(['/images/presentatore.jpg'], 0)} className="cursor-zoom-in group">
-                <img src="/images/presentatore.jpg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-[#D4AF37] transition-colors duration-500 shadow-lg" />
+                <img src="/images/presentatore.jpg" alt="Matisse Royale" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
             </div>
 
             <div className="mb-12 text-center">
               <button onClick={() => openModal(['/images/madrina.jpeg'], 0)} className="cursor-zoom-in group">
-                <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20 group-hover:border-[#D4AF37] transition-colors duration-500 shadow-lg" />
+                <img src="/images/madrina.jpeg" alt="Elektra Show" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <p className="font-pinyon text-5xl text-white italic mt-6 font-bold">🔥 La Dea dello Spettacolo! 🔥</p>
               <p className="text-center font-pinyon text-4xl mt-4">Elektra Show è la Madrina del Festival</p>
@@ -292,12 +295,12 @@ function App() {
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
                       breakpoints={{ 640: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }}
-                      className="w-full"
+                      className="w-full pb-12"
                     >
                       {primaSerataImages.map((src, index) => (
                         <SwiperSlide key={index}>
-                          <button onClick={() => openModal(primaSerataImages, index)} className="w-full cursor-zoom-in group">
-                            <img src={src} alt="Performer" className="w-full h-auto object-cover aspect-[3/4] border border-white/10 group-hover:border-[#D4AF37] transition-all" />
+                          <button onClick={() => openModal(primaSerataImages, index)} className="w-full cursor-zoom-in">
+                            <img src={src} alt="Performer" className={`w-full h-auto object-cover aspect-[3/4] ${imageBorderClass}`} />
                           </button>
                         </SwiperSlide>
                       ))}
@@ -319,7 +322,7 @@ function App() {
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
               <button onClick={() => openModal(['/images/terryparadise.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
-                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className="w-full h-auto object-cover border-4 border-white/20 group-hover:border-[#D4AF37] shadow-xl transition-colors duration-500" />
+                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover ${imageBorderClass}`} />
               </button>
               <div className="max-w-2xl w-full">
                 <h3 className="font-pinyon text-6xl text-white mb-2 text-center italic font-bold">Make-it Up!</h3>
