@@ -7,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// Definiamo un tipo per la galleria del modale
 type ModalGallery = {
   images: string[];
   currentIndex: number;
@@ -102,7 +101,6 @@ function App() {
         .font-playfair { font-family: 'Playfair Display', serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
-        /* EFFETTO 3D ORO ACCESO (non giallo) */
         .text-shadow-3d {
           text-shadow: 
             1px 1px 0px #8B7355, 
@@ -195,9 +193,15 @@ function App() {
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-playfair text-5xl md:text-7xl text-[#D4AF37] mb-4 tracking-wider uppercase font-bold text-shadow-3d">
-              PESCARA BURLESQUE FESTIVAL
-            </h1>
+            {/* TITOLO SOSTITUITO CON IMMAGINE PNG */}
+            <div className="mb-8 flex justify-center">
+              <img
+                src="/images/titolo.png"
+                alt="Pescara Burlesque Festival"
+                className="w-full max-w-3xl h-auto drop-shadow-2xl"
+              />
+            </div>
+
             <div className="text-2xl md:text-3xl text-white mb-2 font-light italic">
               II EDIZIONE
             </div>
