@@ -96,17 +96,17 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#25a3e9] to-[#061c57] text-white pb-24 font-quicksand">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Quicksand:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Quicksand:wght@300;400;600&display=swap');
         
-        .font-playfair { font-family: 'Satisfy', cursive; }
+        .font-pinyon { font-family: 'Pinyon Script', cursive; }
         .font-quicksand { font-family: 'Quicksand', sans-serif; }
 
         .text-shadow-3d {
-          text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0px 0px 10px rgba(0,0,0,0.3);
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0px 0px 8px rgba(0,0,0,0.2);
         }
 
         :root {
-          --swiper-theme-color: #EFBF04; 
+          --swiper-theme-color: #D4AF37; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
           --swiper-pagination-bullet-inactive-opacity: 1;
         }
@@ -119,7 +119,7 @@ function App() {
         >
           <button
             onClick={() => setModalGallery(null)}
-            className="absolute top-4 right-4 text-white hover:text-[#EFBF04] transition-colors z-50"
+            className="absolute top-4 right-4 text-white hover:text-[#D4AF37] transition-colors z-50"
           >
             <X className="w-10 h-10" />
           </button>
@@ -164,15 +164,14 @@ function App() {
             <button
               key={item.page}
               onClick={() => goToPage(item.page)}
-              className="group flex flex-1 flex-col items-center gap-1 px-1 transition-all duration-300 transform"
+              className="group flex flex-1 flex-col items-center gap-1 px-1 text-xs transition-all duration-300 transform"
             >
               <item.Icon
                 className={`w-6 h-6 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
                   }`}
               />
-              {/* MODIFICA: Font Quicksand, grassetto, tutto maiuscolo per il menu */}
               <span
-                className={`font-quicksand text-[10px] font-bold uppercase tracking-widest mt-1 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
+                className={`font-pinyon text-lg transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
                   }`}
               >
                 {item.label}
@@ -198,10 +197,10 @@ function App() {
             <div className="text-2xl md:text-3xl text-white mb-2 font-light italic font-quicksand uppercase tracking-widest">
               II EDIZIONE
             </div>
-            <div className="font-playfair text-base text-white mb-8 italic tracking-wider">
+            <div className="font-pinyon text-3xl text-white mb-8 tracking-wider">
               una produzione di Matisse Royale
             </div>
-            <p className="text-xl md:text-2xl text-sky-100 font-playfair mb-12 italic">
+            <p className="text-2xl md:text-4xl text-sky-100 font-pinyon mb-12 italic">
               La notte più glamour dell’Adriatico
             </p>
 
@@ -225,12 +224,12 @@ function App() {
             </div>
 
             <div className="border-t border-b border-white/30 py-6 mb-8">
-              <div className="text-white text-2xl font-playfair mb-4 font-bold">
+              <div className="text-white text-2xl font-pinyon mb-4 font-bold">
                 Sabato 16 maggio ore 21:00
               </div>
               <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-white text-lg md:text-xl font-quicksand">
                 <MapPin className="w-6 h-6 text-white" />
-                <span className="font-playfair text-3xl">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
+                <span className="font-pinyon text-4xl">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
               <a
                 href={mapsLink}
@@ -243,12 +242,14 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5">
-              <h3 className="font-playfair text-3xl text-white mb-6 uppercase">PRENOTAZIONI</h3>
+              {/* TITOLO BIANCO */}
+              <h3 className="font-pinyon text-5xl text-white mb-6">Prenotazioni</h3>
+              {/* TASTO BIANCO SCRITTA BLU */}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-quicksand hover:bg-[#0b46d0] hover:text-white transition-all transform hover:scale-105"
+                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-quicksand hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
               >
                 PRENOTA ORA
               </a>
@@ -261,7 +262,7 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-playfair text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase text-shadow-3d">
               IL CAST
             </h2>
 
@@ -269,30 +270,25 @@ function App() {
               <button onClick={() => openModal(['/images/presentatore.jpg'], 0)} className="cursor-zoom-in group">
                 <img src="/images/presentatore.jpg" alt="Matisse Royale" className="max-w-full h-auto border border-white/20 group-hover:border-[#D4AF37] transition-colors duration-500 shadow-lg" />
               </button>
-              <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
-                <p>Matisse Royale è l’anima scintillante del festival: showman, performer e raffinato narratore di emozioni.</p>
-              </div>
             </div>
 
             <div className="mb-12 text-center">
               <button onClick={() => openModal(['/images/madrina.jpeg'], 0)} className="cursor-zoom-in group">
                 <img src="/images/madrina.jpeg" alt="Elektra Show" className="max-w-full h-auto border border-white/20 group-hover:border-[#D4AF37] transition-colors duration-500 shadow-lg" />
               </button>
-              <div className="text-lg md:text-xl mt-8 text-left max-w-3xl mx-auto">
-                <p className="font-playfair text-2xl text-white italic text-center mb-6 font-bold">🔥 La Dea dello Spettacolo! 🔥</p>
-                <p className="text-center font-playfair text-xl"><strong>Elektra Show</strong> è la <strong>MADRINA</strong> del Pescara Burlesque Festival!</p>
-              </div>
+              <p className="font-pinyon text-5xl text-white italic mt-6 font-bold">🔥 La Dea dello Spettacolo! 🔥</p>
+              <p className="text-center font-pinyon text-4xl mt-4">Elektra Show è la Madrina del Festival</p>
             </div>
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-playfair text-3xl text-[#D4AF37] mb-4 border-b border-white/20 pb-3 hover:text-white transition-colors duration-300 uppercase">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-pinyon text-5xl text-[#D4AF37] border-b border-white/20 pb-3 hover:text-white transition-colors duration-300 uppercase">
                   <span>PERFORMER</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
                 {openSection === 'performer' && (
                   <div className="py-4 text-center">
-                    <p className="text-center text-lg italic text-white/70 mb-8 font-playfair">Un assaggio del piacere che ti attende… scorri le immagini.</p>
+                    <p className="text-center text-2xl italic text-white/70 mb-8 font-pinyon">Un assaggio del piacere che ti attende… scorri le immagini.</p>
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
                       breakpoints={{ 640: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }}
@@ -301,7 +297,7 @@ function App() {
                       {primaSerataImages.map((src, index) => (
                         <SwiperSlide key={index}>
                           <button onClick={() => openModal(primaSerataImages, index)} className="w-full cursor-zoom-in group">
-                            <img src={src} alt="Performer" className="w-full h-auto object-cover aspect-[3/4] border border-white/10 group-hover:border-[#D4AF37] transition-colors duration-300" />
+                            <img src={src} alt="Performer" className="w-full h-auto object-cover aspect-[3/4] border border-white/10 group-hover:border-[#D4AF37] transition-all" />
                           </button>
                         </SwiperSlide>
                       ))}
@@ -318,7 +314,7 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-6xl text-[#D4AF37] mb-4 tracking-wider border-b-2 border-white/30 pb-4 uppercase text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-white/30 pb-4 uppercase text-shadow-3d">
               WORKSHOP
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
@@ -326,18 +322,15 @@ function App() {
                 <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className="w-full h-auto object-cover border-4 border-white/20 group-hover:border-[#D4AF37] shadow-xl transition-colors duration-500" />
               </button>
               <div className="max-w-2xl w-full">
-                <h3 className="font-playfair text-3xl text-white mb-2 text-center uppercase font-bold italic">💄 MAKE-IT UP!</h3>
-                <p className="text-white font-playfair text-xl mb-3 text-center">Tenuto da: Terry Paradise</p>
-                <div className="text-sm border-t border-b border-white/20 py-4 mb-4 text-center font-quicksand">
-                  <p>🗓 <span className="font-semibold text-white">Domenica 17 Maggio</span></p>
-                  <p>💰 <span className="font-semibold text-white">Costo: 25€</span></p>
-                </div>
-                <div className="text-center mt-6">
-                  <a href="https://wa.me/393922752576" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-quicksand hover:bg-[#D4AF37] hover:text-white transition-all transform hover:scale-105">
-                    <MessageCircle className="w-6 h-6" />
-                    ISCRIVITI ORA
-                  </a>
-                </div>
+                <h3 className="font-pinyon text-6xl text-white mb-2 text-center italic font-bold">Make-it Up!</h3>
+                <p className="text-white font-pinyon text-4xl mb-8">Tenuto da: Terry Paradise</p>
+                <a
+                  href="https://wa.me/393922752576"
+                  target="_blank"
+                  className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-quicksand hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                >
+                  <MessageCircle className="w-6 h-6 inline-block mr-2" /> ISCRIVITI ORA
+                </a>
               </div>
             </div>
           </div>
@@ -348,52 +341,30 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider uppercase text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider uppercase text-shadow-3d">
               INFORMAZIONI E CONTATTI
             </h2>
-            <div className="space-y-12 text-lg mb-12 max-w-md mx-auto">
-
+            <div className="space-y-12 text-lg">
               <div className="flex items-start gap-4 text-left">
-                <MapPin className="w-6 h-6 text-white mt-1" />
+                <MapPin className="w-8 h-8 text-white mt-1" />
                 <div className="font-quicksand">
-                  <p className="font-playfair text-4xl text-white mb-1">Location:</p>
+                  <p className="font-pinyon text-5xl text-white mb-1">Location:</p>
                   <p className="text-white/90">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
-                  <a
-                    href={mapsLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-[#0b46d0] transition-colors duration-300 underline decoration-white/20 hover:decoration-[#0b46d0] text-base"
-                  >
-                    Apri su Google Maps →
-                  </a>
+                  <a href={mapsLink} target="_blank" className="text-white hover:text-[#0b46d0] underline decoration-white/20 transition-all">Apri su Google Maps →</a>
                 </div>
               </div>
-
               <div className="flex items-start gap-4 text-left">
-                <Instagram className="w-6 h-6 text-white mt-1" />
+                <Instagram className="w-8 h-8 text-white mt-1" />
                 <div className="font-quicksand">
-                  <p className="font-playfair text-4xl text-white mb-1">Pagina Ufficiale:</p>
-                  <a
-                    href={instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-[#0b46d0] transition-colors duration-300 underline decoration-white/20 hover:decoration-[#0b46d0]"
-                  >
-                    @pescara_burlesque_festival
-                  </a>
+                  <p className="font-pinyon text-5xl text-white mb-1">Pagina Ufficiale:</p>
+                  <a href={instagramUrl} target="_blank" className="text-white hover:text-[#0b46d0] underline decoration-white/20 transition-all">@pescara_burlesque_festival</a>
                 </div>
               </div>
-
               <div className="flex items-start gap-4 text-left">
-                <Mail className="w-6 h-6 text-white mt-1" />
+                <Mail className="w-8 h-8 text-white mt-1" />
                 <div className="font-quicksand">
-                  <p className="font-playfair text-4xl text-white mb-1">Email:</p>
-                  <a
-                    href={`mailto:${emailAddress}`}
-                    className="text-white hover:text-[#0b46d0] transition-colors duration-300 underline decoration-white/20 hover:decoration-[#0b46d0]"
-                  >
-                    {emailAddress}
-                  </a>
+                  <p className="font-pinyon text-5xl text-white mb-1">Email:</p>
+                  <a href={`mailto:${emailAddress}`} className="text-white hover:text-[#0b46d0] underline decoration-white/20 transition-all">{emailAddress}</a>
                 </div>
               </div>
             </div>
