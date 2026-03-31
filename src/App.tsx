@@ -343,44 +343,44 @@ function App() {
       {/* Page 4 - Contacts */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-          <div className="max-w-3xl mx-auto text-center w-full">
-            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-12 tracking-wider text-shadow-3d">
+          <div className="max-w-2xl mx-auto w-full">
+            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center">
               Informazioni e Contatti
             </h2>
 
-            <div className="space-y-12 w-full max-w-lg mx-auto">
+            <div className="space-y-12 px-4 md:px-0">
 
               {/* Location Block */}
-              <div className="flex flex-col items-center text-center space-y-3">
-                <MapPin className="w-10 h-10 text-white" />
-                <div className="font-quicksand">
-                  <p className="font-pinyon text-5xl text-white mb-2">Location:</p>
+              <div className="flex items-start gap-6">
+                <MapPin className="w-10 h-10 text-white shrink-0 mt-2" />
+                <div className="font-quicksand text-left">
+                  <p className="font-pinyon text-5xl text-white mb-2 leading-none">Location:</p>
                   <p className="text-white/90 mb-2 leading-relaxed">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a href={mapsLink} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold">Apri su Google Maps →</a>
                 </div>
               </div>
 
               {/* Instagram Block */}
-              <div className="flex flex-col items-center text-center space-y-3">
-                <Instagram className="w-10 h-10 text-white" />
-                <div className="font-quicksand">
-                  <p className="font-pinyon text-5xl text-white mb-2">Pagina Ufficiale:</p>
-                  <a href={instagramUrl} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold">@pescara_burlesque_festival</a>
+              <div className="flex items-start gap-6">
+                <Instagram className="w-10 h-10 text-white shrink-0 mt-2" />
+                <div className="font-quicksand text-left">
+                  <p className="font-pinyon text-5xl text-white mb-2 leading-none">Pagina Ufficiale:</p>
+                  <a href={instagramUrl} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold break-all">@pescara_burlesque_festival</a>
                 </div>
               </div>
 
               {/* Email Block */}
-              <div className="flex flex-col items-center text-center space-y-3">
-                <Mail className="w-10 h-10 text-white" />
-                <div className="font-quicksand">
-                  <p className="font-pinyon text-5xl text-white mb-2">Email:</p>
+              <div className="flex items-start gap-6">
+                <Mail className="w-10 h-10 text-white shrink-0 mt-2" />
+                <div className="font-quicksand text-left">
+                  <p className="font-pinyon text-5xl text-white mb-2 leading-none">Email:</p>
                   <a href={`mailto:${emailAddress}`} className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold break-all">{emailAddress}</a>
                 </div>
               </div>
 
             </div>
 
-            <div className="border-t border-white/20 pt-8 mt-16">
+            <div className="border-t border-white/20 pt-8 mt-20 text-center">
               <p className="text-white/50 text-sm font-quicksand">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
