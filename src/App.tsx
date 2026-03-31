@@ -343,35 +343,44 @@ function App() {
       {/* Page 4 - Contacts */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider text-shadow-3d">
+          <div className="max-w-3xl mx-auto text-center w-full">
+            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-12 tracking-wider text-shadow-3d">
               Informazioni e Contatti
             </h2>
-            <div className="space-y-12 text-lg">
-              <div className="flex items-start gap-4 text-left">
-                <MapPin className="w-8 h-8 text-white mt-1" />
+
+            <div className="space-y-12 w-full max-w-lg mx-auto">
+
+              {/* Location Block */}
+              <div className="flex flex-col items-center text-center space-y-3">
+                <MapPin className="w-10 h-10 text-white" />
                 <div className="font-quicksand">
-                  <p className="font-pinyon text-5xl text-white mb-1">Location:</p>
-                  <p className="text-white/90">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
-                  <a href={mapsLink} target="_blank" className="text-white hover:text-[#0b46d0] underline decoration-white/20 transition-all">Apri su Google Maps →</a>
+                  <p className="font-pinyon text-5xl text-white mb-2">Location:</p>
+                  <p className="text-white/90 mb-2 leading-relaxed">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  <a href={mapsLink} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold">Apri su Google Maps →</a>
                 </div>
               </div>
-              <div className="flex items-start gap-4 text-left">
-                <Instagram className="w-8 h-8 text-white mt-1" />
+
+              {/* Instagram Block */}
+              <div className="flex flex-col items-center text-center space-y-3">
+                <Instagram className="w-10 h-10 text-white" />
                 <div className="font-quicksand">
-                  <p className="font-pinyon text-5xl text-white mb-1">Pagina Ufficiale:</p>
-                  <a href={instagramUrl} target="_blank" className="text-white hover:text-[#0b46d0] underline decoration-white/20 transition-all">@pescara_burlesque_festival</a>
+                  <p className="font-pinyon text-5xl text-white mb-2">Pagina Ufficiale:</p>
+                  <a href={instagramUrl} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold">@pescara_burlesque_festival</a>
                 </div>
               </div>
-              <div className="flex items-start gap-4 text-left">
-                <Mail className="w-8 h-8 text-white mt-1" />
+
+              {/* Email Block */}
+              <div className="flex flex-col items-center text-center space-y-3">
+                <Mail className="w-10 h-10 text-white" />
                 <div className="font-quicksand">
-                  <p className="font-pinyon text-5xl text-white mb-1">Email:</p>
-                  <a href={`mailto:${emailAddress}`} className="text-white hover:text-[#0b46d0] underline decoration-white/20 transition-all">{emailAddress}</a>
+                  <p className="font-pinyon text-5xl text-white mb-2">Email:</p>
+                  <a href={`mailto:${emailAddress}`} className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold break-all">{emailAddress}</a>
                 </div>
               </div>
+
             </div>
-            <div className="border-t border-white/20 pt-8 mt-12">
+
+            <div className="border-t border-white/20 pt-8 mt-16">
               <p className="text-white/50 text-sm font-quicksand">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
