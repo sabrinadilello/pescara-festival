@@ -262,7 +262,7 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center uppercase text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-white/30 pb-4 text-center text-shadow-3d">
               IL CAST
             </h2>
 
@@ -314,7 +314,7 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-white/30 pb-4 uppercase text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-white/30 pb-4 text-shadow-3d">
               WORKSHOP
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
@@ -341,7 +341,7 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider uppercase text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider text-shadow-3d">
               INFORMAZIONI E CONTATTI
             </h2>
             <div className="space-y-12 text-lg">
