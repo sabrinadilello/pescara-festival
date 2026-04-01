@@ -97,12 +97,13 @@ function App() {
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-[#25a3e9] to-[#061c57] text-white pb-24 font-quicksand">
+    <div className="min-h-screen bg-gradient-to-b from-white via-[#25a3e9] to-[#061c57] text-white pb-24 font-montserrat">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Quicksand:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:wght@400&family=Montserrat:wght@400&display=swap');
         
         .font-pinyon { font-family: 'Pinyon Script', cursive; }
-        .font-quicksand { font-family: 'Quicksand', sans-serif; }
+        .font-garamond { font-family: 'EB Garamond', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
         .text-shadow-3d {
           text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0px 0px 8px rgba(0,0,0,0.2);
@@ -174,7 +175,7 @@ function App() {
                   }`}
               />
               <span
-                className={`font-quicksand text-[10px] font-bold uppercase tracking-widest mt-1 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
+                className={`font-montserrat text-[10px] uppercase tracking-widest mt-1 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
                   }`}
               >
                 {item.label}
@@ -197,13 +198,13 @@ function App() {
               />
             </div>
 
-            <div className="text-2xl md:text-3xl mb-2 font-light italic font-quicksand uppercase tracking-widest">
+            <div className="text-2xl md:text-3xl mb-2 font-garamond uppercase tracking-widest">
               II EDIZIONE
             </div>
-            <div className="text-2xl md:text-3xl mb-8 font-quicksand tracking-widest font-bold">
+            <div className="text-2xl md:text-3xl mb-8 font-garamond tracking-wide">
               una produzione di Matisse Royale
             </div>
-            <p className="text-xl md:text-3xl font-quicksand mb-12 italic font-semibold">
+            <p className="text-2xl md:text-4xl font-garamond mb-12 italic">
               La notte più glamour dell’Adriatico
             </p>
 
@@ -220,42 +221,40 @@ function App() {
               </button>
             </div>
 
-            <div className="text-lg md:text-xl leading-relaxed mb-12 text-left max-w-3xl mx-auto space-y-6 font-quicksand">
+            <div className="text-lg md:text-xl leading-relaxed mb-12 text-left max-w-3xl mx-auto space-y-6 font-montserrat">
               <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
               <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
               <p className="italic pt-6">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
             </div>
 
-            {/* Sezione Data e Location - Testo pulito in Quicksand */}
             <div className="border-t border-b border-[#061c57]/20 py-8 mb-10 text-[#061c57]">
-              <div className="text-2xl md:text-3xl font-quicksand mb-4 font-bold tracking-wide">
+              <div className="text-2xl md:text-3xl font-garamond mb-4 tracking-wide">
                 Sabato 16 maggio ore 21:00
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-lg md:text-xl font-quicksand">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-lg md:text-xl font-montserrat">
                 <MapPin className="w-6 h-6" />
-                <span className="font-bold text-xl md:text-2xl tracking-wide">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
+                <span className="text-xl md:text-2xl tracking-wide">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
               <a
                 href={mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-5 text-[#061c57] hover:text-[#D4AF37] transition-all duration-300 underline decoration-[#061c57]/30 font-bold"
+                className="inline-block mt-5 text-[#061c57] hover:text-[#D4AF37] transition-all duration-300 underline decoration-[#061c57]/30 font-montserrat"
               >
                 Apri su Google Maps →
               </a>
             </div>
 
-            {/* Sezione Prenotazioni - Tornata in bianco su blu scuro */}
             <div className="border-4 border-white p-8 bg-white/5 text-white">
-              <h3 className="text-4xl md:text-5xl font-quicksand font-bold mb-4 tracking-tighter">Prenotazioni</h3>
-              <p className="text-sm md:text-base font-quicksand mb-8 max-w-xl mx-auto leading-relaxed opacity-80">
+              <h3 className="text-4xl md:text-5xl font-garamond mb-4">Prenotazioni</h3>
+              <p className="text-sm md:text-base font-montserrat mb-8 max-w-xl mx-auto leading-relaxed opacity-80">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-quicksand hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
               >
                 PRENOTA ORA
               </a>
@@ -282,19 +281,19 @@ function App() {
               <button onClick={() => openModal(['/images/madrina.jpeg'], 0)} className="cursor-zoom-in group">
                 <img src="/images/madrina.jpeg" alt="Elektra Show" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
-              <p className="text-3xl md:text-4xl text-white italic mt-8 font-quicksand font-bold">🔥 La Dea dello Spettacolo! 🔥</p>
-              <p className="text-center font-quicksand text-xl md:text-2xl mt-4 opacity-90">Elektra Show è la Madrina del Festival</p>
+              <p className="text-3xl md:text-4xl text-white italic mt-8 font-garamond">🔥 La Dea dello Spettacolo! 🔥</p>
+              <p className="text-center font-garamond text-xl md:text-2xl mt-4 opacity-90">Elektra Show è la Madrina del Festival</p>
             </div>
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-quicksand text-3xl font-bold text-[#D4AF37] border-b border-white/20 pb-3 hover:text-white transition-colors duration-300">
-                  <span className="uppercase tracking-widest">Performer</span>
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-garamond text-3xl text-[#D4AF37] border-b border-white/20 pb-3 hover:text-white transition-colors duration-300">
+                  <span className="uppercase tracking-widest">PERFORMER</span>
                   <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
                 {openSection === 'performer' && (
                   <div className="py-4 text-center">
-                    <p className="text-center text-lg italic text-white/70 mb-8 font-quicksand">Un assaggio del piacere che ti attende… scorri le immagini.</p>
+                    <p className="text-center text-lg italic text-white/70 mb-8 font-montserrat">Un assaggio del piacere che ti attende… scorri le immagini.</p>
                     <Swiper
                       modules={[Navigation, Pagination]} loop={true} spaceBetween={20} slidesPerView={2} navigation pagination={{ clickable: true }}
                       breakpoints={{ 640: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }}
@@ -328,12 +327,12 @@ function App() {
                 <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover ${imageBorderClass}`} />
               </button>
               <div className="max-w-2xl w-full">
-                <h3 className="text-4xl md:text-5xl text-white mb-2 text-center italic font-quicksand font-bold">Make-it Up!</h3>
-                <p className="text-white font-quicksand text-xl md:text-2xl mb-8">Tenuto da: Terry Paradise</p>
+                <h3 className="text-4xl md:text-5xl text-white mb-2 text-center italic font-garamond">Make-it Up!</h3>
+                <p className="text-white font-garamond text-xl md:text-2xl mb-8">Tenuto da: Terry Paradise</p>
                 <a
                   href="https://wa.me/393922752576"
                   target="_blank"
-                  className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-bold font-quicksand hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                  className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
                 >
                   <MessageCircle className="w-6 h-6 inline-block mr-2" /> ISCRIVITI ORA
                 </a>
@@ -355,33 +354,33 @@ function App() {
 
               <div className="flex items-start gap-6">
                 <MapPin className="w-10 h-10 text-white shrink-0 mt-2" />
-                <div className="font-quicksand text-left">
-                  <p className="text-2xl md:text-3xl text-[#D4AF37] font-bold mb-2 leading-none uppercase tracking-tighter">Location:</p>
-                  <p className="text-white/90 mb-2 leading-relaxed text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
-                  <a href={mapsLink} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold">Apri su Google Maps →</a>
+                <div className="font-montserrat text-left">
+                  <p className="text-2xl md:text-3xl text-[#D4AF37] font-garamond mb-2 leading-none">LOCATION:</p>
+                  <p className="text-white/90 mb-2 leading-relaxed text-lg font-montserrat">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  <a href={mapsLink} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-montserrat">Apri su Google Maps →</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-6">
                 <Instagram className="w-10 h-10 text-white shrink-0 mt-2" />
-                <div className="font-quicksand text-left">
-                  <p className="text-2xl md:text-3xl text-[#D4AF37] font-bold mb-2 leading-none uppercase tracking-tighter">Pagina Ufficiale:</p>
-                  <a href={instagramUrl} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold break-all text-lg">@pescara_burlesque_festival</a>
+                <div className="font-montserrat text-left">
+                  <p className="text-2xl md:text-3xl text-[#D4AF37] font-garamond mb-2 leading-none">PAGINA UFFICIALE:</p>
+                  <a href={instagramUrl} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-montserrat break-all text-lg">@pescara_burlesque_festival</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-6">
                 <Mail className="w-10 h-10 text-white shrink-0 mt-2" />
-                <div className="font-quicksand text-left">
-                  <p className="text-2xl md:text-3xl text-[#D4AF37] font-bold mb-2 leading-none uppercase tracking-tighter">Email:</p>
-                  <a href={`mailto:${emailAddress}`} className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-bold break-all text-lg">{emailAddress}</a>
+                <div className="font-montserrat text-left">
+                  <p className="text-2xl md:text-3xl text-[#D4AF37] font-garamond mb-2 leading-none">EMAIL:</p>
+                  <a href={`mailto:${emailAddress}`} className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-montserrat break-all text-lg">{emailAddress}</a>
                 </div>
               </div>
 
             </div>
 
             <div className="border-t border-white/20 pt-8 mt-20 text-center">
-              <p className="text-white/50 text-sm font-quicksand">
+              <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
             </div>
