@@ -99,7 +99,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#25a3e9] to-[#061c57] text-white pb-24 font-montserrat">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:wght@400&family=Montserrat:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:wght@400&family=Montserrat:wght@400;700&display=swap');
         
         .font-pinyon { font-family: 'Pinyon Script', cursive; }
         .font-garamond { font-family: 'EB Garamond', serif; }
@@ -198,7 +198,7 @@ function App() {
               />
             </div>
 
-            <div className="text-2xl md:text-3xl mb-2 font-garamond uppercase tracking-widest text-[#0b46d0]">
+            <div className="text-2xl md:text-3xl mb-2 font-garamond italic uppercase tracking-widest text-[#0b46d0]">
               II EDIZIONE
             </div>
             <div className="text-2xl md:text-3xl mb-8 font-garamond tracking-wide text-[#0b46d0]">
@@ -277,12 +277,27 @@ function App() {
               </button>
             </div>
 
-            <div className="mb-12 text-center">
+            <div className="mb-20 text-center">
               <button onClick={() => openModal(['/images/madrina.jpeg'], 0)} className="cursor-zoom-in group">
                 <img src="/images/madrina.jpeg" alt="Elektra Show" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <p className="text-3xl md:text-4xl text-white italic mt-8 font-garamond">🔥 La Dea dello Spettacolo! 🔥</p>
               <p className="text-center font-garamond text-xl md:text-2xl mt-4 opacity-90">Elektra Show è la Madrina del Festival</p>
+            </div>
+
+            <div className="mb-20 text-center font-montserrat">
+              <button onClick={() => openModal(['/images/host.jpeg'], 0)} className="cursor-zoom-in group mb-8">
+                <img src="/images/host.jpeg" alt="Stefano Cirulli" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
+              </button>
+              <div className="text-white">
+                <p className="text-2xl md:text-3xl font-bold uppercase tracking-widest text-[#D4AF37] mb-2">THE HOST</p>
+                <p className="text-3xl md:text-4xl font-bold mb-8">Stefano Cirulli</p>
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed opacity-90">
+                  <p>Stefano Cirulli, cantante, musicista e autentico mattatore di palco, è la voce che accompagnerà il pubblico in una serata carica di energia e spettacolo. Con carisma e presenza scenica, guida lo show tra ritmo, ironia e momenti sorprendenti.</p>
+                  <p>Con il microfono in una mano e il cuore nell’altra, conduce gli spettatori in un viaggio fatto di musica, emozioni e intrattenimento, trasformando ogni istante in un’esperienza coinvolgente e indimenticabile.</p>
+                </div>
+                <p className="text-xl md:text-2xl font-bold italic text-[#D4AF37] mt-8">Energy. Rhythm. Show.</p>
+              </div>
             </div>
 
             <div className="space-y-8 mt-16">
