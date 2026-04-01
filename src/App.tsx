@@ -379,13 +379,16 @@ function App() {
       {/* Page 4 - Contacts */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-          <div className="max-w-2xl mx-auto w-full">
+          {/* Aumentato il max-w a 4xl per permettere al blocco di "partire" più a sinistra */}
+          <div className="max-w-4xl mx-auto w-full px-4 md:px-10">
             <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center">
               Informazioni e Contatti
             </h2>
 
-            <div className="space-y-10 px-4 md:px-0">
+            {/* Container allineato a sinistra con spaziatura Excelsior */}
+            <div className="space-y-10">
 
+              {/* LOCATION */}
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
@@ -397,6 +400,7 @@ function App() {
                 </div>
               </div>
 
+              {/* PAGINA UFFICIALE */}
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
@@ -412,6 +416,7 @@ function App() {
                 </div>
               </div>
 
+              {/* EMAIL */}
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
