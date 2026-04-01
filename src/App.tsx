@@ -378,22 +378,22 @@ function App() {
 
       {/* Page 4 - Contacts */}
       {currentPage === 4 && (
-        <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-          {/* Aumentato il max-w a 4xl per permettere al blocco di "partire" più a sinistra */}
-          <div className="max-w-4xl mx-auto w-full px-4 md:px-10">
-            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center">
+        <section className="min-h-screen flex flex-col items-start justify-center px-8 md:px-20 py-12">
+          <div className="w-full max-w-4xl">
+            {/* Il titolo rimane centrato rispetto alla larghezza totale */}
+            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
               Informazioni e Contatti
             </h2>
 
-            {/* Container allineato a sinistra con spaziatura Excelsior */}
-            <div className="space-y-10">
+            {/* Container dei contatti allineato a sinistra */}
+            <div className="space-y-10 w-full">
 
               {/* LOCATION */}
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0]">LOCATION:</p>
-                  <p className="text-white font-montserrat">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base">LOCATION:</p>
+                  <p className="text-white font-montserrat text-base md:text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#D4AF37] transition-colors underline text-base font-montserrat">
                     Apri su Google Maps →
                   </a>
@@ -404,12 +404,12 @@ function App() {
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0]">PAGINA UFFICIALE:</p>
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat"
+                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
                   >
                     @pescara_burlesque_festival
                   </a>
@@ -420,10 +420,10 @@ function App() {
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0]">EMAIL:</p>
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
-                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat"
+                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
                   >
                     {emailAddress}
                   </a>
@@ -432,7 +432,7 @@ function App() {
 
             </div>
 
-            <div className="border-t border-white/20 pt-8 mt-20 text-center">
+            <div className="border-t border-white/20 pt-8 mt-20 text-center w-full">
               <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
