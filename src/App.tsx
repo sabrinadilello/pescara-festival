@@ -246,7 +246,8 @@ function App() {
 
             <div className="border-4 border-white p-8 bg-white/5 text-white">
               <h3 className="font-pinyon text-5xl mb-4">Prenotazioni</h3>
-              <p className="text-lg md:text-xl font-quicksand mb-8 max-w-2xl mx-auto leading-relaxed">
+              {/* Testo più piccolo e leggermente trasparente */}
+              <p className="text-sm md:text-base font-quicksand mb-8 max-w-xl mx-auto leading-relaxed opacity-80">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
               <a
