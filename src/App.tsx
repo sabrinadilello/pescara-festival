@@ -204,7 +204,7 @@ function App() {
             <div className="text-2xl md:text-3xl mb-8 font-garamond tracking-wide text-[#0b46d0]">
               una produzione di Matisse Royale
             </div>
-            <p className="text-2xl md:text-4xl font-garamond mb-12 italic text-[#0b46d0]">
+            <p className="text-2xl md:text-4xl font-pinyon mb-12 italic text-[#0b46d0]">
               La notte più glamour dell’Adriatico
             </p>
 
