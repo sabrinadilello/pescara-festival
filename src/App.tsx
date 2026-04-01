@@ -239,7 +239,7 @@ function App() {
                 href={mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-5 text-violet-600 hover:text-[#D4AF37] transition-all duration-300 underline decoration-white/30 font-montserrat"
+                className="inline-block mt-5 text-[#061c57] hover:text-[#D4AF37] transition-all duration-300 underline decoration-white/30 font-montserrat"
               >
                 Apri su Google Maps →
               </a>
