@@ -380,33 +380,33 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-2xl mx-auto w-full">
-            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center">
+            <h2 className="font-pinyon text-5xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider text-shadow-3d text-center">
               Informazioni e Contatti
             </h2>
 
-            <div className="space-y-12 px-4 md:px-0">
+            <div className="space-y-10 px-4 md:px-0">
 
-              <div className="flex items-start gap-6">
-                <MapPin className="w-10 h-10 text-[#0b46d0] shrink-0 mt-2" />
+              <div className="flex items-start gap-5">
+                <MapPin className="w-6 h-6 text-[#0b46d0] shrink-0 mt-1" />
                 <div className="font-montserrat text-left">
-                  <p className="text-2xl md:text-3xl text-[#0b46d0] font-garamond mb-2 leading-none">LOCATION:</p>
-                  <p className="text-white mb-2 leading-relaxed text-lg font-montserrat">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  <p className="text-base md:text-lg text-[#0b46d0] font-garamond mb-1 leading-none uppercase tracking-widest">LOCATION:</p>
+                  <p className="text-white mb-1 leading-relaxed text-lg font-montserrat">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a href={mapsLink} target="_blank" className="text-[#061c57] hover:text-[#D4AF37] underline decoration-[#061c57] transition-all font-montserrat">Apri su Google Maps →</a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-6">
-                <Instagram className="w-10 h-10 text-[#0b46d0] shrink-0 mt-2" />
+              <div className="flex items-start gap-5">
+                <Instagram className="w-6 h-6 text-[#0b46d0] shrink-0 mt-1" />
                 <div className="font-montserrat text-left">
-                  <p className="text-2xl md:text-3xl text-[#0b46d0] font-garamond mb-2 leading-none">PAGINA UFFICIALE:</p>
+                  <p className="text-base md:text-lg text-[#0b46d0] font-garamond mb-1 leading-none uppercase tracking-widest">PAGINA UFFICIALE:</p>
                   <a href={instagramUrl} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-montserrat break-all text-lg">@pescara_burlesque_festival</a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-6">
-                <Mail className="w-10 h-10 text-[#0b46d0] shrink-0 mt-2" />
+              <div className="flex items-start gap-5">
+                <Mail className="w-6 h-6 text-[#0b46d0] shrink-0 mt-2" />
                 <div className="font-montserrat text-left">
-                  <p className="text-2xl md:text-3xl text-[#0b46d0] font-garamond mb-2 leading-none">EMAIL:</p>
+                  <p className="text-base md:text-lg text-[#0b46d0] font-garamond mb-2 leading-none uppercase tracking-widest">EMAIL:</p>
                   <a href={`mailto:${emailAddress}`} className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-montserrat break-all text-lg">{emailAddress}</a>
                 </div>
               </div>
