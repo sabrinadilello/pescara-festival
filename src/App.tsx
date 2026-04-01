@@ -388,7 +388,7 @@ function App() {
             </h2>
 
             {/* Wrapper dei contatti: centrato nella pagina, ma testo allineato a sinistra */}
-            <div className="space-y-10 w-full max-w-fit md:max-w-md lg:max-w-lg">
+            <div className="space-y-10 w-full max-w-fit">
 
               {/* LOCATION */}
               <div className="flex items-start gap-4">
@@ -414,6 +414,22 @@ function App() {
                     className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
                   >
                     @pescara_burlesque_festival
+                  </a>
+                </div>
+              </div>
+
+              {/* DIREZIONE ARTISTICA */}
+              <div className="flex items-start gap-4">
+                <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <div className="text-left">
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">DIREZIONE ARTISTICA:</p>
+                  <a
+                    href="https://www.instagram.com/matisse_royale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
+                  >
+                    @matisse_royale
                   </a>
                 </div>
               </div>
