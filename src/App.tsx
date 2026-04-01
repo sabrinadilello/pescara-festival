@@ -197,7 +197,6 @@ function App() {
               />
             </div>
 
-            {/* Testi scuri per contrasto con lo sfondo chiaro in alto */}
             <div className="text-2xl md:text-3xl text-[#061c57] mb-2 font-light italic font-quicksand uppercase tracking-widest">
               II EDIZIONE
             </div>
@@ -227,7 +226,6 @@ function App() {
               <p className="italic text-[#061c57] pt-6">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
             </div>
 
-            {/* Da qui in poi lo sfondo diventa blu scuro, quindi torniamo al bianco */}
             <div className="border-t border-b border-white/30 py-6 mb-8 text-white">
               <div className="text-2xl font-pinyon mb-4 font-bold">
                 Sabato 16 maggio ore 21:00
@@ -247,7 +245,10 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5 text-white">
-              <h3 className="font-pinyon text-5xl mb-6">Prenotazioni</h3>
+              <h3 className="font-pinyon text-5xl mb-4">Prenotazioni</h3>
+              <p className="text-lg md:text-xl font-quicksand mb-8 max-w-2xl mx-auto leading-relaxed">
+                Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
+              </p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
