@@ -239,7 +239,7 @@ function App() {
                 href={mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-5 text-[#061c57] hover:text-[#D4AF37] transition-all duration-300 underline decoration-white/30 font-montserrat"
+                className="inline-block mt-5 text-[#061c57] hover:text-[#D4AF37] transition-all duration-300 underline decoration-[#061c57] font-montserrat"
               >
                 Apri su Google Maps →
               </a>
@@ -391,7 +391,7 @@ function App() {
                 <div className="font-montserrat text-left">
                   <p className="text-2xl md:text-3xl text-[#0b46d0] font-garamond mb-2 leading-none">LOCATION:</p>
                   <p className="text-white mb-2 leading-relaxed text-lg font-montserrat">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
-                  <a href={mapsLink} target="_blank" className="text-white hover:text-[#D4AF37] underline decoration-white/20 transition-all font-montserrat">Apri su Google Maps →</a>
+                  <a href={mapsLink} target="_blank" className="text-[#061c57] hover:text-[#D4AF37] underline decoration-[#061c57] transition-all font-montserrat">Apri su Google Maps →</a>
                 </div>
               </div>
 
