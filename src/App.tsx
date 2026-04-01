@@ -378,21 +378,23 @@ function App() {
 
       {/* Page 4 - Contacts */}
       {currentPage === 4 && (
-        <section className="min-h-screen flex flex-col items-start justify-center px-8 md:px-20 py-12">
-          <div className="w-full max-w-4xl">
-            {/* Il titolo rimane centrato rispetto alla larghezza totale */}
+        <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
+          {/* Contenitore principale centrato */}
+          <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
+
+            {/* Titolo sempre al centro */}
             <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
               Informazioni e Contatti
             </h2>
 
-            {/* Container dei contatti allineato a sinistra */}
-            <div className="space-y-10 w-full">
+            {/* Wrapper dei contatti: centrato nella pagina, ma testo allineato a sinistra */}
+            <div className="space-y-10 w-full max-w-fit md:max-w-md lg:max-w-lg">
 
               {/* LOCATION */}
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base">LOCATION:</p>
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">LOCATION:</p>
                   <p className="text-white font-montserrat text-base md:text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#D4AF37] transition-colors underline text-base font-montserrat">
                     Apri su Google Maps →
@@ -404,7 +406,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base">PAGINA UFFICIALE:</p>
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
                     target="_blank"
@@ -420,7 +422,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base">EMAIL:</p>
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
                     className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
@@ -432,6 +434,7 @@ function App() {
 
             </div>
 
+            {/* Footer finale */}
             <div className="border-t border-white/20 pt-8 mt-20 text-center w-full">
               <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
