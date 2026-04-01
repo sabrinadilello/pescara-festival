@@ -197,13 +197,14 @@ function App() {
               />
             </div>
 
-            <div className="text-2xl md:text-3xl text-white mb-2 font-light italic font-quicksand uppercase tracking-widest">
+            {/* Testi scuri per contrasto con lo sfondo chiaro in alto */}
+            <div className="text-2xl md:text-3xl text-[#061c57] mb-2 font-light italic font-quicksand uppercase tracking-widest">
               II EDIZIONE
             </div>
-            <div className="font-pinyon text-3xl text-white mb-8 tracking-wider">
+            <div className="font-pinyon text-3xl text-[#061c57] mb-8 tracking-wider">
               una produzione di Matisse Royale
             </div>
-            <p className="text-2xl md:text-4xl text-sky-100 font-pinyon mb-12 italic">
+            <p className="text-2xl md:text-4xl text-[#061c57] font-pinyon mb-12 italic">
               La notte più glamour dell’Adriatico
             </p>
 
@@ -220,17 +221,18 @@ function App() {
               </button>
             </div>
 
-            <div className="text-lg md:text-xl leading-relaxed mb-12 text-left max-w-3xl mx-auto space-y-6 font-quicksand">
+            <div className="text-lg md:text-xl leading-relaxed mb-12 text-left max-w-3xl mx-auto space-y-6 font-quicksand text-[#061c57]">
               <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
               <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
-              <p className="italic text-sky-100 pt-6">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
+              <p className="italic text-[#061c57] pt-6">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
             </div>
 
-            <div className="border-t border-b border-white/30 py-6 mb-8">
-              <div className="text-white text-2xl font-pinyon mb-4 font-bold">
+            {/* Da qui in poi lo sfondo diventa blu scuro, quindi torniamo al bianco */}
+            <div className="border-t border-b border-white/30 py-6 mb-8 text-white">
+              <div className="text-2xl font-pinyon mb-4 font-bold">
                 Sabato 16 maggio ore 21:00
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-white text-lg md:text-xl font-quicksand">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-lg md:text-xl font-quicksand">
                 <MapPin className="w-6 h-6 text-white" />
                 <span className="font-pinyon text-4xl">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
@@ -238,16 +240,14 @@ function App() {
                 href={mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-white hover:text-[#0b46d0] transition-all duration-300 underline decoration-white/30 hover:decoration-[#0b46d0]"
+                className="inline-block mt-4 text-white hover:text-[#D4AF37] transition-all duration-300 underline decoration-white/30"
               >
                 Apri su Google Maps →
               </a>
             </div>
 
-            <div className="border-4 border-white p-8 bg-white/5">
-              {/* TITOLO BIANCO */}
-              <h3 className="font-pinyon text-5xl text-white mb-6">Prenotazioni</h3>
-              {/* TASTO BIANCO SCRITTA BLU */}
+            <div className="border-4 border-white p-8 bg-white/5 text-white">
+              <h3 className="font-pinyon text-5xl mb-6">Prenotazioni</h3>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
@@ -350,7 +350,6 @@ function App() {
 
             <div className="space-y-12 px-4 md:px-0">
 
-              {/* Location Block */}
               <div className="flex items-start gap-6">
                 <MapPin className="w-10 h-10 text-white shrink-0 mt-2" />
                 <div className="font-quicksand text-left">
@@ -360,7 +359,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Instagram Block */}
               <div className="flex items-start gap-6">
                 <Instagram className="w-10 h-10 text-white shrink-0 mt-2" />
                 <div className="font-quicksand text-left">
@@ -369,7 +367,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Email Block */}
               <div className="flex items-start gap-6">
                 <Mail className="w-10 h-10 text-white shrink-0 mt-2" />
                 <div className="font-quicksand text-left">
