@@ -386,22 +386,22 @@ function App() {
           {/* Contenitore principale centrato */}
           <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
 
-            {/* Titolo sempre al centro */}
+            {/* Titolo sempre al centro con glow bianco */}
             <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
               Informazioni e Contatti
             </h2>
 
-            {/* Wrapper dei contatti: centrato nella pagina, ma testo allineato a sinistra */}
+            {/* Wrapper dei contatti */}
             <div className="space-y-10 w-full max-w-fit">
 
               {/* LOCATION */}
               <div className="flex items-start gap-4">
-                {/* Icona Dorata con bagliore bianco */}
                 <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
                   <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">LOCATION:</p>
                   <p className="text-white font-montserrat text-base md:text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
-                  <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#D4AF37] transition-colors underline text-base font-montserrat">
+                  {/* Hover modificato in Blu Reale #25a3e9 */}
+                  <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#25a3e9] transition-colors underline text-base font-montserrat">
                     Apri su Google Maps →
                   </a>
                 </div>
@@ -412,11 +412,12 @@ function App() {
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
                   <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">PAGINA UFFICIALE:</p>
+                  {/* Hover modificato in Blu Reale #25a3e9 */}
                   <a
                     href={instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
+                    className="text-white hover:text-[#25a3e9] transition-colors underline font-montserrat text-base md:text-lg"
                   >
                     @pescara_burlesque_festival
                   </a>
@@ -428,11 +429,12 @@ function App() {
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
                   <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">DIREZIONE ARTISTICA:</p>
+                  {/* Hover modificato in Blu Reale #25a3e9 */}
                   <a
                     href="https://www.instagram.com/matisse_royale"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
+                    className="text-white hover:text-[#25a3e9] transition-colors underline font-montserrat text-base md:text-lg"
                   >
                     @matisse_royale
                   </a>
@@ -443,10 +445,11 @@ function App() {
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase text-[#D4AF37] text-shadow-3d">EMAIL:</p>
+                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">EMAIL:</p>
+                  {/* Hover modificato in Blu Reale #25a3e9 */}
                   <a
                     href={`mailto:${emailAddress}`}
-                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
+                    className="text-white hover:text-[#25a3e9] transition-colors underline font-montserrat text-base md:text-lg"
                   >
                     {emailAddress}
                   </a>
