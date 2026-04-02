@@ -83,10 +83,10 @@ function App() {
   ];
 
   const primaSerataImages = [
-    'cartolina Astrey&Halley.jpg', 'cartolina baby blond.jpg', 'cartolina.jpg', 'ele.jpg',
-    'Ellis.jpg', 'lady like.jpg', 'Lady Malvasia.jpg', 'lady Xena.jpg',
-    'lilith lyla.jpg', 'nina.jpg', 'ralda.jpg', 'romi.jpg', 'Sinti.jpg'
-  ].map(img => `/images/prima serata/${img}`);
+    'colette.jpg', 'gigi.jpeg',
+    'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg',
+    'sciagura.jpeg'
+  ].map(img => `/images/performer/${img}`);
 
   // Classe CSS comune per i bordi delle immagini
   const imageBorderClass = "border-4 border-white hover:border-[#D4AF37] active:border-[#D4AF37] transition-colors duration-300 shadow-lg";
