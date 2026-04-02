@@ -391,13 +391,11 @@ function App() {
               Informazioni e Contatti
             </h2>
 
-            {/* Wrapper dei contatti: centrato nella pagina e testi centrati */}
-            <div className="space-y-10 w-full flex flex-col items-center text-center">
-
+            <div className="space-y-10 w-full max-w-fit">
               {/* LOCATION */}
-              <div className="flex flex-col items-center gap-2">
-                <MapPin className="w-6 h-6 text-[#0b46d0]" />
-                <div className="text-center">
+              <div className="flex items-start gap-4">
+                <MapPin className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <div className="text-left">
                   <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">LOCATION:</p>
                   <p className="text-white font-montserrat text-base md:text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#D4AF37] transition-colors underline text-base font-montserrat">
@@ -407,9 +405,9 @@ function App() {
               </div>
 
               {/* PAGINA UFFICIALE */}
-              <div className="flex flex-col items-center gap-2">
-                <Instagram className="w-6 h-6 text-[#0b46d0]" />
-                <div className="text-center">
+              <div className="flex items-start gap-4">
+                <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <div className="text-left">
                   <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
@@ -423,9 +421,9 @@ function App() {
               </div>
 
               {/* DIREZIONE ARTISTICA */}
-              <div className="flex flex-col items-center gap-2">
-                <Instagram className="w-6 h-6 text-[#0b46d0]" />
-                <div className="text-center">
+              <div className="flex items-start gap-4">
+                <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <div className="text-left">
                   <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">DIREZIONE ARTISTICA:</p>
                   <a
                     href="https://www.instagram.com/matisse_royale"
@@ -439,9 +437,9 @@ function App() {
               </div>
 
               {/* EMAIL */}
-              <div className="flex flex-col items-center gap-2">
-                <Mail className="w-6 h-6 text-[#0b46d0]" />
-                <div className="text-center">
+              <div className="flex items-start gap-4">
+                <Mail className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <div className="text-left">
                   <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
@@ -451,10 +449,8 @@ function App() {
                   </a>
                 </div>
               </div>
-
             </div>
 
-            {/* Footer finale */}
             <div className="border-t border-white/20 pt-8 mt-20 text-center w-full">
               <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
