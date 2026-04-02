@@ -95,7 +95,7 @@ function App() {
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(to_bottom,#b0ddf6_0%,#25a3e9_15%,#003ba3_40%,#061c57_70%,#112149_100%)] text-white pb-24 font-montserrat">
+    <div className="min-h-screen bg-[linear-gradient(to_bottom,#b0ddf6_2%,#25a3e9_15%,#003ba3_30%,#061c57_60%,#112149_100%)] text-white pb-24 font-montserrat">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:wght@400&family=Montserrat:wght@400&display=swap');
         
