@@ -391,12 +391,15 @@ function App() {
               Informazioni e Contatti
             </h2>
 
+            {/* Wrapper dei contatti: centrato nella pagina, ma testo allineato a sinistra */}
             <div className="space-y-10 w-full max-w-fit">
+
               {/* LOCATION */}
               <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                {/* Icona Dorata con bagliore bianco */}
+                <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">LOCATION:</p>
+                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">LOCATION:</p>
                   <p className="text-white font-montserrat text-base md:text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#D4AF37] transition-colors underline text-base font-montserrat">
                     Apri su Google Maps →
@@ -406,9 +409,9 @@ function App() {
 
               {/* PAGINA UFFICIALE */}
               <div className="flex items-start gap-4">
-                <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">PAGINA UFFICIALE:</p>
+                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
                     target="_blank"
@@ -422,9 +425,9 @@ function App() {
 
               {/* DIREZIONE ARTISTICA */}
               <div className="flex items-start gap-4">
-                <Instagram className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">DIREZIONE ARTISTICA:</p>
+                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">DIREZIONE ARTISTICA:</p>
                   <a
                     href="https://www.instagram.com/matisse_royale"
                     target="_blank"
@@ -438,9 +441,9 @@ function App() {
 
               {/* EMAIL */}
               <div className="flex items-start gap-4">
-                <Mail className="w-6 h-6 text-[#0b46d0] flex-shrink-0 mt-1" />
+                <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase">EMAIL:</p>
+                  <p className="font-garamond text-[#0b46d0] tracking-widest text-sm md:text-base uppercase text-[#D4AF37] text-shadow-3d">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
                     className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-base md:text-lg"
@@ -449,8 +452,10 @@ function App() {
                   </a>
                 </div>
               </div>
+
             </div>
 
+            {/* Footer finale */}
             <div className="border-t border-white/20 pt-8 mt-20 text-center w-full">
               <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
