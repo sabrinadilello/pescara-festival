@@ -95,11 +95,9 @@ function App() {
   return (
     <div className="min-h-screen bg-[linear-gradient(to_bottom,#b0ddf6_0%,#25a3e9_25%,#003ba3_50%,#061c57_75%,#112149_100%)] text-white pb-24 font-montserrat">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Allura&family=Pinyon+Script&family=EB+Garamond:wght@400&family=Montserrat:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
         
-        .font-allura { font-family: 'Allura', cursive; }
-        .font-pinyon { font-family: 'Pinyon Script', cursive; }
-        .font-garamond { font-family: 'EB Garamond', serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
         * {
@@ -199,15 +197,14 @@ function App() {
               />
             </div>
 
-            <div className="text-2xl md:text-3xl mb-2 font-garamond italic uppercase tracking-widest text-[#0b46d0]">
+            <div className="text-2xl md:text-3xl mb-2 font-cormorant italic uppercase tracking-widest text-[#0b46d0]">
               II EDIZIONE
             </div>
-            <div className="mb-8 font-garamond tracking-wide text-[#0b46d0]">
-              <span className="text-base md:text-xl block mb-1">una produzione di</span>
-              <span className="text-2xl md:text-3xl font-bold">Matisse Royale</span>
+            <div className="mb-8 font-cormorant tracking-wide text-[#0b46d0]">
+              <span className="text-base md:text-lg block mb-1">una produzione di</span>
+              <span className="text-2xl md:text-3xl block">Matisse Royale</span>
             </div>
-            {/* AGGIORNATO: Font Allura */}
-            <p className="text-4xl md:text-6xl font-allura mb-12 text-[#0b46d0]">
+            <p className="text-3xl md:text-5xl font-cormorant mb-12 italic text-[#0b46d0]">
               La notte più glamour dell’Adriatico
             </p>
 
@@ -224,14 +221,14 @@ function App() {
               </button>
             </div>
 
-            <div className="text-lg md:text-xl leading-relaxed mb-12 text-center max-w-3xl mx-auto space-y-6 font-montserrat text-white">
+            <div className="text-lg md:text-xl leading-relaxed mb-12 text-center max-w-3xl mx-auto space-y-6 font-montserrat text-white text-shadow-3d">
               <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
               <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
-              <p className="italic pt-6">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
+              <p className="italic pt-6 text-center text-sky-100">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
             </div>
 
-            <div className="border-t border-b border-[#061c57]/20 py-8 mb-10 text-white">
-              <div className="text-2xl md:text-3xl font-garamond mb-4 tracking-wide text-center">
+            <div className="border-t border-b border-white/40 py-8 mb-10 text-white">
+              <div className="text-2xl md:text-3xl font-cormorant mb-4 tracking-wide text-center">
                 Sabato 16 maggio ore 21:00
               </div>
               <div className="flex flex-col items-center justify-center gap-3 text-lg md:text-xl font-montserrat text-center">
@@ -248,9 +245,8 @@ function App() {
               </a>
             </div>
 
-            <div className="border-4 border-white p-8 bg-white/5 text-white">
-              {/* AGGIORNATO: Font Allura */}
-              <h3 className="text-5xl md:text-7xl font-allura mb-6 text-center">Prenotazioni</h3>
+            <div className="border-4 border-white p-8 bg-white/5 text-white text-center">
+              <h3 className="text-4xl md:text-6xl font-cormorant mb-6">Prenotazioni</h3>
               <p className="text-sm md:text-base font-montserrat mb-8 max-w-xl mx-auto leading-relaxed opacity-80 text-center">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
@@ -271,7 +267,7 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d">
+            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d">
               Il Cast
             </h2>
 
@@ -281,9 +277,8 @@ function App() {
                 <img src="/images/presentatore.jpg" alt="Matisse Royale" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                {/* AGGIORNATO: Font Allura */}
-                <p className="text-4xl md:text-6xl font-allura text-[#D4AF37] mb-4">PRODUCER</p>
-                <p className="text-3xl md:text-4xl font-pinyon mb-8">Matisse Royale</p>
+                <p className="text-2xl md:text-3xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">PRODUCER</p>
+                <p className="text-4xl md:text-6xl font-cormorant mb-8">Matisse Royale</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed">
                   <p>Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.</p>
                   <p>Dai palchi d’Europa alle luci dell’Excelsior, porta con sé un universo fatto di glamour, poesia e provocazione. Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia.</p>
@@ -297,15 +292,14 @@ function App() {
                 <img src="/images/godmother.jpeg" alt="Candy Rose" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                {/* AGGIORNATO: Font Allura */}
-                <p className="text-4xl md:text-6xl font-allura text-[#D4AF37] mb-4">THE GODMOTHER</p>
-                <p className="text-3xl md:text-4xl font-pinyon mb-8">Candy Rose</p>
+                <p className="text-2xl md:text-3xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">THE GODMOTHER</p>
+                <p className="text-4xl md:text-6xl font-cormorant mb-8">Candy Rose</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90 text-white">
                   <p>Candy Rose incanta con uno sguardo magnetico, un sorriso irresistibile e un’eleganza che si traduce in pura presenza scenica. Artista poliedrica, accompagna il pubblico in atmosfere sensuali e suggestive, distinguendosi per uno stile raffinato e inconfondibile.</p>
                   <p>Ballerina versatile, si avvicina alla danza fin da bambina, intraprendendo un percorso di costante crescita e perfezionamento attraverso stage e collaborazioni con maestri di fama internazionale.</p>
                   <p>Eleganza e charme definiscono la sua essenza: pelle diafana, labbra rosso intenso e un’estetica rétro che la rendono una figura iconica, capace di evocare il fascino senza tempo del burlesque.</p>
                 </div>
-                <p className="text-xl md:text-2xl font-garamond italic text-[#D4AF37] mt-8 text-center">Elegance. Charm. Seduction.</p>
+                <p className="text-2xl md:text-3xl font-cormorant italic text-[#D4AF37] mt-8 text-center">Elegance. Charm. Seduction.</p>
               </div>
             </div>
 
@@ -315,20 +309,19 @@ function App() {
                 <img src="/images/host.jpeg" alt="Stefano Cirulli" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                {/* AGGIORNATO: Font Allura */}
-                <p className="text-4xl md:text-6xl font-allura text-[#D4AF37] mb-4">THE HOST</p>
-                <p className="text-3xl md:text-4xl font-pinyon mb-8">Stefano Cirulli</p>
+                <p className="text-2xl md:text-3xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">THE HOST</p>
+                <p className="text-4xl md:text-6xl font-cormorant mb-8">Stefano Cirulli</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90 text-white">
                   <p>Stefano Cirulli, cantante, musicista e autentico mattatore di palco, è la voce che accompagnerà il pubblico in una serata carica di energia e spettacolo. Con carisma e presenza scenica, guida lo show tra ritmo, ironia e momenti sorprendenti.</p>
                   <p>Con il microfono in una mano e il cuore nell’altra, conduce gli spettatori in un viaggio fatto di musica, emozioni e intrattenimento, trasformando ogni istante in un’esperienza coinvolgente e indimenticabile.</p>
                 </div>
-                <p className="text-xl md:text-2xl font-garamond italic text-[#D4AF37] mt-8 text-center">Energy. Rhythm. Show.</p>
+                <p className="text-2xl md:text-3xl font-cormorant italic text-[#D4AF37] mt-8 text-center">Energy. Rhythm. Show.</p>
               </div>
             </div>
 
             <div className="space-y-8 mt-16 text-center">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-center items-center font-garamond text-3xl border-b border-white/20 pb-3 text-white hover:text-[#D4AF37] active:text-[#D4AF37] transition-colors duration-300">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-center items-center font-cormorant text-3xl md:text-4xl border-b border-white/20 pb-3 text-white hover:text-[#D4AF37] active:text-[#D4AF37] transition-colors duration-300">
                   <span className="uppercase tracking-widest">PERFORMER</span>
                   <ChevronDown className={`ml-4 w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
@@ -360,7 +353,7 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d text-center w-full">
+            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d text-center w-full">
               Workshop
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
@@ -368,8 +361,8 @@ function App() {
                 <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover mx-auto ${imageBorderClass}`} />
               </button>
               <div className="max-w-2xl w-full">
-                <h3 className="text-4xl md:text-5xl text-white mb-2 italic font-garamond">Make-it Up!</h3>
-                <p className="text-white font-garamond text-xl md:text-2xl mb-8">Tenuto da: Terry Paradise</p>
+                <h3 className="text-4xl md:text-6xl text-white mb-2 italic font-cormorant">Make-it Up!</h3>
+                <p className="text-white font-cormorant text-xl md:text-2xl mb-8">Tenuto da: Terry Paradise</p>
                 <a
                   href="https://wa.me/393922752576"
                   target="_blank"
@@ -387,7 +380,8 @@ function App() {
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
-            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
+
+            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
               Informazioni e Contatti
             </h2>
 
@@ -396,7 +390,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">LOCATION:</p>
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">LOCATION:</p>
                   <p className="text-white font-montserrat text-base md:text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
                   <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#25a3e9] transition-colors underline text-base font-montserrat">
                     Apri su Google Maps →
@@ -408,7 +402,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">PAGINA UFFICIALE:</p>
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
                     target="_blank"
@@ -424,7 +418,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">DIREZIONE ARTISTICA:</p>
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">DIREZIONE ARTISTICA:</p>
                   <a
                     href="https://www.instagram.com/matisse_royale"
                     target="_blank"
@@ -440,7 +434,7 @@ function App() {
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">EMAIL:</p>
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
                     className="text-white hover:text-[#25a3e9] transition-colors underline font-montserrat text-base md:text-lg"
