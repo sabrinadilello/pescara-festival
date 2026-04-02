@@ -83,7 +83,7 @@ function App() {
   ];
 
   const primaSerataImages = [
-    'colette.jpg', 'gigi.jpeg', 'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg', 'sciagura.jpeg'
+    'colette.jpeg', 'gigi.jpeg', 'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg', 'sciagura.jpeg'
   ].map(img => `/images/performer/${img}`);
 
   // Classe CSS comune per i bordi delle immagini
