@@ -86,8 +86,8 @@ function App() {
     'colette.jpeg', 'gigi.jpeg', 'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg', 'sciagura.jpeg'
   ].map(img => `/images/performer/${img}`);
 
-  // Classe CSS comune per i bordi delle immagini
-  const imageBorderClass = "border-4 border-white hover:border-[#D4AF37] active:border-[#D4AF37] transition-colors duration-300 shadow-lg";
+  // Classe CSS comune per i bordi delle immagini (Aggiornato a #D4AF36)
+  const imageBorderClass = "border-4 border-white hover:border-[#D4AF36] active:border-[#D4AF36] transition-colors duration-300 shadow-lg";
 
   // Dati di contatto
   const mapsLink = "https://www.google.com/maps/search/?api=1&query=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara";
@@ -113,7 +113,7 @@ function App() {
         }
 
         :root {
-          --swiper-theme-color: #D4AF37; 
+          --swiper-theme-color: #D4AF36; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
           --swiper-pagination-bullet-inactive-opacity: 1;
         }
@@ -126,7 +126,7 @@ function App() {
         >
           <button
             onClick={() => setModalGallery(null)}
-            className="absolute top-4 right-4 text-white hover:text-[#D4AF37] transition-colors z-50"
+            className="absolute top-4 right-4 text-white hover:text-[#D4AF36] transition-colors z-50"
           >
             <X className="w-10 h-10" />
           </button>
@@ -135,7 +135,7 @@ function App() {
             <button
               onClick={showPrevImage}
               disabled={modalGallery.currentIndex === 0}
-              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-white/10 hover:bg-[#D4AF37]/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed z-50"
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-white/10 hover:bg-[#D4AF36]/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed z-50"
             >
               <ChevronLeft className="w-10 h-10" />
             </button>
@@ -148,7 +148,7 @@ function App() {
             <img
               src={modalGallery.images[modalGallery.currentIndex]}
               alt="Ingrandimento"
-              className="w-full h-auto object-contain max-h-[90vh] border-2 border-[#D4AF37]/40"
+              className="w-full h-auto object-contain max-h-[90vh] border-2 border-[#D4AF36]/40"
             />
           </div>
 
@@ -156,7 +156,7 @@ function App() {
             <button
               onClick={showNextImage}
               disabled={modalGallery.currentIndex === modalGallery.images.length - 1}
-              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-white/10 hover:bg-[#D4AF37]/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed z-50"
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-white/10 hover:bg-[#D4AF36]/20 transition-all disabled:opacity-30 disabled:cursor-not-allowed z-50"
             >
               <ChevronRight className="w-10 h-10" />
             </button>
@@ -174,11 +174,11 @@ function App() {
               className="group flex flex-1 flex-col items-center gap-1 px-1 text-xs transition-all duration-300 transform"
             >
               <item.Icon
-                className={`w-6 h-6 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
+                className={`w-6 h-6 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF36]' : 'text-white/40 group-hover:text-[#D4AF36]'
                   }`}
               />
               <span
-                className={`font-montserrat text-[10px] uppercase tracking-widest mt-1 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF37]' : 'text-white/40 group-hover:text-[#D4AF37]'
+                className={`font-montserrat text-[10px] uppercase tracking-widest mt-1 transition-colors duration-300 ${currentPage === item.page ? 'text-[#D4AF36]' : 'text-white/40 group-hover:text-[#D4AF36]'
                   }`}
               >
                 {item.label}
@@ -232,7 +232,7 @@ function App() {
             </div>
 
             <div className="border-t border-b border-[#061c57]/20 py-8 mb-10 text-white">
-              <div className="text-2xl md:text-3xl font-garamond mb-4 tracking-wide">
+              <div className="text-2xl md:text-3xl font-garamond mb-4 tracking-wide text-center">
                 Sabato 16 maggio ore 21:00
               </div>
               <div className="flex flex-col items-center justify-center gap-3 text-lg md:text-xl font-montserrat">
@@ -243,14 +243,14 @@ function App() {
                 href={mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-5 text-white hover:text-[#D4AF37] transition-all duration-300 underline decoration-white/30 font-montserrat"
+                className="inline-block mt-5 text-white hover:text-[#D4AF36] transition-all duration-300 underline decoration-white/30 font-montserrat"
               >
                 Apri su Google Maps →
               </a>
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5 text-white">
-              <h3 className="text-4xl md:text-5xl font-garamond mb-4">Prenotazioni</h3>
+              <h3 className="text-4xl md:text-5xl font-garamond mb-4 text-center">Prenotazioni</h3>
               <p className="text-sm md:text-base font-montserrat mb-8 max-w-xl mx-auto leading-relaxed opacity-80 text-center">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
@@ -258,7 +258,7 @@ function App() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF36] hover:text-black transition-all transform hover:scale-105 shadow-lg"
               >
                 PRENOTA ORA
               </a>
@@ -271,7 +271,7 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF36] mb-12 tracking-wider border-b-2 border-[#D4AF36] pb-4 text-center text-shadow-3d">
               Il Cast
             </h2>
 
@@ -281,7 +281,7 @@ function App() {
                 <img src="/images/presentatore.jpg" alt="Matisse Royale" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF37] uppercase tracking-widest mb-2">PRODUCER</p>
+                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF36] uppercase tracking-widest mb-2">PRODUCER</p>
                 <p className="text-3xl md:text-4xl font-pinyon mb-8">Matisse Royale</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center text-white leading-relaxed">
                   <p>Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.</p>
@@ -296,14 +296,14 @@ function App() {
                 <img src="/images/godmother.jpeg" alt="Candy Rose" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF37] uppercase tracking-widest mb-2">THE GODMOTHER</p>
-                <p className="text-3xl md:text-4xl font-pinyon mb-8">Candy Rose</p>
-                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90">
+                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF36] uppercase tracking-widest mb-2">THE GODMOTHER</p>
+                <p className="text-5xl md:text-6xl font-pinyon mb-8">Candy Rose</p>
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-left leading-relaxed opacity-90">
                   <p>Candy Rose incanta con uno sguardo magnetico, un sorriso irresistibile e un’eleganza che si traduce in pura presenza scenica. Artista poliedrica, accompagna il pubblico in atmosfere sensuali e suggestive, distinguendosi per uno stile raffinato e inconfondibile.</p>
                   <p>Ballerina versatile, si avvicina alla danza fin da bambina, intraprendendo un percorso di costante crescita e perfezionamento attraverso stage e collaborazioni con maestri di fama internazionale.</p>
                   <p>Eleganza e charme definiscono la sua essenza: pelle diafana, labbra rosso intenso e un’estetica rétro che la rendono una figura iconica, capace di evocare il fascino senza tempo del burlesque.</p>
                 </div>
-                <p className="text-xl md:text-2xl font-garamond italic text-[#D4AF37] mt-8 text-center">Elegance. Charm. Seduction.</p>
+                <p className="text-xl md:text-2xl font-garamond italic text-[#D4AF36] mt-8 text-center">Elegance. Charm. Seduction.</p>
               </div>
             </div>
 
@@ -313,21 +313,21 @@ function App() {
                 <img src="/images/host.jpeg" alt="Stefano Cirulli" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF37] uppercase tracking-widest mb-2">THE HOST</p>
-                <p className="text-3xl md:text-4xl font-pinyon mb-8">Stefano Cirulli</p>
-                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90">
+                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF36] uppercase tracking-widest mb-2">THE HOST</p>
+                <p className="text-5xl md:text-6xl font-pinyon mb-8">Stefano Cirulli</p>
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-left leading-relaxed opacity-90">
                   <p>Stefano Cirulli, cantante, musicista e autentico mattatore di palco, è la voce che accompagnerà il pubblico in una serata carica di energia e spettacolo. Con carisma e presenza scenica, guida lo show tra ritmo, ironia e momenti sorprendenti.</p>
                   <p>Con il microfono in una mano e il cuore nell’altra, conduce gli spettatori in un viaggio fatto di musica, emozioni e intrattenimento, trasformando ogni istante in un’esperienza coinvolgente e indimenticabile.</p>
                 </div>
-                <p className="text-xl md:text-2xl font-garamond italic text-[#D4AF37] mt-8 text-center">Energy. Rhythm. Show.</p>
+                <p className="text-xl md:text-2xl font-garamond italic text-[#D4AF36] mt-8 text-center">Energy. Rhythm. Show.</p>
               </div>
             </div>
 
             <div className="space-y-8 mt-16">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-center items-center font-garamond text-3xl border-b border-white/20 pb-3 text-white hover:text-[#D4AF37] active:text-[#D4AF37] transition-colors duration-300">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-garamond text-3xl border-b border-white/20 pb-3 text-white hover:text-[#D4AF36] active:text-[#D4AF36] transition-colors duration-300">
                   <span className="uppercase tracking-widest">PERFORMER</span>
-                  <ChevronDown className={`ml-4 w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
                 {openSection === 'performer' && (
                   <div className="py-4 text-center">
@@ -357,7 +357,7 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d">
+            <h2 className="font-pinyon text-7xl text-[#D4AF36] mb-4 border-b-2 border-[#D4AF36] pb-4 text-shadow-3d">
               Workshop
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
@@ -370,7 +370,7 @@ function App() {
                 <a
                   href="https://wa.me/393922752576"
                   target="_blank"
-                  className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                  className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF36] hover:text-black transition-all transform hover:scale-105 shadow-lg"
                 >
                   <MessageCircle className="w-6 h-6 inline-block mr-2" /> ISCRIVITI ORA
                 </a>
@@ -387,7 +387,7 @@ function App() {
           <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
 
             {/* Titolo sempre al centro con glow bianco */}
-            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
+            <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF36] mb-16 tracking-wider text-shadow-3d text-center w-full">
               Informazioni e Contatti
             </h2>
 
@@ -396,11 +396,10 @@ function App() {
 
               {/* LOCATION */}
               <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+                <MapPin className="w-6 h-6 text-[#D4AF36] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">LOCATION:</p>
+                  <p className="font-garamond text-[#D4AF36] tracking-widest text-sm md:text-base uppercase text-shadow-3d">LOCATION:</p>
                   <p className="text-white font-montserrat text-base md:text-lg">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
-                  {/* Hover modificato in Blu Reale #25a3e9 */}
                   <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="text-[#061c57] hover:text-[#25a3e9] transition-colors underline text-base font-montserrat">
                     Apri su Google Maps →
                   </a>
@@ -409,10 +408,9 @@ function App() {
 
               {/* PAGINA UFFICIALE */}
               <div className="flex items-start gap-4">
-                <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+                <Instagram className="w-6 h-6 text-[#D4AF36] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">PAGINA UFFICIALE:</p>
-                  {/* Hover modificato in Blu Reale #25a3e9 */}
+                  <p className="font-garamond text-[#D4AF36] tracking-widest text-sm md:text-base uppercase text-shadow-3d">PAGINA UFFICIALE:</p>
                   <a
                     href={instagramUrl}
                     target="_blank"
@@ -426,10 +424,9 @@ function App() {
 
               {/* DIREZIONE ARTISTICA */}
               <div className="flex items-start gap-4">
-                <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+                <Instagram className="w-6 h-6 text-[#D4AF36] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">DIREZIONE ARTISTICA:</p>
-                  {/* Hover modificato in Blu Reale #25a3e9 */}
+                  <p className="font-garamond text-[#D4AF36] tracking-widest text-sm md:text-base uppercase text-shadow-3d">DIREZIONE ARTISTICA:</p>
                   <a
                     href="https://www.instagram.com/matisse_royale"
                     target="_blank"
@@ -443,10 +440,9 @@ function App() {
 
               {/* EMAIL */}
               <div className="flex items-start gap-4">
-                <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+                <Mail className="w-6 h-6 text-[#D4AF36] flex-shrink-0 mt-1 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                 <div className="text-left">
-                  <p className="font-garamond text-[#D4AF37] tracking-widest text-sm md:text-base uppercase text-shadow-3d">EMAIL:</p>
-                  {/* Hover modificato in Blu Reale #25a3e9 */}
+                  <p className="font-garamond text-[#D4AF36] tracking-widest text-sm md:text-base uppercase text-shadow-3d">EMAIL:</p>
                   <a
                     href={`mailto:${emailAddress}`}
                     className="text-white hover:text-[#25a3e9] transition-colors underline font-montserrat text-base md:text-lg"
