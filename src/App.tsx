@@ -82,14 +82,12 @@ function App() {
     { page: 4, Icon: Mail, label: 'Contatti' },
   ];
 
-  const primaSerataImages = [
+  const performerImages = [
     'colette.jpeg', 'gigi.jpeg', 'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg', 'sciagura.jpeg'
   ].map(img => `/images/performer/${img}`);
 
-  // Classe CSS comune per i bordi delle immagini
   const imageBorderClass = "border-4 border-white hover:border-[#D4AF37] active:border-[#D4AF37] transition-colors duration-300 shadow-lg";
 
-  // Dati di contatto
   const mapsLink = "https://www.google.com/maps/search/?api=1&query=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara";
   const instagramUrl = "https://www.instagram.com/pescara_burlesque_festival";
   const emailAddress = "pescaraburlesquefestival@gmail.com";
@@ -97,13 +95,13 @@ function App() {
   return (
     <div className="min-h-screen bg-[linear-gradient(to_bottom,#b0ddf6_0%,#25a3e9_25%,#003ba3_50%,#061c57_75%,#112149_100%)] text-white pb-24 font-montserrat">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:wght@400&family=Montserrat:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allura&family=Pinyon+Script&family=EB+Garamond:wght@400&family=Montserrat:wght@400;700&display=swap');
         
+        .font-allura { font-family: 'Allura', cursive; }
         .font-pinyon { font-family: 'Pinyon Script', cursive; }
         .font-garamond { font-family: 'EB Garamond', serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
-        /* Ombreggiatura globale per i testi */
         * {
           text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
@@ -206,9 +204,10 @@ function App() {
             </div>
             <div className="mb-8 font-garamond tracking-wide text-[#0b46d0]">
               <span className="text-base md:text-xl block mb-1">una produzione di</span>
-              <span className="text-2xl md:text-3xl">Matisse Royale</span>
+              <span className="text-2xl md:text-3xl font-bold">Matisse Royale</span>
             </div>
-            <p className="text-2xl md:text-4xl font-pinyon mb-12 italic text-[#0b46d0]">
+            {/* AGGIORNATO: Font Allura */}
+            <p className="text-4xl md:text-6xl font-allura mb-12 text-[#0b46d0]">
               La notte più glamour dell’Adriatico
             </p>
 
@@ -235,7 +234,7 @@ function App() {
               <div className="text-2xl md:text-3xl font-garamond mb-4 tracking-wide text-center">
                 Sabato 16 maggio ore 21:00
               </div>
-              <div className="flex flex-col items-center justify-center gap-3 text-lg md:text-xl font-montserrat">
+              <div className="flex flex-col items-center justify-center gap-3 text-lg md:text-xl font-montserrat text-center">
                 <MapPin className="w-6 h-6" />
                 <span className="text-xl md:text-2xl tracking-wide text-center">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
@@ -250,7 +249,8 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5 text-white">
-              <h3 className="text-4xl md:text-5xl font-garamond mb-4 text-center">Prenotazioni</h3>
+              {/* AGGIORNATO: Font Allura */}
+              <h3 className="text-5xl md:text-7xl font-allura mb-6 text-center">Prenotazioni</h3>
               <p className="text-sm md:text-base font-montserrat mb-8 max-w-xl mx-auto leading-relaxed opacity-80 text-center">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
@@ -281,9 +281,10 @@ function App() {
                 <img src="/images/presentatore.jpg" alt="Matisse Royale" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF37] uppercase tracking-widest mb-2">PRODUCER</p>
+                {/* AGGIORNATO: Font Allura */}
+                <p className="text-4xl md:text-6xl font-allura text-[#D4AF37] mb-4">PRODUCER</p>
                 <p className="text-3xl md:text-4xl font-pinyon mb-8">Matisse Royale</p>
-                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center text-white leading-relaxed">
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed">
                   <p>Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.</p>
                   <p>Dai palchi d’Europa alle luci dell’Excelsior, porta con sé un universo fatto di glamour, poesia e provocazione. Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia.</p>
                 </div>
@@ -296,7 +297,8 @@ function App() {
                 <img src="/images/godmother.jpeg" alt="Candy Rose" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF37] uppercase tracking-widest mb-2">THE GODMOTHER</p>
+                {/* AGGIORNATO: Font Allura */}
+                <p className="text-4xl md:text-6xl font-allura text-[#D4AF37] mb-4">THE GODMOTHER</p>
                 <p className="text-3xl md:text-4xl font-pinyon mb-8">Candy Rose</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90 text-white">
                   <p>Candy Rose incanta con uno sguardo magnetico, un sorriso irresistibile e un’eleganza che si traduce in pura presenza scenica. Artista poliedrica, accompagna il pubblico in atmosfere sensuali e suggestive, distinguendosi per uno stile raffinato e inconfondibile.</p>
@@ -313,7 +315,8 @@ function App() {
                 <img src="/images/host.jpeg" alt="Stefano Cirulli" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF37] uppercase tracking-widest mb-2">THE HOST</p>
+                {/* AGGIORNATO: Font Allura */}
+                <p className="text-4xl md:text-6xl font-allura text-[#D4AF37] mb-4">THE HOST</p>
                 <p className="text-3xl md:text-4xl font-pinyon mb-8">Stefano Cirulli</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90 text-white">
                   <p>Stefano Cirulli, cantante, musicista e autentico mattatore di palco, è la voce che accompagnerà il pubblico in una serata carica di energia e spettacolo. Con carisma e presenza scenica, guida lo show tra ritmo, ironia e momenti sorprendenti.</p>
@@ -323,11 +326,11 @@ function App() {
               </div>
             </div>
 
-            <div className="space-y-8 mt-16">
+            <div className="space-y-8 mt-16 text-center">
               <div>
-                <button onClick={() => toggleSection('performer')} className="w-full flex justify-between items-center text-left font-garamond text-3xl border-b border-white/20 pb-3 text-white hover:text-[#D4AF37] active:text-[#D4AF37] transition-colors duration-300">
+                <button onClick={() => toggleSection('performer')} className="w-full flex justify-center items-center font-garamond text-3xl border-b border-white/20 pb-3 text-white hover:text-[#D4AF37] active:text-[#D4AF37] transition-colors duration-300">
                   <span className="uppercase tracking-widest">PERFORMER</span>
-                  <ChevronDown className={`w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`ml-4 w-8 h-8 transition-transform duration-300 ${openSection === 'performer' ? 'rotate-180' : ''}`} />
                 </button>
                 {openSection === 'performer' && (
                   <div className="py-4 text-center">
@@ -337,9 +340,9 @@ function App() {
                       breakpoints={{ 640: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }}
                       className="w-full pb-12"
                     >
-                      {primaSerataImages.map((src, index) => (
+                      {performerImages.map((src, index) => (
                         <SwiperSlide key={index}>
-                          <button onClick={() => openModal(primaSerataImages, index)} className="w-full cursor-zoom-in">
+                          <button onClick={() => openModal(performerImages, index)} className="w-full cursor-zoom-in">
                             <img src={src} alt="Performer" className={`w-full h-auto object-cover aspect-[3/4] ${imageBorderClass}`} />
                           </button>
                         </SwiperSlide>
@@ -355,18 +358,18 @@ function App() {
 
       {/* Page 3 - Workshop */}
       {currentPage === 3 && (
-        <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d">
+        <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-pinyon text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d text-center w-full">
               Workshop
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
               <button onClick={() => openModal(['/images/terryparadise.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
-                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover ${imageBorderClass}`} />
+                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover mx-auto ${imageBorderClass}`} />
               </button>
               <div className="max-w-2xl w-full">
-                <h3 className="text-4xl md:text-5xl text-white mb-2 text-center italic font-garamond">Make-it Up!</h3>
-                <p className="text-white font-garamond text-xl md:text-2xl mb-8 text-center">Tenuto da: Terry Paradise</p>
+                <h3 className="text-4xl md:text-5xl text-white mb-2 italic font-garamond">Make-it Up!</h3>
+                <p className="text-white font-garamond text-xl md:text-2xl mb-8">Tenuto da: Terry Paradise</p>
                 <a
                   href="https://wa.me/393922752576"
                   target="_blank"
@@ -383,17 +386,12 @@ function App() {
       {/* Page 4 - Contacts */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-          {/* Contenitore principale centrato */}
           <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
-
-            {/* Titolo sempre al centro con glow bianco - Mantenuto come i titoli delle altre pagine */}
             <h2 className="font-pinyon text-6xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
               Informazioni e Contatti
             </h2>
 
-            {/* Wrapper dei contatti: centrato ma allineato a sinistra internamente */}
             <div className="space-y-10 w-full max-w-fit">
-
               {/* LOCATION */}
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
@@ -451,10 +449,8 @@ function App() {
                   </a>
                 </div>
               </div>
-
             </div>
 
-            {/* Footer finale */}
             <div className="border-t border-white/20 pt-8 mt-20 text-center w-full">
               <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
