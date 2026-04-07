@@ -357,12 +357,11 @@ function App() {
               Workshop
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
-              <button onClick={() => openModal(['/images/terryparadise.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
-                <img src="/images/terryparadise.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover mx-auto ${imageBorderClass}`} />
+              <button onClick={() => openModal(['/images/workshop.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
+                <img src="/images/workshop.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover mx-auto ${imageBorderClass}`} />
               </button>
               <div className="max-w-2xl w-full">
-                <h3 className="text-4xl md:text-6xl text-white mb-2 italic font-cormorant">Make-it Up!</h3>
-                <p className="text-white font-cormorant text-xl md:text-2xl mb-8">Tenuto da: Terry Paradise</p>
+                <h3 className="text-4xl md:text-6xl text-white mb-2 italic font-cormorant">✨ WORKSHOP DI FLOORWORK – CON MATISSE ROYALE ✨</h3>
                 <a
                   href="https://wa.me/393922752576"
                   target="_blank"
