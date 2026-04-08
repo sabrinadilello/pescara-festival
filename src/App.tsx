@@ -187,24 +187,21 @@ function App() {
       {/* Page 1 - Home */}
       {currentPage === 1 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
-          <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
 
-            <div className="mb-8 flex justify-center">
-              <img
-                src="/images/titolo.png"
-                alt="Pescara Burlesque Festival"
-                className="w-full max-w-3xl h-auto drop-shadow-2xl"
-              />
-            </div>
+            {/* 1. Titolo Testuale in Sentence Case, Dorato, con ombra e linea dorata */}
+            <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d">
+              Pescara Burlesque Festival
+            </h1>
 
-            <div className="text-2xl md:text-3xl mb-2 font-cormorant italic uppercase tracking-widest text-[#0b46d0]">
-              II EDIZIONE
-            </div>
-            <div className="mb-8 font-cormorant tracking-wide text-[#0b46d0]">
-              <span className="text-base md:text-lg block mb-1">una produzione di</span>
+            {/* 2. "una produzione di" più vicino a "Matisse Royale" (interlinea ridotta) e senza grassetto */}
+            <div className="mb-8 font-cormorant tracking-wide text-[#0b46d0] leading-tight">
+              <span className="text-base md:text-lg block">una produzione di</span>
               <span className="text-2xl md:text-3xl block">Matisse Royale</span>
             </div>
-            <p className="text-3xl md:text-5xl font-cormorant mb-12 italic text-[#0b46d0]">
+
+            {/* 3. Dorato, font Cormorant Italic */}
+            <p className="text-3xl md:text-5xl font-cormorant mb-12 italic text-[#D4AF37]">
               La notte più glamour dell’Adriatico
             </p>
 
@@ -224,17 +221,25 @@ function App() {
             <div className="text-lg md:text-xl leading-relaxed mb-12 text-center max-w-3xl mx-auto space-y-6 font-montserrat text-white text-shadow-3d">
               <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
               <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
-              <p className="italic pt-6 text-center text-sky-100">Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨</p>
+
+              {/* 4. Dorato, font Cormorant Italic */}
+              <p className="italic pt-6 text-center font-cormorant text-2xl md:text-3xl text-[#D4AF37]">
+                Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨
+              </p>
             </div>
 
-            <div className="border-t border-b border-white/40 py-8 mb-10 text-white">
+            {/* 5. Colore della linea cambiato in Oro (#D4AF37) */}
+            <div className="border-t border-b border-[#D4AF37] py-8 mb-10 text-white">
               <div className="text-2xl md:text-3xl font-cormorant mb-4 tracking-wide text-center">
                 Sabato 16 maggio ore 21:00
               </div>
-              <div className="flex flex-col items-center justify-center gap-3 text-lg md:text-xl font-montserrat">
-                <MapPin className="w-6 h-6" />
-                <span className="text-xl md:text-2xl tracking-wide text-center">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
+
+              {/* 5. Carattere diminuito e Icona sulla stessa linea del testo */}
+              <div className="flex flex-row items-center justify-center gap-2 text-base md:text-lg font-montserrat text-center">
+                <MapPin className="w-5 h-5 shrink-0" />
+                <span className="tracking-wide">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
+
               <a
                 href={mapsLink}
                 target="_blank"
@@ -245,16 +250,18 @@ function App() {
               </a>
             </div>
 
-            <div className="border-4 border-white p-8 bg-white/5 text-white text-center">
-              <h3 className="text-4xl md:text-6xl font-cormorant mb-6">Prenotazioni</h3>
+            <div className="border-4 border-white p-8 bg-white/5 text-white">
+              <h3 className="text-4xl md:text-6xl font-cormorant mb-6 uppercase">Prenotazioni</h3>
               <p className="text-sm md:text-base font-montserrat mb-8 max-w-xl mx-auto leading-relaxed opacity-80 text-center">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
+
+              {/* 6. Tasto: al passaggio scritta bianca su sfondo oro */}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-white transition-all transform hover:scale-105 shadow-lg"
               >
                 PRENOTA ORA
               </a>
