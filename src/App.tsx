@@ -231,7 +231,7 @@ function App() {
               <div className="text-2xl md:text-3xl font-cormorant mb-4 tracking-wide text-center">
                 Sabato 16 maggio ore 21:00
               </div>
-              <div className="flex flex-col items-center justify-center gap-3 text-lg md:text-xl font-montserrat text-center">
+              <div className="flex flex-col items-center justify-center gap-3 text-lg md:text-xl font-montserrat">
                 <MapPin className="w-6 h-6" />
                 <span className="text-xl md:text-2xl tracking-wide text-center">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
@@ -279,7 +279,7 @@ function App() {
               <div className="text-white">
                 <p className="text-2xl md:text-3xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">PRODUCER</p>
                 <p className="text-4xl md:text-6xl font-cormorant mb-8">Matisse Royale</p>
-                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed">
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center text-white leading-relaxed">
                   <p>Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.</p>
                   <p>Dai palchi d’Europa alle luci dell’Excelsior, porta con sé un universo fatto di glamour, poesia e provocazione. Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia.</p>
                 </div>
@@ -292,7 +292,7 @@ function App() {
                 <img src="/images/godmother.jpeg" alt="Candy Rose" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
               </button>
               <div className="text-white">
-                <p className="text-2xl md:text-3xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">THE GODMOTHER</p>
+                <p className="text-2xl md:text-3xl font-garamond text-[#D4AF37] uppercase tracking-widest mb-2">THE GODMOTHER</p>
                 <p className="text-4xl md:text-6xl font-cormorant mb-8">Candy Rose</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90 text-white">
                   <p>Candy Rose incanta con uno sguardo magnetico, un sorriso irresistibile e un’eleganza che si traduce in pura presenza scenica. Artista poliedrica, accompagna il pubblico in atmosfere sensuali e suggestive, distinguendosi per uno stile raffinato e inconfondibile.</p>
@@ -311,7 +311,7 @@ function App() {
               <div className="text-white">
                 <p className="text-2xl md:text-3xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">THE HOST</p>
                 <p className="text-4xl md:text-6xl font-cormorant mb-8">Stefano Cirulli</p>
-                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed opacity-90 text-white">
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-left leading-relaxed opacity-90 text-white">
                   <p>Stefano Cirulli, cantante, musicista e autentico mattatore di palco, è la voce che accompagnerà il pubblico in una serata carica di energia e spettacolo. Con carisma e presenza scenica, guida lo show tra ritmo, ironia e momenti sorprendenti.</p>
                   <p>Con il microfono in una mano e il cuore nell’altra, conduce gli spettatori in un viaggio fatto di musica, emozioni e intrattenimento, trasformando ogni istante in un’esperienza coinvolgente e indimenticabile.</p>
                 </div>
@@ -353,22 +353,52 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d text-center w-full">
+            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d text-center w-full uppercase">
               Workshop
             </h2>
             <div className="mt-12 flex flex-col items-center gap-8">
               <button onClick={() => openModal(['/images/workshop.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
-                <img src="/images/workshop.jpeg" alt="Terry Paradise" className={`w-full h-auto object-cover mx-auto ${imageBorderClass}`} />
+                <img src="/images/workshop.jpeg" alt="Workshop Floorwork" className={`w-full h-auto object-cover mx-auto ${imageBorderClass}`} />
               </button>
-              <div className="max-w-2xl w-full">
-                <h3 className="text-4xl md:text-6xl text-white mb-2 italic font-cormorant">✨ WORKSHOP DI FLOORWORK – CON MATISSE ROYALE ✨</h3>
-                <a
-                  href="https://wa.me/393922752576"
-                  target="_blank"
-                  className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
-                >
-                  <MessageCircle className="w-6 h-6 inline-block mr-2" /> ISCRIVITI ORA
-                </a>
+              <div className="max-w-3xl w-full text-center font-montserrat">
+                <h3 className="text-3xl md:text-5xl text-white mb-8 italic font-cormorant tracking-tight">✨ WORKSHOP DI FLOORWORK – CON MATISSE ROYALE ✨</h3>
+
+                <div className="space-y-6 text-lg md:text-xl leading-relaxed text-white/90">
+                  <p>C’è un momento, sulla scena, in cui tutto si rallenta… e ogni dettaglio diventa essenziale.</p>
+                  <p>È nel contatto con il pavimento che il movimento si fa più intimo, più profondo, quasi sussurrato. Qui il floorwork incontra l’eleganza del burlesque, dando vita a una danza fatta di linee morbide, gesti sospesi e silenzi carichi di significato.</p>
+                  <p>Il corpo scivola, si adagia, si inarca con naturalezza, trasformando ogni transizione in un quadro, ogni pausa in uno sguardo che cattura. Il pavimento diventa scena e confidente, superficie e poesia.</p>
+                  <p>Non è solo tecnica: è presenza. Non è solo movimento: è intenzione.</p>
+                  <p>Un’esperienza pensata per chi desidera esplorare una dimensione più sofisticata della performance, sviluppare fluidità nei movimenti a terra e rendere ogni gesto carico di significato scenico.</p>
+                </div>
+
+                <div className="mt-12 p-6 border-2 border-[#D4AF37]/30 bg-black/20 text-left md:text-center inline-block w-full">
+                  <p className="text-2xl font-cormorant text-[#D4AF37] mb-4 uppercase tracking-widest">📍 INFO WORKSHOP</p>
+                  <div className="space-y-2 text-lg">
+                    <p>🗓 Sabato 16 Maggio</p>
+                    <p>🕒 Ore 15:00</p>
+                    <p>📍 Teatro Cavour – Via Camillo Conte di Cavour 9, Pescara</p>
+                    <p className="pt-4">⏱ Durata: 1 ora e 15 minuti</p>
+                    <p className="text-2xl text-[#D4AF37] font-cormorant">💸 Costo: 25€</p>
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                  <p className="text-2xl font-cormorant text-[#D4AF37] mb-4 uppercase tracking-widest font-bold">🎟 PRENOTAZIONE</p>
+                  <p className="mb-8 text-xl">📲 Prenota ora al: <span className="font-bold">392 2752576</span></p>
+
+                  <a
+                    href="https://wa.me/393922752576"
+                    target="_blank"
+                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                  >
+                    <MessageCircle className="w-6 h-6 inline-block mr-2" /> ISCRIVITI ORA
+                  </a>
+
+                  <div className="mt-12 space-y-6">
+                    <p className="text-lg opacity-80">I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco… partendo da terra.</p>
+                    <p className="text-2xl italic font-cormorant text-[#D4AF37]">✨ Perché la vera seduzione… non ha bisogno di alzare la voce.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -380,7 +410,7 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
 
-            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full">
+            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-16 tracking-wider text-shadow-3d text-center w-full uppercase">
               Informazioni e Contatti
             </h2>
 
