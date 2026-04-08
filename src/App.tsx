@@ -86,7 +86,6 @@ function App() {
     'colette.jpeg', 'gigi.jpeg', 'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg', 'sciagura.jpeg'
   ].map(img => `/images/performer/${img}`);
 
-  // Uniformato a border-4 come Roma
   const imageBorderClass = "border-4 border-white hover:border-[#D4AF37] active:border-[#D4AF37] transition-all duration-300 shadow-lg";
 
   const mapsLink = "https://www.google.com/maps/search/?api=1&query=Teatro+Cavour+Via+Camillo+Benso+Conte+di+Cavour+9+Pescara";
@@ -107,6 +106,11 @@ function App() {
 
         .text-shadow-3d {
           text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6), 0px 0px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Ombra dorata per il punto 2 */
+        .gold-glow {
+          text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.8);
         }
 
         :root {
@@ -162,7 +166,6 @@ function App() {
         </div>
       )}
 
-      {/* Navigazione Uniformata (Punto 5) */}
       <nav className="fixed inset-x-0 bottom-0 z-40 bg-black/60 backdrop-blur-md border-t border-white/20">
         <div className="flex items-center py-3">
           {navItems.map((item) => (
@@ -191,16 +194,16 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
 
-            <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-4 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d">
+            {/* Punto 5: Titolo in MAIUSCOLO */}
+            <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-4 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d uppercase">
               Pescara Burlesque Festival
             </h1>
 
-            <div className="text-2xl md:text-3xl text-[#0b46d0] mb-2 font-light tracking-widest uppercase">
+            {/* Punto 2: Bianco con ombra dorata */}
+            <div className="text-2xl md:text-3xl text-white mb-2 font-light tracking-widest uppercase gold-glow">
               II EDIZIONE
             </div>
-
-            {/* Firma Uniformata a Roma (Punto 2) */}
-            <div className="font-cormorant text-base text-[#D4AF37]/70 mb-8 italic tracking-wider">
+            <div className="font-cormorant text-base text-white mb-8 italic tracking-wider gold-glow">
               una produzione di Matisse Royale
             </div>
 
@@ -208,20 +211,20 @@ function App() {
               La notte più glamour dell’Adriatico
             </p>
 
-            <div className="mb-12 border-4 border-white p-4 bg-white/5 inline-block">
+            {/* Punto 1: Rimessa parte originale locandina */}
+            <div className="mb-12 inline-flex overflow-hidden">
               <button
                 onClick={() => openModal(['/images/locandina II ed..jpg'], 0)}
-                className="cursor-zoom-in"
+                className={`cursor-zoom-in block ${imageBorderClass}`}
               >
                 <img
                   src="/images/locandina II ed..jpg"
                   alt="Locandina Pescara Burlesque Festival"
-                  className="max-w-full h-auto max-h-96 object-contain"
+                  className="max-w-full h-auto max-h-[500px] object-contain block"
                 />
               </button>
             </div>
 
-            {/* Testo Uniformato (Punto 1) */}
             <div className="text-lg md:text-xl leading-relaxed mb-12 text-center max-w-3xl mx-auto space-y-6 font-montserrat text-white text-shadow-3d">
               <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
               <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
@@ -236,7 +239,6 @@ function App() {
                 Sabato 16 maggio ore 21:00
               </div>
 
-              {/* Icona Uniformata (Punto 4) */}
               <div className="flex flex-row items-center justify-center gap-3 text-white text-lg md:text-xl font-montserrat">
                 <MapPin className="w-6 h-6 shrink-0 text-[#D4AF37]" />
                 <span className="tracking-wide">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
@@ -253,17 +255,18 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5 text-white">
-              <h3 className="text-4xl md:text-5xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
+              {/* Punto 4: Grandezza uniformata a Roma (text-3xl) */}
+              <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
               <p className="text-lg mb-6 font-montserrat">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
 
-              {/* Pulsante Uniformato (Punto 3) */}
+              {/* Punto 3: Rimosso font-bold */}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg font-bold"
+                className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 PRENOTA ORA
               </a>
@@ -280,7 +283,6 @@ function App() {
               Il Cast
             </h2>
 
-            {/* CAST ITEMS - Uniformati come Roma (Punto 1 e 4) */}
             {[
               {
                 role: "PRODUCER",
@@ -389,7 +391,6 @@ function App() {
                 <div className="pt-6 space-y-6 text-white/90 text-lg md:text-xl leading-relaxed">
                   <p>C’è un momento, sulla scena, in cui tutto si rallenta… e ogni dettaglio diventa essenziale.</p>
                   <p>È nel contatto con il pavimento che il movimento si fa più intimo, più profondo, quasi sussurrato. Qui il floorwork incontra l’eleganza del burlesque, dando vita a una danza fatta di linee morbide, gesti sospesi e silenzi carichi di significato.</p>
-                  <p>Il corpo scivola, si adagia, si inarca con naturalezza, trasformando ogni transizione in un quadro, ogni pausa in uno sguardo che cattura. Il pavimento diventa scena e confidente, superficie e poesia.</p>
                 </div>
 
                 <div className="mt-8 space-y-2">
@@ -397,16 +398,17 @@ function App() {
                   <p className="text-white text-base md:text-lg">Teatro Cavour – Via Camillo Conte di Cavour 9, Pescara</p>
                 </div>
 
-                {/* Box Uniformato (Punto 1 e 3) */}
                 <div className="mt-16 border-4 border-white p-8 bg-white/5 text-white text-center">
-                  <h3 className="text-3xl md:text-4xl font-cormorant mb-6 uppercase tracking-wider">Iscrizione Workshop</h3>
+                  {/* Punto 4: Grandezza uniformata a Roma (text-3xl) */}
+                  <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
                   <p className="text-lg md:text-xl font-montserrat mb-8 max-w-xl mx-auto leading-relaxed text-center">
                     I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco.
                   </p>
+                  {/* Punto 3: Rimosso font-bold */}
                   <a
                     href="https://wa.me/393922752576"
                     target="_blank"
-                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg uppercase font-bold"
+                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg uppercase"
                   >
                     <MessageCircle className="w-6 h-6 inline-block mr-2" /> Iscriviti ora
                   </a>
@@ -426,7 +428,6 @@ function App() {
               Informazioni e Contatti
             </h2>
 
-            {/* Spaziature Contatti Uniformate (Punto 1 e 4) */}
             <div className="space-y-8 w-full max-w-fit">
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
