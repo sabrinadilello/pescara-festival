@@ -363,7 +363,7 @@ function App() {
               <div className="max-w-3xl w-full text-center font-montserrat">
                 <h3 className="text-3xl md:text-5xl text-white mb-8 italic font-cormorant tracking-tight">✨ WORKSHOP DI FLOORWORK – CON MATISSE ROYALE ✨</h3>
 
-                <div className="space-y-6 text-lg md:text-xl leading-relaxed text-white/90">
+                <div className="space-y-6 text-lg md:text-xl leading-relaxed text-white/90 mb-16">
                   <p>C’è un momento, sulla scena, in cui tutto si rallenta… e ogni dettaglio diventa essenziale.</p>
                   <p>È nel contatto con il pavimento che il movimento si fa più intimo, più profondo, quasi sussurrato. Qui il floorwork incontra l’eleganza del burlesque, dando vita a una danza fatta di linee morbide, gesti sospesi e silenzi carichi di significato.</p>
                   <p>Il corpo scivola, si adagia, si inarca con naturalezza, trasformando ogni transizione in un quadro, ogni pausa in uno sguardo che cattura. Il pavimento diventa scena e confidente, superficie e poesia.</p>
@@ -371,7 +371,7 @@ function App() {
                   <p>Un’esperienza pensata per chi desidera esplorare una dimensione più sofisticata della performance, sviluppare fluidità nei movimenti a terra e rendere ogni gesto carico di significato scenico.</p>
                 </div>
 
-                <div className="mt-12 p-6 border-2 border-[#D4AF37]/30 bg-black/20 text-left md:text-center inline-block w-full">
+                <div className="mt-12 p-6 border-2 border-[#D4AF37]/30 bg-black/20 text-center inline-block w-full">
                   <p className="text-2xl font-cormorant text-[#D4AF37] mb-4 uppercase tracking-widest">📍 INFO WORKSHOP</p>
                   <div className="space-y-2 text-lg">
                     <p>🗓 Sabato 16 Maggio</p>
@@ -382,22 +382,23 @@ function App() {
                   </div>
                 </div>
 
-                <div className="mt-12">
-                  <p className="text-2xl font-cormorant text-[#D4AF37] mb-4 uppercase tracking-widest font-bold">🎟 PRENOTAZIONE</p>
-                  <p className="mb-8 text-xl">📲 Prenota ora al: <span className="font-bold">392 2752576</span></p>
-
+                {/* Box di Iscrizione uniformato alla Home */}
+                <div className="mt-16 border-4 border-white p-8 bg-white/5 text-white text-center">
+                  <h3 className="text-4xl md:text-5xl font-cormorant mb-6 uppercase">Iscrizione Workshop</h3>
+                  <p className="text-sm md:text-base font-montserrat mb-8 max-w-xl mx-auto leading-relaxed opacity-80">
+                    I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco… partendo da terra.
+                  </p>
                   <a
                     href="https://wa.me/393922752576"
                     target="_blank"
-                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg"
+                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg uppercase"
                   >
-                    <MessageCircle className="w-6 h-6 inline-block mr-2" /> ISCRIVITI ORA
+                    <MessageCircle className="w-6 h-6 inline-block mr-2" /> Iscriviti ora
                   </a>
 
-                  <div className="mt-12 space-y-6">
-                    <p className="text-lg opacity-80">I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco… partendo da terra.</p>
-                    <p className="text-2xl italic font-cormorant text-[#D4AF37]">✨ Perché la vera seduzione… non ha bisogno di alzare la voce.</p>
-                  </div>
+                  <p className="mt-8 text-xl italic font-cormorant text-[#D4AF37]">
+                    ✨ Perché la vera seduzione… non ha bisogno di alzare la voce.
+                  </p>
                 </div>
               </div>
             </div>
@@ -461,6 +462,7 @@ function App() {
 
               {/* EMAIL */}
               <div className="flex items-start gap-4">
+                <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1 invisible" />
                 <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] tracking-widest text-sm md:text-base uppercase">EMAIL:</p>
