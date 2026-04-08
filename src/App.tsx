@@ -351,19 +351,36 @@ function App() {
 
       {/* Page 3 - Workshop */}
       {currentPage === 3 && (
-        <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-4 border-b-2 border-[#D4AF37] pb-4 text-shadow-3d text-center w-full uppercase">
+        <section className="min-h-screen flex flex-col items-center px-6 py-20">
+          <div className="max-w-4xl mx-auto w-full">
+            <h2 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d uppercase">
               Workshop
             </h2>
-            <div className="mt-12 flex flex-col items-center gap-8">
+
+            <div className="flex flex-col items-center gap-12">
               <button onClick={() => openModal(['/images/workshop.jpeg'], 0)} className="cursor-zoom-in group w-full max-w-2xl">
                 <img src="/images/workshop.jpeg" alt="Workshop Floorwork" className={`w-full h-auto object-cover mx-auto ${imageBorderClass}`} />
               </button>
-              <div className="max-w-3xl w-full text-center font-montserrat">
-                <h3 className="text-3xl md:text-5xl text-white mb-8 italic font-cormorant tracking-tight">✨ WORKSHOP DI FLOORWORK – CON MATISSE ROYALE ✨</h3>
 
-                <div className="space-y-6 text-lg md:text-xl leading-relaxed text-white/90 mb-16">
+              <div className="w-full text-left font-montserrat">
+                {/* Titolo Workshop in Cormorant */}
+                <h3 className="text-3xl md:text-4xl text-white mb-2 font-cormorant tracking-tight">
+                  ✨ WORKSHOP DI FLOORWORK – CON MATISSE ROYALE ✨
+                </h3>
+                <p className="text-[#D4AF37] font-cormorant text-2xl mb-6">TENUTO DA: MATISSE ROYALE</p>
+
+                {/* Linea superiore e info data/costo (Stile Excelsior) */}
+                <div className="border-t border-white/20 py-4 space-y-2">
+                  <p className="text-white text-lg flex items-center gap-2">
+                    🗓 <span className="font-cormorant text-[#D4AF37] uppercase tracking-widest text-sm">Data:</span> Sabato 16 Maggio, ore 15:00
+                  </p>
+                  <p className="text-white text-lg flex items-center gap-2">
+                    💰 <span className="font-cormorant text-[#D4AF37] uppercase tracking-widest text-sm">Costo:</span> 25€ – <span className="font-cormorant text-[#D4AF37] uppercase tracking-widest text-sm">Durata:</span> 1h 15 min
+                  </p>
+                </div>
+
+                {/* Linea inferiore e descrizione */}
+                <div className="border-t border-white/20 pt-6 space-y-6 text-white/90 text-lg leading-relaxed">
                   <p>C’è un momento, sulla scena, in cui tutto si rallenta… e ogni dettaglio diventa essenziale.</p>
                   <p>È nel contatto con il pavimento che il movimento si fa più intimo, più profondo, quasi sussurrato. Qui il floorwork incontra l’eleganza del burlesque, dando vita a una danza fatta di linee morbide, gesti sospesi e silenzi carichi di significato.</p>
                   <p>Il corpo scivola, si adagia, si inarca con naturalezza, trasformando ogni transizione in un quadro, ogni pausa in uno sguardo che cattura. Il pavimento diventa scena e confidente, superficie e poesia.</p>
@@ -371,32 +388,27 @@ function App() {
                   <p>Un’esperienza pensata per chi desidera esplorare una dimensione più sofisticata della performance, sviluppare fluidità nei movimenti a terra e rendere ogni gesto carico di significato scenico.</p>
                 </div>
 
-                <div className="mt-12 p-6 border-2 border-[#D4AF37]/30 bg-black/20 text-center inline-block w-full">
-                  <p className="text-2xl font-cormorant text-[#D4AF37] mb-4 uppercase tracking-widest">📍 INFO WORKSHOP</p>
-                  <div className="space-y-2 text-lg">
-                    <p>🗓 Sabato 16 Maggio</p>
-                    <p>🕒 Ore 15:00</p>
-                    <p>📍 Teatro Cavour – Via Camillo Conte di Cavour 9, Pescara</p>
-                    <p className="pt-4">⏱ Durata: 1 ora e 15 minuti</p>
-                    <p className="text-2xl text-[#D4AF37] font-cormorant">💸 Costo: 25€</p>
-                  </div>
+                {/* Sezione Info Location (Stile Excelsior) */}
+                <div className="mt-8 space-y-2">
+                  <p className="text-[#D4AF37] font-cormorant tracking-widest uppercase">📍 Location:</p>
+                  <p className="text-white">Teatro Cavour – Via Camillo Conte di Cavour 9, Pescara</p>
                 </div>
 
-                {/* Box di Iscrizione uniformato alla Home */}
+                {/* Box Iscrizione (Uniformato alla Home come richiesto) */}
                 <div className="mt-16 border-4 border-white p-8 bg-white/5 text-white text-center">
-                  <h3 className="text-4xl md:text-5xl font-cormorant mb-6 uppercase">Iscrizione Workshop</h3>
+                  <h3 className="text-4xl md:text-5xl font-cormorant mb-6 uppercase tracking-wider">Iscrizione Workshop</h3>
                   <p className="text-sm md:text-base font-montserrat mb-8 max-w-xl mx-auto leading-relaxed opacity-80">
                     I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco… partendo da terra.
                   </p>
                   <a
                     href="https://wa.me/393922752576"
                     target="_blank"
-                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg uppercase"
+                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-black transition-all transform hover:scale-105 shadow-lg uppercase font-bold"
                   >
                     <MessageCircle className="w-6 h-6 inline-block mr-2" /> Iscriviti ora
                   </a>
 
-                  <p className="mt-8 text-xl italic font-cormorant text-[#D4AF37]">
+                  <p className="mt-8 text-2xl italic font-cormorant text-[#D4AF37]">
                     ✨ Perché la vera seduzione… non ha bisogno di alzare la voce.
                   </p>
                 </div>
