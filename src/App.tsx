@@ -194,14 +194,16 @@ function App() {
               Pescara Burlesque Festival
             </h1>
 
-            {/* 2. "una produzione di" più vicino a "Matisse Royale" (interlinea ridotta) e senza grassetto */}
+            <div className="text-2xl md:text-3xl mb-2 font-cormorant italic uppercase tracking-widest text-[#0b46d0]">
+              II EDIZIONE
+            </div>
             <div className="mb-8 font-cormorant tracking-wide text-[#0b46d0] leading-tight">
               <span className="text-base md:text-lg block">una produzione di</span>
               <span className="text-2xl md:text-3xl block">Matisse Royale</span>
             </div>
 
             {/* 3. Dorato, font Cormorant Italic */}
-            <p className="text-3xl md:text-5xl font-cormorant mb-12 italic text-[#D4AF37]">
+            <p className="text-3xl md:text-3xl font-cormorant mb-12 italic text-[#D4AF37]">
               La notte più glamour dell’Adriatico
             </p>
 
