@@ -108,11 +108,6 @@ function App() {
           text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6), 0px 0px 5px rgba(255, 255, 255, 0.3);
         }
 
-        /* Ombra dorata per il punto 2 */
-        .gold-glow {
-          text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.8);
-        }
-
         :root {
           --swiper-theme-color: #D4AF37; 
           --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4); 
@@ -194,16 +189,16 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
 
-            {/* Punto 5: Titolo in MAIUSCOLO */}
-            <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-4 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d uppercase">
+            {/* Punto 3: Rimossa linea sotto il titolo (pb-4 e border-b-2 rimosse) e Punto 5: MAIUSCOLO */}
+            <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider text-center text-shadow-3d uppercase">
               Pescara Burlesque Festival
             </h1>
 
-            {/* Punto 2: Bianco con ombra dorata */}
-            <div className="text-2xl md:text-3xl text-white mb-2 font-light tracking-widest uppercase gold-glow">
+            {/* Punto 1: Rimossa ombra dorata | Punto 4: Uniformato font a Cormorant */}
+            <div className="text-2xl md:text-3xl text-white mb-2 font-cormorant tracking-widest uppercase">
               II EDIZIONE
             </div>
-            <div className="font-cormorant text-base text-white mb-8 italic tracking-wider gold-glow">
+            <div className="font-cormorant text-base text-white mb-8 italic tracking-wider">
               una produzione di Matisse Royale
             </div>
 
@@ -211,7 +206,6 @@ function App() {
               La notte più glamour dell’Adriatico
             </p>
 
-            {/* Punto 1: Rimessa parte originale locandina */}
             <div className="mb-12 inline-flex overflow-hidden">
               <button
                 onClick={() => openModal(['/images/locandina II ed..jpg'], 0)}
@@ -255,13 +249,14 @@ function App() {
             </div>
 
             <div className="border-4 border-white p-8 bg-white/5 text-white">
-              {/* Punto 4: Grandezza uniformata a Roma (text-3xl) */}
+              {/* Punto 4: Grandezza 3xl come Roma */}
               <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
-              <p className="text-lg mb-6 font-montserrat">
+              {/* Punto 2: Testo rimpicciolito (text-base md:text-lg e opacity) */}
+              <p className="text-base md:text-lg mb-6 font-montserrat opacity-80 max-w-2xl mx-auto">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
 
-              {/* Punto 3: Rimosso font-bold */}
+              {/* Punto 3: Rimosso grassetto */}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
@@ -399,12 +394,12 @@ function App() {
                 </div>
 
                 <div className="mt-16 border-4 border-white p-8 bg-white/5 text-white text-center">
-                  {/* Punto 4: Grandezza uniformata a Roma (text-3xl) */}
                   <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
-                  <p className="text-lg md:text-xl font-montserrat mb-8 max-w-xl mx-auto leading-relaxed text-center">
+                  {/* Punto 2: Testo rimpicciolito */}
+                  <p className="text-base md:text-lg mb-6 font-montserrat opacity-80 max-w-xl mx-auto">
                     I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco.
                   </p>
-                  {/* Punto 3: Rimosso font-bold */}
+                  {/* Punto 3: Rimosso grassetto */}
                   <a
                     href="https://wa.me/393922752576"
                     target="_blank"
