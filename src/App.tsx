@@ -501,8 +501,8 @@ function App() {
             </div>
 
             {/* FOOTER */}
-            <div className="border-t border-[#D4AF37] pt-8">
-              <p className="text-[#D4AF37]/70 text-sm font-montserrat">
+            <div className="border-t border-white/20 pt-8 mt-20">
+              <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
             </div>
