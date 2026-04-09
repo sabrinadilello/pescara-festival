@@ -189,6 +189,15 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
 
+            {/* Logo aggiunto in Home */}
+            <div className="mb-12">
+              <img
+                src="/images/logo.png"
+                alt="Logo Pescara Burlesque Festival"
+                className="max-w-xs mx-auto"
+              />
+            </div>
+
             <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider text-center text-shadow-3d uppercase">
               Pescara Burlesque Festival
             </h1>
@@ -246,7 +255,7 @@ function App() {
               </a>
             </div>
 
-            {/* BOX PRENOTAZIONI HOME (Punti 1, 2 e 3) */}
+            {/* BOX PRENOTAZIONI HOME */}
             <div className="border-4 border-[#D4AF37] p-8 bg-white/5 text-white">
               <h3 className="text-3xl font-cormorant mb-8 uppercase tracking-wider text-[#D4AF37]">PRENOTAZIONI</h3>
               <p className="text-lg md:text-xl font-cormorant mb-8 tracking-wide text-center text-white">
@@ -389,7 +398,7 @@ function App() {
                   <p className="text-white text-base md:text-lg">Teatro Cavour – Via Camillo Conte di Cavour 9, Pescara</p>
                 </div>
 
-                {/* BOX PRENOTAZIONI WORKSHOP (Punti 1, 2 e 3) */}
+                {/* BOX PRENOTAZIONI WORKSHOP */}
                 <div className="mt-16 border-4 border-[#D4AF37] p-8 bg-white/5 text-[#D4AF37] text-center">
                   <h3 className="text-3xl font-cormorant mb-8 uppercase tracking-wider text-[#D4AF37]">PRENOTAZIONI</h3>
                   <p className="text-lg md:text-xl font-cormorant mb-8 tracking-wide text-center text-white">
@@ -409,16 +418,16 @@ function App() {
         </section>
       )}
 
-      {/* Page 4 - Contacts - Locandina senza contenitore */}
+      {/* Page 4 - Contacts */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
 
-            {/* Locandina pulita senza bordo né sfondo */}
+            {/* Logo aggiornato in Contatti */}
             <div className="mb-12">
               <img
-                src="/images/locandina.png"
-                alt="Locandina Pescara Burlesque Festival"
+                src="/images/logo.png"
+                alt="Logo Pescara Burlesque Festival"
                 className="max-w-xs mx-auto"
               />
             </div>
@@ -428,7 +437,6 @@ function App() {
             </h2>
 
             <div className="space-y-8 text-lg mb-12 max-w-md mx-auto">
-              {/* LOCATION */}
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
@@ -445,7 +453,6 @@ function App() {
                 </div>
               </div>
 
-              {/* PAGINA UFFICIALE */}
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
@@ -461,7 +468,6 @@ function App() {
                 </div>
               </div>
 
-              {/* DIREZIONE ARTISTICA */}
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
@@ -477,7 +483,6 @@ function App() {
                 </div>
               </div>
 
-              {/* EMAIL */}
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
