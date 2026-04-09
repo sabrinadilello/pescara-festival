@@ -241,9 +241,9 @@ function App() {
                 Sabato 16 maggio ore 21:00
               </div>
 
-              <div className="flex flex-row items-center justify-center gap-3 text-white text-lg md:text-xl font-montserrat">
-                <MapPin className="w-6 h-6 shrink-0 text-[#D4AF37]" />
-                <span className="tracking-wide">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
+              <div className="flex flex-row items-start justify-center gap-3 text-white text-lg md:text-xl font-montserrat px-2">
+                <MapPin className="w-6 h-6 shrink-0 text-[#D4AF37] mt-1" />
+                <span className="tracking-wide text-left md:text-center">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</span>
               </div>
 
               <a
