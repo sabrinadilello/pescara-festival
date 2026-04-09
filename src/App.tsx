@@ -189,12 +189,10 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
 
-            {/* Punto 3: Rimossa linea sotto il titolo (pb-4 e border-b-2 rimosse) e Punto 5: MAIUSCOLO */}
             <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider text-center text-shadow-3d uppercase">
               Pescara Burlesque Festival
             </h1>
 
-            {/* Punto 1: Rimossa ombra dorata | Punto 4: Uniformato font a Cormorant */}
             <div className="text-2xl md:text-3xl text-white mb-2 font-cormorant tracking-widest uppercase">
               II EDIZIONE
             </div>
@@ -248,15 +246,13 @@ function App() {
               </a>
             </div>
 
-            <div className="border-4 border-white p-8 bg-white/5 text-white">
-              {/* Punto 4: Grandezza 3xl come Roma */}
-              <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
-              {/* Punto 2: Testo rimpicciolito (text-base md:text-lg e opacity) */}
-              <p className="text-lg md:text-xl font-cormorant mb-4 tracking-wide text-center text-white">
+            {/* BOX PRENOTAZIONI HOME (Punti 1, 2 e 3) */}
+            <div className="border-4 border-[#D4AF37] p-8 bg-white/5 text-white">
+              <h3 className="text-3xl font-cormorant mb-8 uppercase tracking-wider text-[#D4AF37]">PRENOTAZIONI</h3>
+              <p className="text-lg md:text-xl font-cormorant mb-8 tracking-wide text-center text-white">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
 
-              {/* Punto 3: Rimosso grassetto */}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc9-Ur65j0i9ynErCy7L0sksM3G_zPUdiPnobASG0YRUaq1Zw/viewform?usp=sharing&ouid=106777875788059470191"
                 target="_blank"
@@ -393,13 +389,12 @@ function App() {
                   <p className="text-white text-base md:text-lg">Teatro Cavour – Via Camillo Conte di Cavour 9, Pescara</p>
                 </div>
 
+                {/* BOX PRENOTAZIONI WORKSHOP (Punti 1, 2 e 3) */}
                 <div className="mt-16 border-4 border-[#D4AF37] p-8 bg-white/5 text-[#D4AF37] text-center">
-                  <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
-                  {/* Punto 2: Testo rimpicciolito */}
-                  <p className="text-lg md:text-xl font-cormorant mb-4 tracking-wide text-center text-white">
+                  <h3 className="text-3xl font-cormorant mb-8 uppercase tracking-wider text-[#D4AF37]">PRENOTAZIONI</h3>
+                  <p className="text-lg md:text-xl font-cormorant mb-8 tracking-wide text-center text-white">
                     I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco.
                   </p>
-                  {/* Punto 3: Rimosso grassetto */}
                   <a
                     href="https://wa.me/393922752576"
                     target="_blank"
