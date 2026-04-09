@@ -92,10 +92,10 @@ function App() {
   const instagramUrl = "https://www.instagram.com/pescara_burlesque_festival";
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
-  // Stile ombra comune per i titoli
+  // DEFINIZIONE STILI OMBRE
   const titleShadow = { textShadow: '2px 2px 10px rgba(0,0,0,0.6), 0px 0px 5px rgba(0,0,0,0.4)' };
-  // Stile ombra bianca per le scritte azzurre
   const whiteShadow = { textShadow: '0px 0px 10px rgba(255,255,255,0.7)' };
+  const strongWhiteShadow = { textShadow: '0px 0px 15px rgba(255,255,255,0.9), 0px 0px 5px rgba(255,255,255,0.6)' };
 
   return (
     <div className="min-h-screen bg-[linear-gradient(to_bottom,#b0ddf6_0%,#25a3e9_25%,#003ba3_50%,#061c57_75%,#112149_100%)] text-white pb-24 font-montserrat">
@@ -214,8 +214,7 @@ function App() {
               una produzione di Matisse Royale
             </div>
 
-            {/* Modifica: Colore blu e ombra bianca */}
-            <p className="text-2xl md:text-3xl text-[#0b46d0] font-cormorant mb-12 italic" style={whiteShadow}>
+            <p className="text-2xl md:text-3xl text-[#0b46d0] font-cormorant mb-12 italic" style={strongWhiteShadow}>
               La notte più glamour dell’Adriatico
             </p>
 
@@ -236,7 +235,7 @@ function App() {
               <p>Il Pescara Burlesque Festival è l’evento internazionale che porta sulla costa adriatica il fascino senza tempo del burlesque, trasformando la città di Pescara in un palcoscenico di arte e seduzione.</p>
               <p>In una cornice elegante e suggestiva, il pubblico viene accolto in un’atmosfera sospesa, quasi irreale, in cui luci, musica e corpi raccontano storie di bellezza, desiderio e libertà.</p>
 
-              <p className="italic pt-6 text-center font-cormorant text-xl md:text-2xl text-[#D4AF37]">
+              <p className="italic pt-6 text-center font-cormorant text-xl md:text-2xl text-[#D4AF37]" style={whiteShadow}>
                 Preparati a varcare la soglia di un mondo in cui tutto è possibile… ✨
               </p>
             </div>
@@ -261,7 +260,6 @@ function App() {
               </a>
             </div>
 
-            {/* BOX PRENOTAZIONI HOME */}
             <div className="border-4 border-[#D4AF37] p-8 bg-white/5 text-white">
               <h3 className="text-3xl font-cormorant mb-8 uppercase tracking-wider text-[#D4AF37]">PRENOTAZIONI</h3>
               <p className="text-lg md:text-xl font-cormorant mb-8 tracking-wide text-center text-white">
@@ -290,54 +288,53 @@ function App() {
               Il Cast
             </h2>
 
-            {[
-              {
-                role: "PRODUCER",
-                name: "Matisse Royale",
-                img: "/images/presentatore.jpg",
-                desc: [
-                  "Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.",
-                  "Dai palchi d’Europa alle luci dell’Excelsior, porta con sé un universo fatto di glamour, poesia e provocazione. Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia."
-                ]
-              },
-              {
-                role: "THE GODMOTHER",
-                name: "Candy Rose",
-                img: "/images/godmother.jpeg",
-                desc: [
-                  "Candy Rose incanta con uno sguardo magnetico, un sorriso irresistibile e un’eleganza che si traduce in pura presenza scenica. Artista poliedrica, accompagna il pubblico in atmosfere sensuali e suggestive, distinguendosi per uno stile raffinato e inconfondibile.",
-                  "Ballerina versatile, si avvicina alla danza fin da bambina, intraprendendo un percorso di costante crescita e perfezionamento attraverso stage e collaborazioni con maestri di fama internazionale.",
-                  "Eleganza e charme definiscono la sua essenza: pelle diafana, labbra rosso intenso e un’estetica rétro che la rendono una figura iconica, capace di evocare il fascino senza tempo del burlesque."
-                ],
-                extra: "Elegance. Charm. Seduction."
-              },
-              {
-                role: "THE HOST",
-                name: "Stefano Cirulli",
-                img: "/images/host.jpeg",
-                desc: [
-                  "Stefano Cirulli, cantante, musicista e autentico mattatore di palco, è la voce che accompagnerà il pubblico in una serata carica di energia e spettacolo. Con carisma e presenza scenica, guida lo show tra ritmo, ironia e momenti sorprendenti.",
-                  "Con il microfono in una mano e il cuore nell’altra, conduce gli spettatori in un viaggio fatto di musica, emozioni e intrattenimento, trasformando ogni istante in un’esperienza coinvolgente e indimenticabile."
-                ],
-                extra: "Energy. Rhythm. Show."
-              }
-            ].map((person, idx) => (
-              <div key={idx} className="mb-24 text-center">
-                <button onClick={() => openModal([person.img], 0)} className="cursor-zoom-in mb-8">
-                  <img src={person.img} alt={person.name} className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
-                </button>
-                <div className="text-white">
-                  {/* Modifica: Scambio grandezze tra Ruolo e Nome */}
-                  <p className="text-3xl md:text-4xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">{person.role}</p>
-                  <p className="text-xl md:text-2xl font-cormorant mb-8">{person.name}</p>
-                  <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed">
-                    {person.desc.map((p, i) => <p key={i}>{p}</p>)}
-                  </div>
-                  {/* Modifica: Ombra bianca alle tagline extra */}
-                  {person.extra && <p className="text-xl md:text-2xl font-cormorant italic text-[#D4AF37] mt-8" style={whiteShadow}>{person.extra}</p>}
+            {/* PRODUCER */}
+            <div className="mb-24 text-center">
+              <button onClick={() => openModal(['/images/presentatore.jpg'], 0)} className="cursor-zoom-in group mb-8">
+                <img src="/images/presentatore.jpg" alt="Matisse Royale" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
+              </button>
+              <div className="text-white">
+                <p className="text-3xl md:text-4xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">PRODUCER</p>
+                <p className="text-xl md:text-2xl font-cormorant mb-8">Matisse Royale</p>
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center text-white leading-relaxed">
+                  <p>Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.</p>
+                  <p>Dai palchi d’Europa alle luci dell’Excelsior, porta con sé un universo fatto di glamour, poesia e provocazione. Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia.</p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* THE GODMOTHER */}
+            <div className="mb-24 text-center">
+              <button onClick={() => openModal(['/images/godmother.jpeg'], 0)} className="cursor-zoom-in group mb-8">
+                <img src="/images/godmother.jpeg" alt="Candy Rose" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
+              </button>
+              <div className="text-white">
+                <p className="text-3xl md:text-4xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">THE GODMOTHER</p>
+                <p className="text-xl md:text-2xl font-cormorant mb-8">Candy Rose</p>
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed text-white">
+                  <p>Candy Rose incanta con uno sguardo magnetico, un sorriso irresistibile e un’eleganza che si traduce in pura presenza scenica. Artista poliedrica, accompagna il pubblico in atmosfere sensuali e suggestive, distinguendosi per uno stile raffinato e inconfondibile.</p>
+                  <p>Ballerina versatile, si avvicina alla danza fin da bambina, intraprendendo un percorso di costante crescita e perfezionamento attraverso stage e collaborazioni con maestri di fama internazionale.</p>
+                  <p>Eleganza e charme definiscono la sua essenza: pelle diafana, labbra rosso intenso e un’estetica rétro che la rendono una figura iconica, capace di evocare il fascino senza tempo del burlesque.</p>
+                </div>
+                <p className="text-xl md:text-2xl font-cormorant italic text-[#D4AF37] mt-8 text-center" style={whiteShadow}>Elegance. Charm. Seduction.</p>
+              </div>
+            </div>
+
+            {/* THE HOST */}
+            <div className="mb-24 text-center">
+              <button onClick={() => openModal(['/images/host.jpeg'], 0)} className="cursor-zoom-in group mb-8">
+                <img src="/images/host.jpeg" alt="Stefano Cirulli" className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
+              </button>
+              <div className="text-white">
+                <p className="text-3xl md:text-4xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">THE HOST</p>
+                <p className="text-xl md:text-2xl font-cormorant mb-8">Stefano Cirulli</p>
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed text-white">
+                  <p>Stefano Cirulli, cantante, musicista e autentico mattatore di palco, è la voce che accompagnerà il pubblico in una serata carica di energia e spettacolo. Con carisma e presenza scenica, guida lo show tra ritmo, ironia e momenti sorprendenti.</p>
+                  <p>Con il microfono in una mano e il cuore nell’altra, conduce gli spettatori in un viaggio fatto di musica, emozioni e intrattenimento, trasformando ogni istante in un’esperienza coinvolgente e indimenticabile.</p>
+                </div>
+                <p className="text-xl md:text-2xl font-cormorant italic text-[#D4AF37] mt-8 text-center" style={whiteShadow}>Energy. Rhythm. Show.</p>
+              </div>
+            </div>
 
             <div className="space-y-8 mt-16 text-center">
               <div>
@@ -401,6 +398,9 @@ function App() {
                 <div className="pt-6 space-y-6 text-white/90 text-lg md:text-xl leading-relaxed">
                   <p>C’è un momento, sulla scena, in cui tutto si rallenta… e ogni dettaglio diventa essenziale.</p>
                   <p>È nel contatto con il pavimento che il movimento si fa più intimo, più profondo, quasi sussurrato. Qui il floorwork incontra l’eleganza del burlesque, dando vita a una danza fatta di linee morbide, gesti sospesi e silenzi carichi di significato.</p>
+                  <p>Il corpo scivola, si adagia, si inarca con naturalezza, trasformando ogni transizione in un quadro, ogni pausa in uno sguardo che cattura. Il pavimento diventa scena e confidente, superficie e poesia.</p>
+                  <p>Non è solo tecnica: è presenza. Non è solo movimento: è intenzione.</p>
+                  <p>Un’esperienza pensata per chi desidera esplorare una dimensione più sofisticata della performance, sviluppare fluidità nei movimenti a terra e rendere ogni gesto carico di significato scenico.</p>
                 </div>
 
                 <div className="mt-8 space-y-2">
@@ -426,10 +426,10 @@ function App() {
         </section>
       )}
 
-      {/* Page 4 - Contacts - Solo scritte bianche rimpicciolite */}
+      {/* Page 4 - Contacts */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center w-full">
 
             <div className="mb-10">
               <img
