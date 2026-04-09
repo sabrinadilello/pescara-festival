@@ -431,7 +431,8 @@ function App() {
               />
             </div>
 
-            <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider uppercase">
+            {/* Titolo leggermente più grande (da 36/60px a 40/64px) */}
+            <h2 className="font-cormorant text-[40px] md:text-[64px] text-[#D4AF37] mb-12 tracking-wider uppercase">
               INFORMAZIONI E CONTATTI
             </h2>
             <div className="space-y-8 text-lg mb-12 max-w-md mx-auto">
@@ -441,12 +442,14 @@ function App() {
                 <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">LOCATION:</p>
-                  <p className="text-white font-montserrat">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  {/* Testo bianco più piccolo (text-sm = 14px) */}
+                  <p className="text-white font-montserrat text-sm">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  {/* Testo azzurro più piccolo (text-[14px]) */}
                   <a
                     href={mapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#b0ddf6] hover:text-[#D4AF37] transition-colors underline text-base font-montserrat"
+                    className="text-[#b0ddf6] hover:text-[#D4AF37] transition-colors underline text-[14px] font-montserrat"
                   >
                     Apri su Google Maps →
                   </a>
@@ -458,11 +461,12 @@ function App() {
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">PAGINA UFFICIALE:</p>
+                  {/* Testo bianco più piccolo */}
                   <a
                     href={instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat"
+                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat text-sm"
                   >
                     @pescara_burlesque_festival
                   </a>
@@ -474,11 +478,12 @@ function App() {
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">DIREZIONE ARTISTICA:</p>
+                  {/* Testo bianco più piccolo */}
                   <a
                     href="https://www.instagram.com/matisse_royale"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat"
+                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat text-sm"
                   >
                     @matisse_royale
                   </a>
@@ -490,9 +495,10 @@ function App() {
                 <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">EMAIL:</p>
+                  {/* Testo bianco più piccolo */}
                   <a
                     href={`mailto:${emailAddress}`}
-                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat break-all"
+                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat break-all text-sm"
                   >
                     {emailAddress}
                   </a>
