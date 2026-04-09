@@ -189,8 +189,7 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
 
-            {/* Logo in Home - Rimpicciolito a max-w-48 (192px) */}
-            <div className="mb-8">
+            <div className="mb-12">
               <img
                 src="/images/logo.png"
                 alt="Logo Pescara Burlesque Festival"
@@ -205,11 +204,13 @@ function App() {
             <div className="text-2xl md:text-3xl text-white mb-2 font-cormorant tracking-widest uppercase">
               II EDIZIONE
             </div>
-            <div className="font-cormorant text-base text-white mb-8 italic tracking-wider">
+            {/* Punto 1: Firma più grande */}
+            <div className="font-cormorant text-lg md:text-xl text-white mb-8 italic tracking-wider">
               una produzione di Matisse Royale
             </div>
 
-            <p className="text-xl md:text-2xl text-[#D4AF37] font-cormorant mb-12 italic">
+            {/* Punto 1: Tagline più grande */}
+            <p className="text-2xl md:text-3xl text-[#D4AF37] font-cormorant mb-12 italic">
               La notte più glamour dell’Adriatico
             </p>
 
@@ -423,15 +424,16 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
 
-            {/* Logo aggiornato in Contatti */}
+            {/* Punto 3: Logo rimpicciolito (max-w-48) */}
             <div className="mb-12">
               <img
                 src="/images/logo.png"
                 alt="Logo Pescara Burlesque Festival"
-                className="max-w-xs mx-auto"
+                className="max-w-48 mx-auto"
               />
             </div>
 
+            {/* Punto 2: Titolo stessa dimensione degli altri (text-4xl md:text-6xl) */}
             <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider uppercase text-shadow-3d">
               Informazioni e Contatti
             </h2>
