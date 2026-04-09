@@ -435,7 +435,7 @@ function App() {
               <img
                 src="/images/logo.png"
                 alt="Logo"
-                className="max-w-40 md:max-w-48 mx-auto border-4 border-[#D4AF37] p-4 bg-white/5"
+                className="max-w-40 md:max-w-48 mx-auto"
               />
             </div>
 
