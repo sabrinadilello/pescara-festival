@@ -252,7 +252,7 @@ function App() {
               {/* Punto 4: Grandezza 3xl come Roma */}
               <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
               {/* Punto 2: Testo rimpicciolito (text-base md:text-lg e opacity) */}
-              <p className="text-base md:text-lg mb-6 font-montserrat opacity-80 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg mb-3 font-montserrat opacity-80 max-w-2xl mx-auto">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
               </p>
 
