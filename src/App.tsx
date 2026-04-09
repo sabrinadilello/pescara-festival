@@ -406,12 +406,10 @@ function App() {
                   <p className="text-lg md:text-xl font-cormorant mb-8 tracking-wide text-center text-white">
                     I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco.
                   </p>
-                  <a
-                    href="https://wa.me/393922752576"
-                    target="_blank"
-                    className="inline-block bg-white text-[#0b46d0] px-12 py-4 text-xl font-montserrat hover:bg-[#D4AF37] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg uppercase"
-                  >
-                    <MessageCircle className="w-6 h-6 inline-block mr-2" /> Iscriviti ora
+                  <a href="https://wa.me/393922752576" target="_blank"
+                    className="inline-flex items-center justify-center bg-white text-[#0b46d0] px-8 md:px-12 py-4 text-lg md:text-xl font-montserrat hover:bg-[#D4AF37] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg uppercase whitespace-nowrap">
+                    <MessageCircle className="w-6 h-6 mr-2 shrink-0" />
+                    Iscriviti ora
                   </a>
                 </div>
               </div>
