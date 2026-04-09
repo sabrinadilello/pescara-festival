@@ -283,7 +283,7 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center uppercase"
+            <h2 className="font-cormorant text-4xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center uppercase"
               style={{
                 ...strongWhiteShadow,
                 boxShadow: '0px 10px 15px -10px rgba(255,255,255,0.8)'
@@ -374,7 +374,7 @@ function App() {
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
             <h2
-              className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center uppercase"
+              className="font-cormorant text-4xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center uppercase"
               style={{
                 ...strongWhiteShadow,
                 boxShadow: '0px 10px 15px -10px rgba(255,255,255,0.8)'
