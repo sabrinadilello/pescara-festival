@@ -418,79 +418,91 @@ function App() {
         </section>
       )}
 
-      {/* Page 4 - Contacts */}
+      {/* Page 4 - Contacts - Solo scritte bianche rimpicciolite */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center w-full">
 
-            {/* Punto 3: Logo rimpicciolito (max-w-48) */}
-            <div className="mb-12">
+            <div className="mb-10">
               <img
                 src="/images/logo.png"
-                alt="Logo Pescara Burlesque Festival"
-                className="max-w-48 mx-auto"
+                alt="Logo"
+                className="max-w-40 md:max-w-48 mx-auto"
               />
             </div>
 
-            {/* Punto 2: Titolo stessa dimensione degli altri (text-4xl md:text-6xl) */}
-            <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider uppercase text-shadow-3d">
+            <h2
+              className="font-cormorant text-3xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider uppercase"
+              style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.6)' }}
+            >
               Informazioni e Contatti
             </h2>
 
-            <div className="space-y-8 text-lg mb-12 max-w-md mx-auto">
+            <div className="space-y-8 max-w-md mx-auto w-full">
+
+              {/* LOCATION */}
               <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-sm md:text-base">LOCATION:</p>
-                  <p className="text-white font-montserrat">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-xs md:text-sm">LOCATION:</p>
+                  {/* Scritta bianca rimpicciolita (text-xs) */}
+                  <p className="text-white font-montserrat text-xs md:text-base leading-snug">
+                    Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara
+                  </p>
                   <a
                     href={mapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#b0ddf6] hover:text-[#D4AF37] transition-colors underline text-base font-montserrat"
+                    className="text-white/60 hover:text-[#D4AF37] transition-colors underline text-[10px] md:text-xs font-montserrat mt-1 block"
                   >
                     Apri su Google Maps →
                   </a>
                 </div>
               </div>
 
+              {/* PAGINA UFFICIALE */}
               <div className="flex items-start gap-4">
-                <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
+                <Instagram className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-sm md:text-base">PAGINA UFFICIALE:</p>
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-xs md:text-sm">PAGINA UFFICIALE:</p>
+                  {/* Scritta bianca rimpicciolita (text-xs) */}
                   <a
                     href={instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat"
+                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-xs md:text-base"
                   >
                     @pescara_burlesque_festival
                   </a>
                 </div>
               </div>
 
+              {/* DIREZIONE ARTISTICA */}
               <div className="flex items-start gap-4">
-                <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
+                <Instagram className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
-                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-sm md:text-base">DIREZIONE ARTISTICA:</p>
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-xs md:text-sm">DIREZIONE ARTISTICA:</p>
+                  {/* Scritta bianca rimpicciolita (text-xs) */}
                   <a
                     href="https://www.instagram.com/matisse_royale"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat"
+                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-xs md:text-base"
                   >
                     @matisse_royale
                   </a>
                 </div>
               </div>
 
+              {/* EMAIL */}
               <div className="flex items-start gap-4">
-                <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
-                <div className="text-left">
-                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-sm md:text-base">EMAIL:</p>
+                <Mail className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-1" />
+                <div className="text-left overflow-hidden">
+                  <p className="font-cormorant text-[#D4AF37] tracking-widest uppercase text-xs md:text-sm">EMAIL:</p>
+                  {/* Scritta bianca rimpicciolita (text-xs) */}
                   <a
                     href={`mailto:${emailAddress}`}
-                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat"
+                    className="text-white hover:text-[#D4AF37] transition-colors underline font-montserrat text-xs md:text-base break-all"
                   >
                     {emailAddress}
                   </a>
@@ -498,7 +510,7 @@ function App() {
               </div>
             </div>
 
-            <div className="border-t border-[#D4AF37]/30 pt-8 mt-20">
+            <div className="border-t border-white/20 pt-8 mt-20">
               <p className="text-white/50 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
