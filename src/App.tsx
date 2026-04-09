@@ -197,7 +197,8 @@ function App() {
               />
             </div>
 
-            <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider text-center text-shadow-3d uppercase">
+            <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider text-center uppercase"
+              style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.6), 0px 0px 5px rgba(0,0,0,0.4)' }}>
               Pescara Burlesque Festival
             </h1>
 
