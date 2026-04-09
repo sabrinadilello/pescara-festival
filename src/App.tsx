@@ -396,7 +396,7 @@ function App() {
                 <div className="mt-16 border-4 border-white p-8 bg-white/5 text-white text-center">
                   <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
                   {/* Punto 2: Testo rimpicciolito */}
-                  <p className="text-base md:text-lg mb-6 font-montserrat opacity-80 max-w-xl mx-auto">
+                  <p className="text-lg md:text-xl font-cormorant mb-4 tracking-wide text-center text-white">
                     I posti sono limitati. Assicurati il tuo spazio e scopri un nuovo modo di vivere il palco.
                   </p>
                   {/* Punto 3: Rimosso grassetto */}
