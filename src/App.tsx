@@ -189,12 +189,12 @@ function App() {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
 
-            {/* Logo aggiunto in Home */}
-            <div className="mb-12">
+            {/* Logo in Home - Rimpicciolito a max-w-48 (192px) */}
+            <div className="mb-8">
               <img
                 src="/images/logo.png"
                 alt="Logo Pescara Burlesque Festival"
-                className="max-w-xs mx-auto"
+                className="max-w-48 mx-auto"
               />
             </div>
 
