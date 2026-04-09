@@ -92,6 +92,11 @@ function App() {
   const instagramUrl = "https://www.instagram.com/pescara_burlesque_festival";
   const emailAddress = "pescaraburlesquefestival@gmail.com";
 
+  // Stile ombra comune per i titoli
+  const titleShadow = { textShadow: '2px 2px 10px rgba(0,0,0,0.6), 0px 0px 5px rgba(0,0,0,0.4)' };
+  // Stile ombra bianca per le scritte azzurre
+  const whiteShadow = { textShadow: '0px 0px 10px rgba(255,255,255,0.7)' };
+
   return (
     <div className="min-h-screen bg-[linear-gradient(to_bottom,#b0ddf6_0%,#25a3e9_25%,#003ba3_50%,#061c57_75%,#112149_100%)] text-white pb-24 font-montserrat">
       <style>{`
@@ -198,20 +203,19 @@ function App() {
             </div>
 
             <h1 className="font-cormorant text-5xl md:text-7xl text-[#D4AF37] mb-8 tracking-wider text-center uppercase"
-              style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.6), 0px 0px 5px rgba(0,0,0,0.4)' }}>
+              style={titleShadow}>
               Pescara Burlesque Festival
             </h1>
 
             <div className="text-2xl md:text-3xl text-white mb-2 font-cormorant tracking-widest uppercase">
               II EDIZIONE
             </div>
-            {/* Punto 1: Firma più grande */}
             <div className="font-cormorant text-lg md:text-xl text-white mb-8 italic tracking-wider">
               una produzione di Matisse Royale
             </div>
 
-            {/* Punto 1: Tagline più grande */}
-            <p className="text-2xl md:text-3xl text-[#D4AF37] font-cormorant mb-12 italic">
+            {/* Modifica: Colore blu e ombra bianca */}
+            <p className="text-2xl md:text-3xl text-[#0b46d0] font-cormorant mb-12 italic" style={whiteShadow}>
               La notte più glamour dell’Adriatico
             </p>
 
@@ -281,7 +285,8 @@ function App() {
       {currentPage === 2 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d uppercase">
+            <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d uppercase"
+              style={titleShadow}>
               Il Cast
             </h2>
 
@@ -322,12 +327,14 @@ function App() {
                   <img src={person.img} alt={person.name} className={`max-w-full h-auto mx-auto ${imageBorderClass}`} />
                 </button>
                 <div className="text-white">
-                  <p className="text-xl md:text-2xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">{person.role}</p>
-                  <p className="text-3xl md:text-4xl font-cormorant mb-8">{person.name}</p>
+                  {/* Modifica: Scambio grandezze tra Ruolo e Nome */}
+                  <p className="text-3xl md:text-4xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">{person.role}</p>
+                  <p className="text-xl md:text-2xl font-cormorant mb-8">{person.name}</p>
                   <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center leading-relaxed">
                     {person.desc.map((p, i) => <p key={i}>{p}</p>)}
                   </div>
-                  {person.extra && <p className="text-xl md:text-2xl font-cormorant italic text-[#D4AF37] mt-8">{person.extra}</p>}
+                  {/* Modifica: Ombra bianca alle tagline extra */}
+                  {person.extra && <p className="text-xl md:text-2xl font-cormorant italic text-[#D4AF37] mt-8" style={whiteShadow}>{person.extra}</p>}
                 </div>
               </div>
             ))}
@@ -366,7 +373,8 @@ function App() {
       {currentPage === 3 && (
         <section className="min-h-screen flex flex-col items-center px-6 py-20">
           <div className="max-w-4xl mx-auto w-full">
-            <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d uppercase">
+            <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider border-b-2 border-[#D4AF37] pb-4 text-center text-shadow-3d uppercase"
+              style={titleShadow}>
               Workshop
             </h2>
 
@@ -427,12 +435,12 @@ function App() {
               <img
                 src="/images/logo.png"
                 alt="Logo"
-                className="max-w-40 md:max-w-48 mx-auto"
+                className="max-w-40 md:max-w-48 mx-auto border-4 border-[#D4AF37] p-4 bg-white/5"
               />
             </div>
 
-            {/* Titolo leggermente più grande (da 36/60px a 40/64px) */}
-            <h2 className="font-cormorant text-[40px] md:text-[64px] text-[#D4AF37] mb-12 tracking-wider uppercase">
+            <h2 className="font-cormorant text-[40px] md:text-[64px] text-[#D4AF37] mb-12 tracking-wider uppercase"
+              style={titleShadow}>
               INFORMAZIONI E CONTATTI
             </h2>
             <div className="space-y-8 text-lg mb-12 max-w-md mx-auto">
@@ -442,9 +450,7 @@ function App() {
                 <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">LOCATION:</p>
-                  {/* Testo bianco più piccolo (text-sm = 14px) */}
                   <p className="text-white font-montserrat text-sm">Teatro Cavour – Via Camillo Benso Conte di Cavour, 9, Pescara</p>
-                  {/* Testo azzurro più piccolo (text-[14px]) */}
                   <a
                     href={mapsLink}
                     target="_blank"
@@ -461,7 +467,6 @@ function App() {
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">PAGINA UFFICIALE:</p>
-                  {/* Testo bianco più piccolo */}
                   <a
                     href={instagramUrl}
                     target="_blank"
@@ -478,7 +483,6 @@ function App() {
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">DIREZIONE ARTISTICA:</p>
-                  {/* Testo bianco più piccolo */}
                   <a
                     href="https://www.instagram.com/matisse_royale"
                     target="_blank"
@@ -495,7 +499,6 @@ function App() {
                 <Mail className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
                   <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">EMAIL:</p>
-                  {/* Testo bianco più piccolo */}
                   <a
                     href={`mailto:${emailAddress}`}
                     className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat break-all text-sm"
@@ -507,8 +510,8 @@ function App() {
             </div>
 
             {/* FOOTER */}
-            <div className="border-t border-white/20 pt-8 mt-20">
-              <p className="text-white/50 text-sm font-montserrat">
+            <div className="border-t border-[#D4AF37] pt-8 mt-20">
+              <p className="text-[#D4AF37]/70 text-sm font-montserrat">
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
             </div>
