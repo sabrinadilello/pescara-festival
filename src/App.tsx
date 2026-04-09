@@ -409,10 +409,20 @@ function App() {
         </section>
       )}
 
-      {/* Page 4 - Contacts - Uniformata a Excelsior */}
+      {/* Page 4 - Contacts - Uniformata a Excelsior con Locandina */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
+
+            {/* Locandina aggiunta come nell'Excelsior */}
+            <div className="mb-12">
+              <img
+                src="/images/locandina.png"
+                alt="Locandina Pescara Burlesque Festival"
+                className="max-w-xs mx-auto border-4 border-[#D4AF37] p-4 bg-white/5"
+              />
+            </div>
+
             <h2 className="font-cormorant text-4xl md:text-6xl text-[#D4AF37] mb-12 tracking-wider uppercase text-shadow-3d">
               Informazioni e Contatti
             </h2>
@@ -451,7 +461,7 @@ function App() {
                 </div>
               </div>
 
-              {/* DIREZIONE ARTISTICA (Aggiunta) */}
+              {/* DIREZIONE ARTISTICA */}
               <div className="flex items-start gap-4">
                 <Instagram className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <div className="text-left">
