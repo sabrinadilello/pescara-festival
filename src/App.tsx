@@ -409,17 +409,17 @@ function App() {
         </section>
       )}
 
-      {/* Page 4 - Contacts - Uniformata a Excelsior con Locandina */}
+      {/* Page 4 - Contacts - Locandina senza contenitore */}
       {currentPage === 4 && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
           <div className="max-w-3xl mx-auto text-center">
 
-            {/* Locandina aggiunta come nell'Excelsior */}
+            {/* Locandina pulita senza bordo né sfondo */}
             <div className="mb-12">
               <img
                 src="/images/locandina.png"
                 alt="Locandina Pescara Burlesque Festival"
-                className="max-w-xs mx-auto border-4 border-[#D4AF37] p-4 bg-white/5"
+                className="max-w-xs mx-auto"
               />
             </div>
 
