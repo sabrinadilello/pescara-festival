@@ -393,7 +393,7 @@ function App() {
                   <p className="text-white text-base md:text-lg">Teatro Cavour – Via Camillo Conte di Cavour 9, Pescara</p>
                 </div>
 
-                <div className="mt-16 border-4 border-white p-8 bg-white/5 text-white text-center">
+                <div className="mt-16 border-4 border-[#D4AF37] p-8 bg-white/5 text-[#D4AF37] text-center">
                   <h3 className="text-3xl font-cormorant mb-6 uppercase tracking-wider">Prenotazioni</h3>
                   {/* Punto 2: Testo rimpicciolito */}
                   <p className="text-lg md:text-xl font-cormorant mb-4 tracking-wide text-center text-white">
