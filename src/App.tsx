@@ -300,8 +300,8 @@ function App() {
                 <p className="text-3xl md:text-4xl font-cormorant text-[#D4AF37] uppercase tracking-widest mb-2">PRODUCER</p>
                 <p className="text-xl md:text-2xl font-cormorant mb-8">Matisse Royale</p>
                 <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-montserrat text-center text-white leading-relaxed">
-                  <p>Matisse Royale è l’anima scintillante dell’Excelsior: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.</p>
-                  <p>Dai palchi d’Europa alle luci dell’Excelsior, porta con sé un universo fatto di glamour, poesia e provocazione. Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia.</p>
+                  <p>Matisse Royale è l’anima scintillante del Pescara Festival: showman, performer di fama internazionale e raffinato narratore di emozioni. Artista di boylesque, cantante e ballerino, unisce eleganza, ironia e sensualità in uno stile unico e riconoscibile.</p>
+                  <p>Dai palchi d’Europa alle luci del Pescara Festival, porta con sé un universo fatto di glamour, poesia e provocazione. Sul palco incanta, dietro le quinte crea: ogni suo spettacolo è un invito a lasciarsi sedurre dal potere dell’arte e dal piacere della meraviglia.</p>
                 </div>
               </div>
             </div>
@@ -498,6 +498,22 @@ function App() {
                     className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat text-sm"
                   >
                     @matisse_royale
+                  </a>
+                </div>
+              </div>
+
+              {/* WHATSAPP - AGGIUNTO */}
+              <div className="flex items-start gap-4">
+                <MessageCircle className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
+                <div className="text-left">
+                  <p className="font-cormorant text-[#D4AF37] uppercase tracking-widest">WHATSAPP:</p>
+                  <a
+                    href="https://wa.me/393922752576"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#b0ddf6] transition-colors underline font-montserrat text-sm"
+                  >
+                    +39 392 2752576
                   </a>
                 </div>
               </div>
