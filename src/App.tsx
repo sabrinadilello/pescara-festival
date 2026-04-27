@@ -84,7 +84,15 @@ function App() {
   ];
 
   const performerImages = [
-    'colette.jpeg', 'gigi.jpeg', 'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg', 'sciagura.jpeg'
+    'colette.jpeg', 'gigi.jpeg', 'lisabel.jpeg', 'lizzananda.jpeg', 'lollynoir.jpeg', 'nocca.jpeg', 'sciagura.jpeg', 'jade.jpeg',
+    'hussy.jpeg',
+    'MCC.jpeg',
+    'luna.jpeg',
+    'lilylinetti.jpeg',
+    'hollygwen.jpeg',
+    'blackwidow.jpeg',
+    'betty.jpeg',
+    'baby.jpeg'
   ].map(img => `/images/performer/${img}`);
 
   const imageBorderClass = "border-4 border-white hover:border-[#D4AF37] active:border-[#D4AF37] transition-all duration-300 shadow-lg";
