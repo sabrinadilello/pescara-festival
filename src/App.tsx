@@ -540,12 +540,13 @@ function App() {
                 © 2025 Pescara Burlesque Festival – Tutti i diritti riservati
               </p>
             </div>
-            <Analytics />
           </div>
         </section>
       )}
-    </div>
 
+
+      <Analytics />
+    </div>
   );
 }
 
