@@ -269,10 +269,16 @@ function App() {
               </a>
             </div>
 
+            {/* BOX PRENOTAZIONI HOME - Modificato con l'aggiunta del prezzo */}
             <div className="border-4 border-[#D4AF37] p-8 bg-white/5 text-white">
               <h3 className="text-3xl font-cormorant mb-8 uppercase tracking-wider text-[#D4AF37]">PRENOTAZIONI</h3>
-              <p className="text-lg md:text-xl font-cormorant mb-8 tracking-wide text-center text-white">
+              <p className="text-lg md:text-xl font-cormorant mb-6 tracking-wide text-center text-white">
                 Vuoi partecipare al Pescara Burlesque Festival? Compila il modulo di prenotazione e assicurati il tuo posto in platea.
+              </p>
+
+              {/* AGGIUNTA PREZZO BIGLIETTO */}
+              <p className="text-xl md:text-2xl font-cormorant mb-8">
+                Costo biglietto: <span className="text-[#D4AF37] font-bold">20€</span>
               </p>
 
               <a
